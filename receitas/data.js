@@ -15,10 +15,86 @@ window.ALLERGENS = [
 ];
 
 window.STORES = [
-  { id: "continente", label: "Continente", cor: "#D50032" },
-  { id: "pingoDoce",  label: "Pingo Doce",  cor: "#ED1C24" },
-  { id: "mercadona",  label: "Mercadona",   cor: "#00834D" },
+  { id: "continente", label: "Continente", cor: "#D50032", logo: "icons/store-continente.svg" },
+  { id: "pingoDoce",  label: "Pingo Doce",  cor: "#ED1C24", logo: "icons/store-pingodoce.png" },
+  { id: "mercadona",  label: "Mercadona",   cor: "#00834D", logo: "icons/store-mercadona.svg" },
 ];
+
+// Alimentos que o utilizador pode evitar — atalhos rápidos + lista completa.
+window.AVOID_PRESETS = [
+  "cogumelos", "coentros", "alho", "cebola",
+  "malagueta", "azeitonas", "queijo", "ovos",
+];
+
+window.AVOIDABLE_FOODS = [
+  // Hortícolas & cogumelos
+  "abóbora", "alface", "alho", "alho-francês", "azeitonas", "batata-doce", "batatas",
+  "beringela", "brócolos", "cenoura", "cebola", "cogumelos", "couve", "curgete",
+  "ervilhas", "espargos", "espinafres", "feijão-verde", "funcho", "milho", "pepino",
+  "pimento", "pimentos", "rúcula", "tomate", "tomate-cereja",
+  // Frutas
+  "abacate", "ananás", "banana", "framboesas", "limão", "maçã", "morangos",
+  "pêssego", "uva",
+  // Leguminosas & cereais
+  "arroz", "aveia", "cuscuz", "farinha", "feijão", "grão-de-bico", "lentilhas",
+  "pão", "quinoa",
+  // Massas
+  "esparguete", "fettuccine", "lasanha", "massa", "penne",
+  // Carnes & enchidos
+  "bifes", "carne de vaca", "carne picada", "chouriço", "coelho", "febras",
+  "frango", "pancetta", "peru", "porco", "presunto", "salsichas",
+  // Peixe & marisco
+  "atum", "bacalhau", "camarão", "lulas", "marisco", "mexilhões", "peixe",
+  "polvo", "salmão", "sardinhas",
+  // Laticínios & ovos
+  "feta", "iogurte", "leite", "manteiga", "mozzarella", "natas", "ovos",
+  "parmesão", "pecorino", "queijo", "ricotta",
+  // Ervas, especiarias & temperos
+  "açafrão", "alecrim", "canela", "caril", "coentros", "cominhos", "curcuma",
+  "gengibre", "louro", "malagueta", "manjericão", "mostarda", "noz-moscada",
+  "orégãos", "paprika", "pimenta", "piripiri", "salsa", "tomilho",
+  // Molhos & condimentos
+  "ketchup", "maionese", "mel", "molho de soja", "óleo de sésamo", "tahini",
+  "vinagre", "vinho", "azeite", "açúcar",
+  // Frutos secos & sementes
+  "amêndoa", "amendoim", "avelã", "castanhas", "nozes", "sementes de sésamo",
+];
+
+// Método de confeção por receita — usado para filtrar na aba Receitas.
+// Valores: "airfryer" | "microondas" | "forno" | "fogao" | "sem"
+window.METODOS = {
+  // Peixe
+  sardinhas: "forno", caldeirada: "fogao", "salada-salmao": "sem",
+  "salmao-teriyaki": "airfryer", "salmao-forno": "forno", "empadao-peixe": "forno",
+  paella: "fogao", "atum-nicoise": "fogao",
+  // Frango
+  "frango-piripiri": "airfryer", "frango-basco": "fogao", "cuscuz-frango": "fogao",
+  "arroz-frango-chourico": "fogao", "frango-teriyaki": "forno",
+  // Carne
+  prego: "fogao", febras: "airfryer", strogonoff: "fogao",
+  "vaca-brocolos": "fogao", moussaka: "forno",
+  // Massas
+  carbonara: "fogao", bolonhesa: "fogao", lasanha: "forno",
+  fettuccine: "fogao", arrabiata: "fogao",
+  // Vegetariano
+  tortilha: "microondas", shakshuka: "microondas", "chili-vegetariano": "fogao",
+  falafel: "airfryer", ratatouille: "forno", "fajitas-grao": "fogao",
+  "lentilhas-abobora": "fogao", dal: "fogao", "feijao-curry": "fogao",
+  rotolo: "forno", "batatas-bravas": "airfryer", "salada-massa": "fogao",
+  // Sobremesas & pequeno-almoço
+  "pasteis-nata": "forno", crumble: "forno", "bolo-cenoura": "forno",
+  "panquecas-banana": "microondas",
+  // Marisco
+  "empanadas-camarao": "forno",
+};
+
+window.METODO_LABELS = {
+  airfryer: { label: "Airfryer", emoji: "🌪️" },
+  microondas: { label: "Microondas", emoji: "⚡" },
+  forno: { label: "Forno", emoji: "🔥" },
+  fogao: { label: "Fogão", emoji: "🍳" },
+  sem: { label: "Sem cozedura", emoji: "🥗" },
+};
 
 window.RECIPES = [
   // ---------- Peixe ----------

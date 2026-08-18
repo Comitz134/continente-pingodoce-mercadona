@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#16a34a" />
+  <meta name="theme-color" content="#FDF4E7" />
   <title>Prato da Semana</title>
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="icon" href="icons/icon-192.png" />
@@ -17,8 +17,14 @@
     </button>
     <div class="appbar-title">
       <span class="logo">🍽️</span>
-      <h1>Prato da Semana</h1>
+      <h1>Prato <span class="script">da semana</span></h1>
     </div>
+    <button id="btn-settings" class="icon-btn" aria-label="Preferências" title="Preferências">
+      <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1.04 1.56V21a2 2 0 1 1-4 0v-.09A1.7 1.7 0 0 0 8.96 19.4a1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.7 1.7 0 0 0 .34-1.87 1.7 1.7 0 0 0-1.56-1.04H3a2 2 0 1 1 0-4h.09A1.7 1.7 0 0 0 4.6 8.96a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.7 1.7 0 0 0 1.87.34A1.7 1.7 0 0 0 10 3.04V3a2 2 0 1 1 4 0v.09a1.7 1.7 0 0 0 1.04 1.56 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.87 1.7 1.7 0 0 0 1.56 1.04H21a2 2 0 1 1 0 4h-.09a1.7 1.7 0 0 0-1.51 1.04Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <button id="btn-account" class="icon-btn" aria-label="Conta">
+      <svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 12a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Zm0 2c-4 0-8 2-8 5v2h16v-2c0-3-4-5-8-5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
     <button id="btn-install" class="icon-btn" aria-label="Instalar app" hidden>
       <svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
@@ -27,10 +33,44 @@
   <main>
     <!-- ===== Ecrã de configuração ===== -->
     <section id="view-config" class="view">
-      <p class="lead">Diz-nos o teu orçamento, alergias e os supermercados que usas. Nós montamos uma ementa para a semana.</p>
+      <div class="hero">
+        <div class="hero-blobs" aria-hidden="true">
+          <span class="blob blob--peach"></span>
+          <span class="blob blob--pink"></span>
+          <span class="blob blob--sun"></span>
+        </div>
+        <p class="hero-eyebrow"><span class="dot"></span> Ementa personalizada · 3 supermercados</p>
+        <h1 class="hero-title">A tua semana<br/>na mesa<span class="hero-script">com sabor</span></h1>
+        <p class="hero-text">Diz-nos o teu orçamento, alergias e os supermercados que usas. Nós montamos uma ementa para a semana.</p>
+      </div>
 
-      <div class="card">
-        <h2 class="card-title"><span>💰</span> Orçamento por dose</h2>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <div class="marquee-row">
+            <span class="marquee-word">Continente</span><span class="marquee-dot"></span>
+            <span class="marquee-word">Pingo Doce</span><span class="marquee-dot"></span>
+            <span class="marquee-word">Mercadona</span><span class="marquee-dot"></span>
+            <span class="marquee-word">Peixe</span><span class="marquee-dot"></span>
+            <span class="marquee-word">Frango</span><span class="marquee-dot"></span>
+            <span class="marquee-word">Vegetariano</span><span class="marquee-dot"></span>
+            <span class="marquee-word">Massas</span><span class="marquee-dot"></span>
+            <span class="marquee-word">Sobremesa</span><span class="marquee-dot"></span>
+          </div>
+          <div class="marquee-row">
+            <span class="marquee-word">Continente</span><span class="marquee-dot"></span>
+            <span class="marquee-word">Pingo Doce</span><span class="marquee-dot"></span>
+            <span class="marquee-word">Mercadona</span><span class="marquee-dot"></span>
+            <span class="marquee-word">Peixe</span><span class="marquee-dot"></span>
+            <span class="marquee-word">Frango</span><span class="marquee-dot"></span>
+            <span class="marquee-word">Vegetariano</span><span class="marquee-dot"></span>
+            <span class="marquee-word">Massas</span><span class="marquee-dot"></span>
+            <span class="marquee-word">Sobremesa</span><span class="marquee-dot"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-reveal>
+        <h2 class="card-title"><span class="ico">💰</span> Orçamento por dose</h2>
         <div class="range-labels">
           <span id="price-min-label">0,50&nbsp;€</span>
           <span id="price-max-label">6&nbsp;€+</span>
@@ -43,28 +83,26 @@
         <p class="hint" id="price-hint">Todas as receitas até 6&nbsp;€ por dose</p>
       </div>
 
-      <div class="card">
-        <h2 class="card-title"><span>🚫</span> Alergias</h2>
+      <div class="card" data-reveal>
+        <h2 class="card-title"><span class="ico">🚫</span> Alergias</h2>
         <p class="hint">Tocas para selecionar. As receitas com estes alergénios são excluídas.</p>
         <div class="chips" id="allergen-chips"></div>
       </div>
 
-      <div class="card">
-        <h2 class="card-title"><span>🙅</span> Alimentos a evitar</h2>
-        <div class="add-row">
-          <input type="text" id="avoid-input" placeholder="Ex.: cogumelos, coentros…" autocomplete="off" />
-          <button id="btn-add-avoid" class="btn btn-ghost" type="button">Adicionar</button>
-        </div>
+      <div class="card" data-reveal>
+        <h2 class="card-title"><span class="ico">🙅</span> Alimentos a evitar</h2>
+        <p class="hint">Toca para selecionar. As receitas com estes alimentos são excluídas.</p>
         <div class="chips" id="avoid-chips"></div>
+        <button id="btn-more-foods" class="btn btn-ghost btn-block" type="button">Mais alimentos…</button>
       </div>
 
-      <div class="card">
-        <h2 class="card-title"><span>🛒</span> Supermercados</h2>
+      <div class="card" data-reveal>
+        <h2 class="card-title"><span class="ico">🛒</span> Supermercados</h2>
         <p class="hint">Só mostramos receitas com ingredientes que encontras nas lojas escolhidas.</p>
         <div class="stores" id="store-toggles"></div>
       </div>
 
-      <button id="btn-generate" class="btn btn-primary btn-block">
+      <button id="btn-generate" class="btn btn-primary btn-block" data-reveal>
         Gerar ementa da semana
       </button>
       <p id="config-error" class="error" hidden></p>
@@ -72,9 +110,16 @@
 
     <!-- ===== Ecrã de resultados ===== -->
     <section id="view-plan" class="view" hidden>
+      <div class="plan-head">
+        <p class="hero-eyebrow"><span class="dot"></span> 7 dias · feita à tua medida</p>
+        <h1 class="plan-head-title">Ementa da <span class="script">semana</span></h1>
+      </div>
+
       <div class="plan-summary card" id="plan-summary"></div>
       <div class="plan-actions">
         <button id="btn-regenerate" class="btn btn-primary">🔄 Nova ementa</button>
+        <button id="btn-save-plan" class="btn btn-ghost" type="button">💾 Guardar</button>
+        <button id="btn-favorites" class="btn btn-ghost" type="button">⭐ Guardadas</button>
       </div>
       <div id="plan-days"></div>
       <button id="btn-edit" class="btn btn-block">✏️ Ajustar preferências</button>
@@ -83,7 +128,7 @@
     <!-- ===== Ecrã do carrinho ===== -->
     <section id="view-cart" class="view" hidden>
       <div class="cart-head card">
-        <h2 class="card-title"><span>🛒</span> Lista de compras</h2>
+        <h2 class="card-title"><span class="ico">🛒</span> Lista de compras</h2>
         <p class="hint" id="cart-hint">Adiciona os ingredientes das receitas e compara o preço em cada supermercado.</p>
       </div>
       <div id="cart-stores"></div>
@@ -96,12 +141,112 @@
       </div>
       <button id="btn-cart-back" class="btn btn-block">← Voltar à ementa</button>
     </section>
+
+    <!-- ===== Ecrã de alimentos a evitar ===== -->
+    <section id="view-foods" class="view" hidden>
+      <div class="plan-head">
+        <p class="hero-eyebrow"><span class="dot"></span> Excluir da ementa</p>
+        <h1 class="plan-head-title">Alimentos a <span class="script">evitar</span></h1>
+      </div>
+      <div class="food-search">
+        <input type="search" id="food-search-input" placeholder="Pesquisar alimentos…" autocomplete="off" />
+      </div>
+      <p class="hint" id="food-count"></p>
+      <div class="chips food-results" id="food-list"></div>
+    </section>
+
+    <!-- ===== Ecrã de conta ===== -->
+    <section id="view-account" class="view" hidden>
+      <div id="account-guest">
+        <div class="hero">
+          <div class="hero-blobs" aria-hidden="true">
+            <span class="blob blob--peach"></span>
+            <span class="blob blob--pink"></span>
+          </div>
+          <p class="hero-eyebrow"><span class="dot"></span> Guarda na nuvem</p>
+          <h1 class="hero-title">A tua<br/>conta<span class="hero-script">sem fios</span></h1>
+          <p class="hero-text">Cria uma conta para guardar receitas, ementas e a lista de compras em todos os teus aparelhos. Ou continua sem conta — fica tudo neste telemóvel.</p>
+        </div>
+        <button id="btn-guest" class="btn btn-primary btn-block" type="button">Continuar como convidado</button>
+        <button id="btn-show-signup" class="btn btn-ghost btn-block" type="button">Criar conta</button>
+        <button id="btn-show-login" class="btn btn-block" type="button">Já tenho conta</button>
+      </div>
+
+      <div id="account-forms" hidden>
+        <div class="plan-head">
+          <p class="hero-eyebrow"><span class="dot"></span> Conta</p>
+          <h1 class="plan-head-title" id="account-form-title">Criar <span class="script">conta</span></h1>
+        </div>
+        <div class="card">
+          <div class="field">
+            <label class="field-label" for="auth-email">Email</label>
+            <input class="field-input" type="email" id="auth-email" autocomplete="email" placeholder="tu@email.com" />
+          </div>
+          <div class="field">
+            <label class="field-label" for="auth-password">Password</label>
+            <input class="field-input" type="password" id="auth-password" autocomplete="current-password" placeholder="••••••••" />
+          </div>
+          <p class="hint" id="auth-msg"></p>
+          <button id="btn-auth-submit" class="btn btn-primary btn-block" type="button">Criar conta</button>
+          <button id="btn-auth-cancel" class="btn btn-ghost btn-block" type="button">← Voltar</button>
+        </div>
+      </div>
+
+      <div id="account-logged" hidden>
+        <div class="cart-head card">
+          <h2 class="card-title"><span class="ico">👤</span> Conta</h2>
+          <p class="hint" id="account-email"></p>
+          <p class="hint">✓ Dados sincronizados na nuvem</p>
+          <button id="btn-signout" class="btn btn-block" type="button">Sair da conta</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 class="cart-subtitle">Ementas guardadas</h3>
+        <div id="account-plans"></div>
+      </div>
+      <button id="btn-account-favorites" class="btn btn-block" type="button">⭐ Receitas guardadas</button>
+    </section>
+
+    <!-- ===== Ecrã de receitas guardadas ===== -->
+    <section id="view-favorites" class="view" hidden>
+      <div class="plan-head">
+        <p class="hero-eyebrow"><span class="dot"></span> A tua coleção</p>
+        <h1 class="plan-head-title">Receitas <span class="script">guardadas</span></h1>
+      </div>
+      <div id="favorites-list"></div>
+    </section>
+
+    <!-- ===== Ecrã de todas as receitas ===== -->
+    <section id="view-receitas" class="view" hidden>
+      <div class="plan-head">
+        <p class="hero-eyebrow"><span class="dot"></span> Por método de confeção</p>
+        <h1 class="plan-head-title">Receitas <span class="script">da casa</span></h1>
+      </div>
+      <div class="chips method-chips" id="method-chips"></div>
+      <p class="hint" id="receitas-count"></p>
+      <div id="receitas-list"></div>
+    </section>
   </main>
 
-  <button id="btn-cart-fab" class="fab" aria-label="Lista de compras" hidden>
-    <span class="fab-icon">🛒</span>
-    <span id="cart-badge" class="fab-badge" hidden>0</span>
-  </button>
+  <nav class="tabbar" id="tabbar" aria-label="Navegação principal" hidden>
+    <button class="tab is-active" type="button" data-nav="home">
+      <span class="tab-ico">🏠</span>
+      <span class="tab-lbl">Início</span>
+    </button>
+    <button class="tab" type="button" data-nav="receitas">
+      <span class="tab-ico">🍽️</span>
+      <span class="tab-lbl">Receitas</span>
+    </button>
+    <button class="tab" type="button" data-nav="ingredientes">
+      <span class="tab-ico">🛒<span class="tab-badge" id="nav-cart-badge" hidden>0</span></span>
+      <span class="tab-lbl">Ingredientes</span>
+    </button>
+    <button class="tab" type="button" data-nav="conta">
+      <span class="tab-ico">👤</span>
+      <span class="tab-lbl">Conta</span>
+    </button>
+  </nav>
 
   <div id="toast" class="toast" hidden></div>
 
@@ -110,6 +255,7 @@
   <script src="data.js"></script>
   <script src="precos.js"></script>
   <script src="supabase-config.js"></script>
+  <script src="auth.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

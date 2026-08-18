@@ -71,6 +71,8 @@ const state = {
   stores: new Set(["continente", "pingoDoce", "mercadona"]),
   planIds: null, // null = ainda não gerado
   cart: [],
+  favorites: [],
+  savedPlans: [],
 };
 
 function loadState() {
@@ -87,6 +89,8 @@ function loadState() {
         state.stores = new Set(saved.stores);
       if (Array.isArray(saved.planIds)) state.planIds = saved.planIds;
       if (Array.isArray(saved.cart)) state.cart = saved.cart;
+      if (Array.isArray(saved.favorites)) state.favorites = saved.favorites;
+      if (Array.isArray(saved.savedPlans)) state.savedPlans = saved.savedPlans;
     }
   } catch (e) {
     /* ignore */
@@ -105,11 +109,14 @@ function saveState() {
         stores: [...state.stores],
         planIds: state.planIds,
         cart: state.cart,
+        favorites: state.favorites,
+        savedPlans: state.savedPlans,
       })
     );
   } catch (e) {
     /* ignore */
   }
+  pushCloud();
 }
 
 /* ================= Filtragem ================= */
@@ -129,9 +136,11 @@ function matchesFilters(r) {
     const nomeTodo = norm(r.nome + " " + r.nomeOrig + " " + r.categoria);
     const ingredientes = r.ingredientes.map((i) => norm(i.nome)).join(" ");
     for (const termo of state.avoid) {
-      const t = norm(termo);
+      const t = norm(termo).trim();
       if (!t) continue;
-      if (nomeTodo.includes(t) || ingredientes.includes(t)) return false;
+      // Aceita singular/plural (ex.: "cogumelo" ≈ "cogumelos").
+      const variantes = new Set([t, t.replace(/s$/, ""), t + "s"]);
+      if ([...variantes].some((v) => nomeTodo.includes(v) || ingredientes.includes(v))) return false;
     }
   }
 
@@ -340,7 +349,8 @@ function cartTotals() {
 
 function updateCartBadge() {
   const count = state.cart.length;
-  const badge = $("#cart-badge");
+  const badge = $("#nav-cart-badge");
+  if (!badge) return;
   badge.hidden = count === 0;
   badge.textContent = count;
 }
@@ -349,9 +359,10 @@ function renderCart() {
   const totals = cartTotals();
   const cheapest = Math.min(totals.continente, totals.pingoDoce, totals.mercadona);
 
+  const hasItems = state.cart.length > 0;
   $("#cart-stores").innerHTML = window.STORES.map((s) => {
     const val = totals[s.id];
-    const winner = Math.abs(val - cheapest) < 0.005;
+    const winner = hasItems && Math.abs(val - cheapest) < 0.005;
     return `<div class="store-total${winner ? " winner" : ""}">
       <span class="dot" style="background:${esc(s.cor)}"></span>
       <span class="nome">${esc(s.label)}</span>
@@ -396,6 +407,343 @@ function renderCart() {
   updateCartBadge();
 }
 
+/* ================= Conta / sincronização ================= */
+
+let authFormMode = null; // null | "signup" | "login"
+let isGate = false;
+let currentView = "config";
+let lastMainView = "config";
+
+const SYNC_KEYS = ["preferences", "plan", "cart", "favorites", "plans"];
+
+function preferencesSnapshot() {
+  return {
+    priceMin: state.priceMin,
+    priceMax: state.priceMax,
+    allergies: [...state.allergies],
+    avoid: state.avoid,
+    stores: [...state.stores],
+  };
+}
+
+function applyPreferences(p) {
+  if (!p) return;
+  if (typeof p.priceMin === "number") state.priceMin = p.priceMin;
+  if (typeof p.priceMax === "number") state.priceMax = p.priceMax;
+  if (Array.isArray(p.allergies)) state.allergies = new Set(p.allergies);
+  if (Array.isArray(p.avoid)) state.avoid = p.avoid;
+  if (Array.isArray(p.stores) && p.stores.length) state.stores = new Set(p.stores);
+}
+
+function applyCloud(data) {
+  if (!data) return;
+  if (data.preferences) applyPreferences(data.preferences);
+  if ("plan" in data) state.planIds = data.plan;
+  if (Array.isArray(data.cart)) state.cart = data.cart;
+  if (Array.isArray(data.favorites)) state.favorites = data.favorites;
+  if (Array.isArray(data.plans)) state.savedPlans = data.plans;
+  saveState();
+}
+
+function refreshAllUI() {
+  buildAllergenChips();
+  buildStoreToggles();
+  buildAvoidChips();
+  updatePriceUI();
+  renderPlan();
+  renderCart();
+  renderFavorites();
+  updateFavButtons();
+  renderSavedPlans();
+  updateCartBadge();
+  renderAccountUI();
+}
+
+let syncTimer = null;
+function pushCloud() {
+  if (!window.Auth || !window.Auth.isLoggedIn()) return;
+  clearTimeout(syncTimer);
+  syncTimer = setTimeout(() => {
+    window.Auth.setData("preferences", preferencesSnapshot());
+    window.Auth.setData("plan", state.planIds);
+    window.Auth.setData("cart", state.cart);
+    window.Auth.setData("favorites", state.favorites);
+    window.Auth.setData("plans", state.savedPlans);
+  }, 400);
+}
+
+async function onSignedIn() {
+  const data = await window.Auth.getAllData();
+  const hasCloud = SYNC_KEYS.some((k) => k in data);
+  if (hasCloud) {
+    applyCloud(data);
+    refreshAllUI();
+    toast("Conta ligada — dados carregados");
+  } else {
+    await window.Auth.setData("preferences", preferencesSnapshot());
+    await window.Auth.setData("plan", state.planIds);
+    await window.Auth.setData("cart", state.cart);
+    await window.Auth.setData("favorites", state.favorites);
+    await window.Auth.setData("plans", state.savedPlans);
+    toast("Conta ligada — dados guardados");
+  }
+}
+
+function continueAsGuest() {
+  window.Auth.setMode("guest");
+  authFormMode = null;
+  isGate = false;
+  renderAccountUI();
+  const target = state.planIds && state.planIds.length ? "plan" : "config";
+  show(target);
+  toast("Modo convidado — dados guardados neste aparelho");
+}
+
+function renderAccountUI() {
+  const logged = window.Auth.isLoggedIn();
+  $("#account-guest").hidden = logged || authFormMode !== null;
+  $("#account-forms").hidden = logged || authFormMode === null;
+  $("#account-logged").hidden = !logged;
+  if (logged) {
+    $("#account-email").textContent = window.Auth.email() || "";
+  }
+  renderSavedPlans();
+  $("#btn-account").classList.toggle("is-on", logged);
+}
+
+function renderAuthForm() {
+  const isSignup = authFormMode === "signup";
+  $("#account-form-title").innerHTML = isSignup
+    ? 'Criar <span class="script">conta</span>'
+    : 'Entrar <span class="script">na conta</span>';
+  $("#btn-auth-submit").textContent = isSignup ? "Criar conta" : "Entrar";
+  $("#auth-password").setAttribute("autocomplete", isSignup ? "new-password" : "current-password");
+  const msg = $("#auth-msg");
+  msg.textContent = "";
+  msg.className = "hint";
+}
+
+async function handleAuthSubmit() {
+  const emailVal = $("#auth-email").value.trim();
+  const pass = $("#auth-password").value;
+  const msg = $("#auth-msg");
+  msg.className = "hint";
+  if (!emailVal || !pass) {
+    msg.textContent = "Preenche o email e a password.";
+    msg.className = "error";
+    return;
+  }
+  if (pass.length < 6) {
+    msg.textContent = "A password tem de ter pelo menos 6 caracteres.";
+    msg.className = "error";
+    return;
+  }
+  $("#btn-auth-submit").disabled = true;
+  const res =
+    authFormMode === "signup"
+      ? await window.Auth.signUp(emailVal, pass)
+      : await window.Auth.signIn(emailVal, pass);
+  $("#btn-auth-submit").disabled = false;
+
+  if (res.ok && res.needsConfirm) {
+    msg.textContent =
+      "Enviamos um email de confirmação. Confirma e depois toca em «Já tenho conta» para entrar.";
+    msg.className = "hint";
+    authFormMode = null;
+    renderAccountUI();
+    return;
+  }
+  if (!res.ok) {
+    msg.textContent = res.error || "Não foi possível. Tenta novamente.";
+    msg.className = "error";
+    return;
+  }
+
+  $("#auth-email").value = "";
+  $("#auth-password").value = "";
+  authFormMode = null;
+  window.Auth.setMode("account");
+  isGate = false;
+  await onSignedIn();
+  renderAccountUI();
+  let target = lastMainView || "config";
+  if (target === "plan" && (!state.planIds || !state.planIds.length)) target = "config";
+  show(target);
+}
+
+/* ================= Guardados (favoritos + ementas) ================= */
+
+function toggleFavorite(id) {
+  const idx = state.favorites.indexOf(id);
+  if (idx >= 0) state.favorites.splice(idx, 1);
+  else state.favorites.push(id);
+  saveState();
+  updateFavButtons();
+  renderFavorites();
+  toast(state.favorites.includes(id) ? "⭐ Guardado" : "Removido dos guardados");
+}
+
+function updateFavButtons() {
+  document.querySelectorAll(".day-fav").forEach((btn) => {
+    const card = btn.closest(".day-card");
+    const fav = card ? state.favorites.includes(card.dataset.id) : false;
+    btn.setAttribute("aria-pressed", String(fav));
+    btn.setAttribute("aria-label", fav ? "Remover dos guardados" : "Guardar receita");
+    btn.textContent = fav ? "★" : "☆";
+  });
+}
+
+function renderFavorites() {
+  const wrap = $("#favorites-list");
+  if (!wrap) return;
+  const recipes = state.favorites
+    .map((id) => window.RECIPES.find((r) => r.id === id))
+    .filter(Boolean);
+  if (!recipes.length) {
+    wrap.innerHTML = `<div class="empty"><p class="big">⭐</p>Não tens receitas guardadas.<br/>Toca na estrela de uma receita para a guardar.</div>`;
+    return;
+  }
+  wrap.innerHTML = recipes.map((r) => favoriteCardHTML(r)).join("");
+  observeReveals();
+}
+
+function saveCurrentPlan() {
+  const ids = state.planIds || [];
+  if (!ids.length) {
+    toast("Gera primeiro uma ementa");
+    return;
+  }
+  const now = new Date();
+  const nome = `Ementa ${String(now.getDate()).padStart(2, "0")}/${String(now.getMonth() + 1).padStart(2, "0")}`;
+  state.savedPlans.push({
+    id: "p" + now.getTime(),
+    nome,
+    criadoEm: now.toISOString(),
+    recipeIds: ids.slice(),
+  });
+  saveState();
+  renderSavedPlans();
+  toast("Ementa guardada 💾");
+}
+
+function loadSavedPlan(id) {
+  const p = state.savedPlans.find((x) => x.id === id);
+  if (!p || !Array.isArray(p.recipeIds) || !p.recipeIds.length) return;
+  state.planIds = p.recipeIds.slice();
+  saveState();
+  renderPlan();
+  show("plan");
+  toast(`Ementa carregada: ${p.nome}`);
+}
+
+function deleteSavedPlan(id) {
+  state.savedPlans = state.savedPlans.filter((x) => x.id !== id);
+  saveState();
+  renderSavedPlans();
+}
+
+function renderSavedPlans() {
+  const wrap = $("#account-plans");
+  if (!wrap) return;
+  if (!state.savedPlans.length) {
+    wrap.innerHTML = `<div class="cart-empty">Sem ementas guardadas.<br/>Na ementa, toca em <strong>💾 Guardar</strong>.</div>`;
+    return;
+  }
+  wrap.innerHTML = state.savedPlans
+    .map((p) => {
+      const d = p.criadoEm ? new Date(p.criadoEm) : null;
+      const data = d
+        ? `${String(d.getDate()).padStart(2, "0")}/${String(d.getMonth() + 1).padStart(2, "0")}/${d.getFullYear()}`
+        : "";
+      return `<div class="plan-item">
+        <div class="plan-item-info">
+          <div class="plan-item-name">${esc(p.nome)}</div>
+          <div class="plan-item-meta">${esc(data)} · ${p.recipeIds.length} receitas</div>
+        </div>
+        <div class="plan-item-actions">
+          <button class="btn btn-ghost btn-sm" type="button" data-plan-load="${esc(p.id)}">Carregar</button>
+          <button class="btn btn-sm plan-del" type="button" data-plan-del="${esc(p.id)}" aria-label="Apagar ${esc(p.nome)}">✕</button>
+        </div>
+      </div>`;
+    })
+    .join("");
+}
+
+function handleRecipeAction(e) {
+  const btn = e.target.closest("[data-action]");
+  if (!btn) return;
+  const card = btn.closest(".day-card");
+  const rid = card ? card.dataset.id : null;
+  const r = rid ? window.RECIPES.find((x) => x.id === rid) : null;
+  const action = btn.dataset.action;
+
+  if (action === "swap") {
+    const cards = [...document.querySelectorAll("#plan-days .day-card")];
+    swapRecipe(cards.indexOf(card));
+  } else if (action === "fav") {
+    if (r) toggleFavorite(r.id);
+  } else if (action === "add-all") {
+    if (r) addRecipeToCart(r);
+  } else if (action === "add-ing") {
+    if (r) {
+      (async () => {
+        addToCart(await enriquecerLinha(precarLinha(btn.dataset.nome, btn.dataset.qtd)));
+        toast("Adicionado à lista");
+      })();
+    }
+  }
+}
+
+/* ================= Receitas (browse por método) ================= */
+
+let methodFilter = "todos"; // todos | airfryer | microondas | forno_fogao
+
+function buildMethodChips() {
+  const wrap = $("#method-chips");
+  const opts = [
+    { id: "todos", label: "Todos", emoji: "🍽️" },
+    { id: "airfryer", label: "Airfryer", emoji: "🌪️" },
+    { id: "microondas", label: "Microondas", emoji: "⚡" },
+    { id: "forno_fogao", label: "Forno/Fogão", emoji: "🔥" },
+  ];
+  wrap.innerHTML = "";
+  for (const o of opts) {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "chip";
+    btn.setAttribute("type", "button");
+    btn.setAttribute("aria-pressed", String(methodFilter === o.id));
+    btn.innerHTML = `${o.emoji} ${esc(o.label)}`;
+    btn.addEventListener("click", () => {
+      methodFilter = o.id;
+      buildMethodChips();
+      renderReceitas();
+    });
+    wrap.appendChild(btn);
+  }
+}
+
+function methodMatches(r) {
+  const m = window.METODOS[r.id] || "fogao";
+  if (methodFilter === "todos") return true;
+  if (methodFilter === "airfryer") return m === "airfryer";
+  if (methodFilter === "microondas") return m === "microondas";
+  if (methodFilter === "forno_fogao") return m === "forno" || m === "fogao";
+  return true;
+}
+
+function renderReceitas() {
+  const lista = window.RECIPES.filter(methodMatches);
+  $("#receitas-count").textContent = `${lista.length} receita${lista.length === 1 ? "" : "s"}`;
+  const wrap = $("#receitas-list");
+  if (!lista.length) {
+    wrap.innerHTML = `<div class="empty"><p class="big">🍳</p>Sem receitas para este método.</div>`;
+    return;
+  }
+  wrap.innerHTML = lista.map((r) => browseCardHTML(r)).join("");
+  observeReveals();
+}
+
 /* ================= Config UI ================= */
 
 function buildAllergenChips() {
@@ -427,10 +775,10 @@ function buildStoreToggles() {
     btn.className = "store-toggle";
     btn.setAttribute("type", "button");
     btn.setAttribute("aria-pressed", String(state.stores.has(s.id)));
+    btn.setAttribute("aria-label", s.label);
     btn.innerHTML =
-      `<span class="store-logo" style="background:${esc(s.cor)}">${esc(s.label.slice(0, 2).toUpperCase())}</span>` +
-      `<span class="store-name">${esc(s.label)}</span>` +
-      `<span class="store-check">✓</span>`;
+      `<span class="store-logo"><img src="${esc(s.logo)}" alt="" /></span>` +
+      `<span class="store-check" aria-hidden="true">✓</span>`;
     btn.addEventListener("click", () => {
       if (state.stores.has(s.id)) state.stores.delete(s.id);
       else state.stores.add(s.id);
@@ -441,30 +789,62 @@ function buildStoreToggles() {
   }
 }
 
-function renderAvoidChips() {
+function toggleAvoid(termo) {
+  const t = termo.trim();
+  if (!t) return;
+  const idx = state.avoid.findIndex((x) => norm(x) === norm(t));
+  if (idx >= 0) state.avoid.splice(idx, 1);
+  else state.avoid.push(t);
+  saveState();
+  buildAvoidChips();
+  renderFoodList();
+}
+
+function buildAvoidChips() {
   const wrap = $("#avoid-chips");
   wrap.innerHTML = "";
-  for (const termo of state.avoid) {
-    const chip = document.createElement("button");
-    chip.type = "button";
-    chip.className = "chip";
-    chip.innerHTML = `${esc(termo)} <span class="x">✕</span>`;
-    chip.addEventListener("click", () => {
-      state.avoid = state.avoid.filter((t) => t !== termo);
-      saveState();
-      renderAvoidChips();
-    });
-    wrap.appendChild(chip);
+  for (const termo of window.AVOID_PRESETS) {
+    const active = state.avoid.some((x) => norm(x) === norm(termo));
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "chip";
+    btn.setAttribute("type", "button");
+    btn.setAttribute("aria-pressed", String(active));
+    btn.textContent = termo;
+    btn.addEventListener("click", () => toggleAvoid(termo));
+    wrap.appendChild(btn);
   }
 }
 
-function addAvoid(termo) {
-  const t = termo.trim();
-  if (!t) return;
-  if (state.avoid.some((x) => norm(x) === norm(t))) return;
-  state.avoid.push(t);
-  saveState();
-  renderAvoidChips();
+function renderFoodList() {
+  const input = $("#food-search-input");
+  const termo = input ? norm(input.value).trim() : "";
+  const lista = termo
+    ? window.AVOIDABLE_FOODS.filter((f) => norm(f).includes(termo))
+    : window.AVOIDABLE_FOODS;
+
+  const wrap = $("#food-list");
+  if (wrap) {
+    wrap.innerHTML = "";
+    for (const f of lista) {
+      const active = state.avoid.some((x) => norm(x) === norm(f));
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "chip";
+      btn.setAttribute("type", "button");
+      btn.setAttribute("aria-pressed", String(active));
+      btn.textContent = f;
+      btn.addEventListener("click", () => toggleAvoid(f));
+      wrap.appendChild(btn);
+    }
+  }
+
+  const count = $("#food-count");
+  if (count) {
+    count.textContent = lista.length
+      ? `${lista.length} alimento${lista.length === 1 ? "" : "s"} · ${state.avoid.length} selecionado${state.avoid.length === 1 ? "" : "s"}`
+      : "Sem resultados. Tenta outra palavra.";
+  }
 }
 
 function updatePriceUI() {
@@ -516,13 +896,37 @@ function bindPrice() {
 
 /* ================= Navegação ================= */
 
+function homeView() {
+  return state.planIds && state.planIds.length ? "plan" : "config";
+}
+
+function activeTabFor(viewId) {
+  if (viewId === "config" || viewId === "plan") return "home";
+  if (viewId === "receitas" || viewId === "favorites") return "receitas";
+  if (viewId === "cart" || viewId === "foods") return "ingredientes";
+  return "conta";
+}
+
 function show(viewId) {
-  $("#view-config").hidden = viewId !== "config";
-  $("#view-plan").hidden = viewId !== "plan";
-  $("#view-cart").hidden = viewId !== "cart";
-  $("#btn-back").hidden = viewId === "config";
-  $("#btn-cart-fab").hidden = viewId !== "plan";
+  ["config", "plan", "cart", "foods", "account", "favorites", "receitas"].forEach((v) => {
+    $("#view-" + v).hidden = v !== viewId;
+  });
+  currentView = viewId;
+  if (viewId === "plan" || viewId === "config") lastMainView = viewId;
+  const showBack = (viewId === "foods" || viewId === "favorites") && !isGate;
+  $("#btn-back").hidden = !showBack;
+  $("#btn-settings").hidden = isGate;
+  $("#tabbar").hidden = isGate;
+  document.querySelectorAll(".tab").forEach((t) => {
+    t.classList.toggle("is-active", t.dataset.nav === activeTabFor(viewId));
+  });
+  if (viewId === "plan") renderPlan();
+  if (viewId === "cart") renderCart();
+  if (viewId === "account") renderAccountUI();
+  if (viewId === "favorites") renderFavorites();
+  if (viewId === "receitas") renderReceitas();
   window.scrollTo({ top: 0 });
+  observeReveals();
 }
 
 /* ================= Plano (resultados) ================= */
@@ -534,6 +938,25 @@ function badgeLoja(id) {
 }
 
 function cardHTML(r, diaIndex) {
+  return recipeCard(r, { dia: diaIndex });
+}
+
+function favoriteCardHTML(r) {
+  return recipeCard(r, { favorite: true });
+}
+
+function browseCardHTML(r) {
+  return recipeCard(r, { browse: true });
+}
+
+function recipeCard(r, opts = {}) {
+  const isFav = opts.favorite === true;
+  const browse = opts.browse === true;
+  const diaIndex = typeof opts.dia === "number" ? opts.dia : null;
+  const favActive = state.favorites.includes(r.id);
+  const metodo = window.METODOS[r.id] || "fogao";
+  const metodoInfo = window.METODO_LABELS[metodo] || window.METODO_LABELS.fogao;
+
   const algs = r.alergenios.length
     ? r.alergenios
         .map((id) => {
@@ -551,22 +974,47 @@ function cardHTML(r, diaIndex) {
     )
     .join("");
 
+  const dayShort = diaIndex != null ? ["SEG", "TER", "QUA", "QUI", "SEX", "SÁB", "DOM"][diaIndex] : "";
+  const num = diaIndex != null ? String(diaIndex + 1).padStart(2, "0") : "";
+  const mediaExtras = diaIndex != null
+    ? `<span class="day-num">${num}</span><span class="day-day">${dayShort}</span>`
+    : "";
+  const eyebrow = diaIndex != null
+    ? `${esc(DIAS[diaIndex])} · ${esc(r.categoria)}`
+    : esc(r.categoria);
+  let actions;
+  if (isFav) {
+    actions = `<button class="btn btn-swap" type="button" data-action="fav">☆ Remover</button>
+       <button class="btn btn-primary" type="button" data-action="add-all">🛒 Adicionar à lista</button>`;
+  } else if (browse) {
+    actions = `<button class="btn btn-primary" type="button" data-action="add-all">🛒 Adicionar à lista</button>`;
+  } else {
+    actions = `<button class="btn btn-swap" type="button" data-action="swap">🔁 Trocar</button>
+       <button class="btn btn-primary" type="button" data-action="add-all">🛒 Adicionar à lista</button>`;
+  }
+
+  const metodoBadge = browse
+    ? `<span class="badge method">${metodoInfo.emoji} ${metodoInfo.label}</span>`
+    : "";
+
   return `
-    <article class="day-card" data-id="${esc(r.id)}">
-      <div class="day-head">
-        <div class="day-name">${esc(DIAS[diaIndex])}
-          <span class="cat">${esc(r.categoria)} · ${esc(r.nomeOrig)}</span>
-        </div>
+    <article class="day-card" data-id="${esc(r.id)}" data-reveal>
+      <div class="day-media">
+        <img class="day-photo" src="${esc(r.foto)}" alt="${esc(r.nome)}" loading="lazy"
+             referrerpolicy="no-referrer" onerror="this.onerror=null;this.src=PLACEHOLDER" />
+        ${mediaExtras}
+        <button class="day-fav" type="button" data-action="fav" aria-pressed="${favActive}"
+                aria-label="${favActive ? "Remover dos guardados" : "Guardar receita"}">${favActive ? "★" : "☆"}</button>
       </div>
-      <img class="day-photo" src="${esc(r.foto)}" alt="${esc(r.nome)}" loading="lazy"
-           referrerpolicy="no-referrer" onerror="this.onerror=null;this.src=PLACEHOLDER" />
       <div class="day-body">
+        <div class="day-eyebrow">${eyebrow}</div>
         <h3 class="day-title">${esc(r.nome)}</h3>
-        <p class="day-sub">Estima-se ${money(r.preco)} por dose</p>
+        <p class="day-sub">${esc(r.nomeOrig)}</p>
         <div class="meta">
           <span class="badge price">${money(r.preco)} / dose</span>
           <span class="badge time">⏱ ${r.tempo} min</span>
           ${algs}
+          ${metodoBadge}
         </div>
         <div class="store-badges">
           ${r.lojas.map(badgeLoja).join("")}
@@ -576,10 +1024,7 @@ function cardHTML(r, diaIndex) {
           <summary>🧾 Lista de compras (${r.ingredientes.length})</summary>
           <ul class="ing-list">${ing}</ul>
         </details>
-        <div class="day-actions">
-          <button class="btn btn-swap" type="button" data-action="swap">🔁 Trocar</button>
-          <button class="btn btn-primary" type="button" data-action="add-all">🛒 Adicionar à lista</button>
-        </div>
+        <div class="day-actions">${actions}</div>
       </div>
     </article>`;
 }
@@ -590,11 +1035,11 @@ function renderPlan() {
 
   const summary = $("#plan-summary");
   summary.innerHTML = `
-    <div>
+    <div class="stat">
       <div class="num">${available.length}</div>
-      <div class="lbl">receitas dentro dos teus filtros</div>
+      <div class="lbl">receitas nos teus filtros</div>
     </div>
-    <div style="text-align:right">
+    <div class="stat">
       <div class="num">${money(current.reduce((s, r) => s + r.preco, 0))}</div>
       <div class="lbl">custo estimado da semana</div>
     </div>`;
@@ -610,6 +1055,7 @@ function renderPlan() {
   }
 
   wrap.innerHTML = current.map((r, i) => cardHTML(r, i)).join("");
+  observeReveals();
 }
 
 function swapRecipe(diaIndex) {
@@ -689,55 +1135,171 @@ function setupPWA() {
   });
 }
 
+/* ================= Motion (reveal + cursor) ================= */
+
+let revealObserver = null;
+
+function observeReveals() {
+  if (!revealObserver) return;
+  document.querySelectorAll("[data-reveal], [data-reveal-rise]").forEach((el) => {
+    if (el.dataset.revealObserved) return;
+    el.dataset.revealObserved = "1";
+    const sibs = el.parentElement
+      ? [...el.parentElement.children].filter((c) => c.matches("[data-reveal], [data-reveal-rise]"))
+      : [];
+    const idx = sibs.indexOf(el);
+    if (idx > 0) el.style.transitionDelay = Math.min(idx, 6) * 55 + "ms";
+    revealObserver.observe(el);
+  });
+}
+
+function setupMotion() {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    document
+      .querySelectorAll("[data-reveal], [data-reveal-rise]")
+      .forEach((el) => el.classList.add("is-in"));
+    return;
+  }
+
+  revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((en) => {
+        if (en.isIntersecting) {
+          en.target.classList.add("is-in");
+          revealObserver.unobserve(en.target);
+        }
+      });
+    },
+    { threshold: 0.08, rootMargin: "0px 0px -6% 0px" }
+  );
+
+  observeReveals();
+  window.addEventListener("scroll", observeReveals, { passive: true });
+
+  // Cursor customizado (apenas desktop com rato preciso).
+  if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+    const ring = document.createElement("div");
+    ring.className = "pz-cursor-ring";
+    const dot = document.createElement("div");
+    dot.className = "pz-cursor-dot";
+    document.body.appendChild(ring);
+    document.body.appendChild(dot);
+    document.body.classList.add("cursor-on");
+
+    let rx = -100, ry = -100, dx = -100, dy = -100;
+    window.addEventListener(
+      "pointermove",
+      (e) => {
+        dx = e.clientX;
+        dy = e.clientY;
+        dot.style.transform = `translate3d(${dx}px, ${dy}px, 0) translate(-50%, -50%)`;
+      },
+      { passive: true }
+    );
+    (function loop() {
+      rx += (dx - rx) * 0.16;
+      ry += (dy - ry) * 0.16;
+      ring.style.transform = `translate3d(${rx}px, ${ry}px, 0) translate(-50%, -50%)`;
+      requestAnimationFrame(loop);
+    })();
+  }
+}
+
 /* ================= Init ================= */
 
 function init() {
+  window.Auth.load();
   loadState();
+
   buildAllergenChips();
   buildStoreToggles();
-  renderAvoidChips();
+  buildAvoidChips();
+  buildMethodChips();
   bindPrice();
   updatePriceUI();
   setupPWA();
+  renderAccountUI();
 
-  $("#btn-add-avoid").addEventListener("click", () => {
-    addAvoid($("#avoid-input").value);
-    $("#avoid-input").value = "";
-    $("#avoid-input").focus();
+  /* --- Conta --- */
+  $("#btn-account").addEventListener("click", () => {
+    authFormMode = null;
+    renderAccountUI();
+    show("account");
   });
-  $("#avoid-input").addEventListener("keydown", (e) => {
-    if (e.key === "Enter") {
-      e.preventDefault();
-      addAvoid($("#avoid-input").value);
-      $("#avoid-input").value = "";
-    }
+  $("#btn-settings").addEventListener("click", () => show("config"));
+  $("#btn-guest").addEventListener("click", continueAsGuest);
+  $("#btn-show-signup").addEventListener("click", () => {
+    authFormMode = "signup";
+    renderAuthForm();
+    renderAccountUI();
+  });
+  $("#btn-show-login").addEventListener("click", () => {
+    authFormMode = "login";
+    renderAuthForm();
+    renderAccountUI();
+  });
+  $("#btn-auth-cancel").addEventListener("click", () => {
+    authFormMode = null;
+    renderAccountUI();
+  });
+  $("#btn-auth-submit").addEventListener("click", handleAuthSubmit);
+  $("#btn-signout").addEventListener("click", async () => {
+    await window.Auth.signOut();
+    window.Auth.setMode("guest");
+    authFormMode = null;
+    renderAccountUI();
+    toast("Sessão terminada");
+  });
+  $("#auth-email").addEventListener("keydown", (e) => {
+    if (e.key === "Enter") $("#auth-password").focus();
+  });
+  $("#auth-password").addEventListener("keydown", (e) => {
+    if (e.key === "Enter") handleAuthSubmit();
   });
 
+  /* --- Guardados --- */
+  $("#btn-favorites").addEventListener("click", () => show("favorites"));
+  $("#btn-account-favorites").addEventListener("click", () => show("favorites"));
+  $("#btn-save-plan").addEventListener("click", saveCurrentPlan);
+  $("#account-plans").addEventListener("click", (e) => {
+    const load = e.target.closest("[data-plan-load]");
+    const del = e.target.closest("[data-plan-del]");
+    if (load) loadSavedPlan(load.dataset.planLoad);
+    else if (del) deleteSavedPlan(del.dataset.planDel);
+  });
+
+  /* --- Alimentos a evitar --- */
+  $("#btn-more-foods").addEventListener("click", () => {
+    $("#food-search-input").value = "";
+    renderFoodList();
+    show("foods");
+  });
+  $("#food-search-input").addEventListener("input", renderFoodList);
+
+  /* --- Navegação / plano --- */
   $("#btn-generate").addEventListener("click", generatePlan);
   $("#btn-regenerate").addEventListener("click", generatePlan);
   $("#btn-edit").addEventListener("click", () => show("config"));
   $("#btn-back").addEventListener("click", () => {
-    show($("#view-cart").hidden ? "config" : "plan");
+    if (currentView === "foods") show("config");
+    else if (currentView === "favorites") show("receitas");
+    else show(homeView());
   });
 
-  $("#plan-days").addEventListener("click", (e) => {
-    const btn = e.target.closest("[data-action]");
-    if (!btn) return;
-    const card = btn.closest(".day-card");
-    const cards = [...document.querySelectorAll(".day-card")];
-    const idx = cards.indexOf(card);
-    if (btn.dataset.action === "swap") {
-      swapRecipe(idx);
-    } else if (btn.dataset.action === "add-all") {
-      const r = resolvePlan(state.planIds || [])[idx];
-      if (r) addRecipeToCart(r);
-    } else if (btn.dataset.action === "add-ing") {
-      (async () => {
-        addToCart(await enriquecerLinha(precarLinha(btn.dataset.nome, btn.dataset.qtd)));
-        toast("Adicionado à lista");
-      })();
-    }
+  /* --- Barra de navegação --- */
+  document.querySelectorAll(".tab").forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const nav = tab.dataset.nav;
+      if (nav === "home") show(homeView());
+      else if (nav === "receitas") show("receitas");
+      else if (nav === "ingredientes") show("cart");
+      else if (nav === "conta") show("account");
+    });
   });
+
+  $("#plan-days").addEventListener("click", handleRecipeAction);
+  $("#favorites-list").addEventListener("click", handleRecipeAction);
+  $("#receitas-list").addEventListener("click", handleRecipeAction);
 
   $("#cart-items").addEventListener("click", (e) => {
     const rm = e.target.closest("[data-cart-remove]");
@@ -750,20 +1312,40 @@ function init() {
     renderCart();
     toast("Lista limpa");
   });
-  $("#btn-cart-fab").addEventListener("click", () => {
-    renderCart();
-    show("cart");
-  });
   $("#btn-cart-back").addEventListener("click", () => show("plan"));
 
   updateCartBadge();
+  setupMotion();
 
-  // Mostra o plano guardado, se existir; caso contrário a configuração.
-  if (state.planIds && state.planIds.length) {
+  /* --- Vista inicial: gate de conta ou app --- */
+  const mode = window.Auth.getMode();
+  const logged = window.Auth.isLoggedIn();
+  if (!mode && !logged) {
+    isGate = true;
+    authFormMode = null;
+    renderAccountUI();
+    show("account");
+  } else if (mode === "account" && !logged) {
+    authFormMode = null;
+    renderAccountUI();
+    show("account");
+  } else if (state.planIds && state.planIds.length) {
     renderPlan();
     show("plan");
   } else {
     show("config");
+  }
+
+  // Sessão guardada: renova o token e sincroniza em background.
+  if (logged) {
+    window.Auth.maybeRefresh().then((ok) => {
+      if (!ok) {
+        renderAccountUI();
+        toast("Sessão expirada — entra novamente");
+      } else {
+        onSignedIn();
+      }
+    });
   }
 }
 

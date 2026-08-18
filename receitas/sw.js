@@ -2,7 +2,7 @@
    - App shell: network-first (recebe atualizações) com fallback offline.
    - Imagens das receitas: cache-first (poupam dados e funcionam offline). */
 
-const CACHE = "prato-da-semana:v2";
+const CACHE = "prato-da-semana:v3";
 const ASSETS = [
   "./",
   "./index.html",
@@ -11,9 +11,13 @@ const ASSETS = [
   "./data.js",
   "./precos.js",
   "./supabase-config.js",
+  "./auth.js",
   "./manifest.webmanifest",
   "./icons/icon-192.png",
   "./icons/icon-512.png",
+  "./icons/store-continente.svg",
+  "./icons/store-pingodoce.png",
+  "./icons/store-mercadona.svg",
 ];
 
 self.addEventListener("install", (event) => {
