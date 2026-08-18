@@ -47,7 +47,7 @@ def search_mercadona(query, cfg):
         timeout=15.0,
     )
     r.raise_for_status()
-    return [_normalize_mercadona(hit, cfg["display"]) for hit in r.json().get("hits", [])]
+    return [_normalize_mercadona(hit, cfg["store_id"]) for hit in r.json().get("hits", [])]
 
 
 def _normalize_mercadona(hit, store):
@@ -89,7 +89,7 @@ def search_continente(query, cfg):
             "product_id": str(imp.get("id")),
             "name": imp.get("name"),
             "brand": imp.get("brand"),
-            "store": cfg["display"],
+            "store": cfg["store_id"],
             "price": float(price) if price not in (None, "") else None,
             "old_price": None,
             "unit": None,
@@ -119,7 +119,7 @@ def search_pingodoce(query, cfg):
             "product_id": mpid.group(1) if mpid else None,
             "name": _html.unescape(mname.group(2)).strip(),
             "brand": mbrand.group(1).strip() if mbrand else None,
-            "store": cfg["display"],
+            "store": cfg["store_id"],
             "price": float(mprice.group(1).replace(",", ".")),
             "old_price": None,
             "unit": unit,

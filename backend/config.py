@@ -15,6 +15,7 @@ Estes endpoints são internos e podem mudar. Usa com moderação.
 STORES = {
     "mercadona_es": {
         "display": "Mercadona",
+        "store_id": "mercadona",
         "kind": "algolia",
         "endpoint": "https://7uzjkl1dj0-dsn.algolia.net/1/indexes/products_prod_vlc1_es/query",
         "app_id": "7UZJKL1DJ0",
@@ -23,16 +24,19 @@ STORES = {
     },
     "continente": {
         "display": "Continente",
+        "store_id": "continente",
         "kind": "html_continente",
         "search_url": "https://www.continente.pt/pesquisa/?q={query}",
     },
     "pingo_doce": {
         "display": "Pingo Doce",
+        "store_id": "pingo_doce",
         "kind": "html_pingodoce",
         "search_url": "https://www.pingodoce.pt/home/produtos?q={query}",
     },
     # "mercadona_pt": {
     #     "display": "Mercadona",
+    #     "store_id": "mercadona",
     #     "kind": "algolia",
     #     "endpoint": "https://<id>-dsn.algolia.net/1/indexes/<indice>/query",
     #     "app_id": "<app-id>",

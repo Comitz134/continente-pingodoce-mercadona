@@ -1,7 +1,7 @@
 // Ligação ao Supabase para preços reais.
-// O workflow de deploy (.github/workflows/pages.yml) preenche isto a partir
-// dos segredos do repositório. Se ficar vazio, a app usa os preços curados.
+// A URL e a chave "anon" são públicas por design (protegidas por RLS):
+// a app só lê. A chave service_role NUNCA está aqui — fica no workflow de scraping.
 window.SUPABASE = {
-  url: "",      // ex.: "https://xyzcompany.supabase.co"
-  anonKey: "",  // chave "anon/public" (é segura para estar no cliente)
+  url: "https://pieijihvcpcqzercvjhb.supabase.co",
+  anonKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBpZWlqaWh2Y3BjcXplcmN2amhiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODcwNzY4NDYsImV4cCI6MjEwMjY1Mjg0Nn0.W9M-gupveDakCa3hfi5RGA8_fIR_-peqJYHYE1pWZIk",
 };

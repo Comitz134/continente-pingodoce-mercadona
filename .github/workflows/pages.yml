@@ -19,14 +19,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Configurar Supabase (frontend)
-        run: |
-          cat > receitas/supabase-config.js <<'EOF'
-          window.SUPABASE = {
-            url: "${{ secrets.SUPABASE_URL }}",
-            anonKey: "${{ secrets.SUPABASE_ANON_KEY }}"
-          };
-          EOF
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

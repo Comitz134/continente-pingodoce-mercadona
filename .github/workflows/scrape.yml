@@ -21,6 +21,6 @@ jobs:
         run: pip install httpx
       - name: Recolher e guardar no Supabase
         env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_URL: https://pieijihvcpcqzercvjhb.supabase.co
           SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
         run: python backend/run_scrape.py

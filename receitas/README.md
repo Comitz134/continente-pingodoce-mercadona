@@ -11,7 +11,7 @@ Cada dia tem foto, preço estimado, tempo de preparação, alergénios, lojas, d
 
 Também há um **carrinho de compras** (botão 🛒): adiciona os ingredientes de uma receita (ou um ingrediente individual) e a app mostra o preço de cada item e o **total em cada supermercado** (Continente, Pingo Doce, Mercadona), destacando a loja mais barata 🏆. Tudo fica guardado no telemóvel (localStorage) e a app é **instalável** (Adicionar ao ecrã principal) e funciona **offline** depois do primeiro carregamento.
 
-**Preços reais (opcional)**: com o Supabase configurado (`supabase-config.js`), o carrinho mostra o **produto mais barato por loja** (com link) e o selo "preço real"; sem ele, usa os preços curados. Vê `../DEPLOY.md` para publicar no GitHub Pages com recolha automática de preços.
+**Preços reais**: ligada ao Supabase (URL e chave `anon` em `supabase-config.js` — ambas públicas por design), o carrinho mostra o **produto mais barato por loja** (com link) e o selo "preço real". Enquanto a base de dados não tem produtos, usa automaticamente os preços curados de `precos.js`. A recolha é automática via GitHub Actions — vê `../DEPLOY.md`.
 
 ## Como usar
 
@@ -31,7 +31,7 @@ Abre http://localhost:8000 no navegador.
 - **Receitas e fotos**: curadas manualmente; as imagens vêm do [TheMealDB](https://www.themealdb.com) (fotos reais dos pratos, serviço gratuito e estável).
 - **Preços**: estimativa por dose em €, para Portugal (indicativo, não é tempo real).
 - **Carrinho**: preços por ingrediente (€/kg, €/L, €/unidade…) em `precos.js` — também uma estimativa curada, para comparação entre lojas.
-- **Disponibilidade por loja**: estimativa curada. O Continente, o Pingo Doce e a Mercadona **não disponibilizam APIs públicas de produtos**, por isso a correspondência receita→loja é uma aproximação baseada em ingredientes comuns; produtos especializados (ex.: pecorino, tahini, molho teriyaki) estão marcados apenas nas lojas onde é mais provável encontrá-los.
+- **Preços por loja**: recolhidos pelos scrapers (`backend/`) que leem os endpoints internos do Continente, Pingo Doce e Mercadona. Não são APIs públicas — podem mudar; é para uso pessoal e com intervalos razoáveis. Sem esses preços, a app usa a estimativa curada.
 
 ## Estrutura
 
