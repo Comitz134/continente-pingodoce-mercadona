@@ -251,19 +251,11 @@ const STORE_ID_MAP = {
 
 async function precosReais(nome) {
   if (!SUPABASE_ON()) return null;
-  try {
-    const url =
-      `${window.SUPABASE.url}/rest/v1/products` +
-      `?select=name,price,price_per_unit,unit,store,url` +
-      `&name=ilike.*${encodeURIComponent(norm(nome))}*&order=price.asc&limit=50`;
-    const r = await fetch(url, {
-      headers: {
-        apikey: window.SUPABASE.anonKey,
-        Authorization: `Bearer ${window.SUPABASE.anonKey}`,
-      },
-    });
-    if (!r.ok) return null;
-    const rows = await r.json();
+  const termo = norm(nome).trim();
+  if (!termo) return null;
+
+  const select = "name,price,price_per_unit,unit,store,url";
+  const pick = (rows) => {
     const best = { continente: null, pingoDoce: null, mercadona: null };
     for (const row of rows) {
       const s = STORE_ID_MAP[row.store];
@@ -272,6 +264,29 @@ async function precosReais(nome) {
       }
     }
     return Object.values(best).some(Boolean) ? best : null;
+  };
+  const fetchRows = async (filter) => {
+    const url =
+      `${window.SUPABASE.url}/rest/v1/products?select=${select}` +
+      `&name=${filter}&order=price.asc&limit=60`;
+    const r = await fetch(url, {
+      headers: {
+        apikey: window.SUPABASE.anonKey,
+        Authorization: `Bearer ${window.SUPABASE.anonKey}`,
+      },
+    });
+    if (!r.ok) return null;
+    return r.json();
+  };
+
+  try {
+    // 1) Prefere produtos que COMEÇAM pelo ingrediente (ex.: "Azeite Virgem…").
+    const exactos = await fetchRows(`ilike.${encodeURIComponent(termo)}*`);
+    const direto = exactos ? pick(exactos) : null;
+    if (direto) return direto;
+    // 2) Senão, cai para "contém" (ex.: "Sardinha em Azeite").
+    const contidos = await fetchRows(`ilike.*${encodeURIComponent(termo)}*`);
+    return contidos ? pick(contidos) : null;
   } catch (e) {
     return null;
   }
