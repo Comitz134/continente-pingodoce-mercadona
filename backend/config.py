@@ -6,8 +6,8 @@ Verificado em 2026-08-18:
   para uma entrada `mercadona_pt`.
 - Continente: `continente.pt/pesquisa/?q=` devolve HTML com os produtos em
   `data-product-tile-impression` (JSON com nome/preço/marca/categoria).
-- Pingo Doce: `pingodoce.pt/home/produtos?q=` (Salesforce Commerce Cloud),
-  tiles com `data-pid`, nome, marca, preço e preço por unidade (€/Kg).
+- Pingo Doce: `pingodoce.pt/on/demandware.store/.../Search-Show?q=` (Salesforce
+  Commerce Cloud), tiles com `data-pid`, nome, marca, preço e €/Kg.
 
 Estes endpoints são internos e podem mudar. Usa com moderação.
 """
@@ -32,7 +32,7 @@ STORES = {
         "display": "Pingo Doce",
         "store_id": "pingo_doce",
         "kind": "html_pingodoce",
-        "search_url": "https://www.pingodoce.pt/home/produtos?q={query}",
+        "search_url": "https://www.pingodoce.pt/on/demandware.store/Sites-pingo-doce-Site/default/Search-Show?q={query}&sz=60",
     },
     # "mercadona_pt": {
     #     "display": "Mercadona",
