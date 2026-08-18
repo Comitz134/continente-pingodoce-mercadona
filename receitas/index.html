@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#16a34a" />
+  <title>Prato da Semana</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="appbar">
+    <button id="btn-back" class="icon-btn" aria-label="Voltar" hidden>
+      <svg viewBox="0 0 24 24" width="22" height="22"><path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="appbar-title">
+      <span class="logo">🍽️</span>
+      <h1>Prato da Semana</h1>
+    </div>
+    <button id="btn-install" class="icon-btn" aria-label="Instalar app" hidden>
+      <svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </header>
+
+  <main>
+    <!-- ===== Ecrã de configuração ===== -->
+    <section id="view-config" class="view">
+      <p class="lead">Diz-nos o teu orçamento, alergias e os supermercados que usas. Nós montamos uma ementa para a semana.</p>
+
+      <div class="card">
+        <h2 class="card-title"><span>💰</span> Orçamento por dose</h2>
+        <div class="range-labels">
+          <span id="price-min-label">0,50&nbsp;€</span>
+          <span id="price-max-label">6&nbsp;€+</span>
+        </div>
+        <div class="dual-range">
+          <input type="range" id="price-min" min="0.5" max="6" step="0.5" value="0.5" aria-label="Preço mínimo" />
+          <input type="range" id="price-max" min="0.5" max="6" step="0.5" value="6" aria-label="Preço máximo" />
+          <div class="dual-range-track"></div>
+        </div>
+        <p class="hint" id="price-hint">Todas as receitas até 6&nbsp;€ por dose</p>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title"><span>🚫</span> Alergias</h2>
+        <p class="hint">Tocas para selecionar. As receitas com estes alergénios são excluídas.</p>
+        <div class="chips" id="allergen-chips"></div>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title"><span>🙅</span> Alimentos a evitar</h2>
+        <div class="add-row">
+          <input type="text" id="avoid-input" placeholder="Ex.: cogumelos, coentros…" autocomplete="off" />
+          <button id="btn-add-avoid" class="btn btn-ghost" type="button">Adicionar</button>
+        </div>
+        <div class="chips" id="avoid-chips"></div>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title"><span>🛒</span> Supermercados</h2>
+        <p class="hint">Só mostramos receitas com ingredientes que encontras nas lojas escolhidas.</p>
+        <div class="stores" id="store-toggles"></div>
+      </div>
+
+      <button id="btn-generate" class="btn btn-primary btn-block">
+        Gerar ementa da semana
+      </button>
+      <p id="config-error" class="error" hidden></p>
+    </section>
+
+    <!-- ===== Ecrã de resultados ===== -->
+    <section id="view-plan" class="view" hidden>
+      <div class="plan-summary card" id="plan-summary"></div>
+      <div class="plan-actions">
+        <button id="btn-regenerate" class="btn btn-primary">🔄 Nova ementa</button>
+      </div>
+      <div id="plan-days"></div>
+      <button id="btn-edit" class="btn btn-block">✏️ Ajustar preferências</button>
+    </section>
+
+    <!-- ===== Ecrã do carrinho ===== -->
+    <section id="view-cart" class="view" hidden>
+      <div class="cart-head card">
+        <h2 class="card-title"><span>🛒</span> Lista de compras</h2>
+        <p class="hint" id="cart-hint">Adiciona os ingredientes das receitas e compara o preço em cada supermercado.</p>
+      </div>
+      <div id="cart-stores"></div>
+      <div class="card" id="cart-items-card">
+        <div class="cart-items-head">
+          <h3 class="cart-subtitle">Itens</h3>
+          <button id="btn-cart-clear" class="btn btn-ghost btn-sm" type="button">Limpar tudo</button>
+        </div>
+        <div id="cart-items"></div>
+      </div>
+      <button id="btn-cart-back" class="btn btn-block">← Voltar à ementa</button>
+    </section>
+  </main>
+
+  <button id="btn-cart-fab" class="fab" aria-label="Lista de compras" hidden>
+    <span class="fab-icon">🛒</span>
+    <span id="cart-badge" class="fab-badge" hidden>0</span>
+  </button>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <template id="tpl-recipe-card"></template>
+
+  <script src="data.js"></script>
+  <script src="precos.js"></script>
+  <script src="supabase-config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
