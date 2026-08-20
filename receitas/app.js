@@ -231,8 +231,13 @@ function precarLinha(nome, qtd) {
     const n = converter(parsed.n, parsed.un, entry.u, entry);
     return { key, nome, n, unit: entry.u, preco: { c: entry.c, p: entry.p, m: entry.m } };
   }
-  const fb = window.PRECOS_FALLBACK[parsed.un] || window.PRECOS_FALLBACK.un;
-  return { key, nome, n: parsed.n, unit: parsed.un, preco: { c: fb.c, p: fb.p, m: fb.m } };
+  // Normaliza gramas/ml para a unidade de preço do fallback (€/kg, €/L).
+  let un = parsed.un;
+  let n = parsed.n;
+  if (un === "g") { un = "kg"; n = n / 1000; }
+  else if (un === "ml") { un = "l"; n = n / 1000; }
+  const fb = window.PRECOS_FALLBACK[un] || window.PRECOS_FALLBACK.un;
+  return { key, nome, n, unit: un, preco: { c: fb.c, p: fb.p, m: fb.m } };
 }
 
 function arredonda(v) {
@@ -413,6 +418,7 @@ let authFormMode = null; // null | "signup" | "login"
 let isGate = false;
 let currentView = "config";
 let lastMainView = "config";
+let recipeReturnView = "plan"; // vista para onde voltar depois do detalhe
 
 const SYNC_KEYS = ["preferences", "plan", "cart", "favorites", "plans"];
 
@@ -672,18 +678,20 @@ function renderSavedPlans() {
 function handleRecipeAction(e) {
   const btn = e.target.closest("[data-action]");
   if (!btn) return;
-  const card = btn.closest(".day-card");
-  const rid = card ? card.dataset.id : null;
+  const holder = btn.closest("[data-id]");
+  const rid = holder ? holder.dataset.id : null;
   const r = rid ? window.RECIPES.find((x) => x.id === rid) : null;
   const action = btn.dataset.action;
 
   if (action === "swap") {
     const cards = [...document.querySelectorAll("#plan-days .day-card")];
-    swapRecipe(cards.indexOf(card));
+    swapRecipe(cards.indexOf(holder));
   } else if (action === "fav") {
     if (r) toggleFavorite(r.id);
   } else if (action === "add-all") {
     if (r) addRecipeToCart(r);
+  } else if (action === "passos") {
+    if (r) openRecipe(r.id);
   } else if (action === "add-ing") {
     if (r) {
       (async () => {
@@ -692,6 +700,86 @@ function handleRecipeAction(e) {
       })();
     }
   }
+}
+
+/* ================= Detalhe da receita (passo a passo) ================= */
+
+function openRecipe(rid) {
+  recipeReturnView = currentView === "recipe" ? recipeReturnView : currentView;
+  renderRecipeDetail(rid);
+  show("recipe");
+}
+
+function renderRecipeDetail(rid) {
+  const r = window.RECIPES.find((x) => x.id === rid);
+  const el = $("#recipe-detail");
+  if (!r || !el) return;
+
+  const favActive = state.favorites.includes(r.id);
+  const metodo = window.METODOS[r.id] || "fogao";
+  const metodoInfo = window.METODO_LABELS[metodo] || window.METODO_LABELS.fogao;
+  const algs = r.alergenios.length
+    ? r.alergenios
+        .map((id) => {
+          const a = window.ALLERGENS.find((x) => x.id === id);
+          return `<span class="badge alg">${a ? esc(a.emoji + " " + a.label) : esc(id)}</span>`;
+        })
+        .join("")
+    : `<span class="badge clean">✓ Sem alergénios comuns</span>`;
+
+  const passos = (r.passos && r.passos.length ? r.passos : [])
+    .map(
+      (p, i) =>
+        `<li class="step" data-reveal><span class="step-num">${i + 1}</span><p class="step-text">${esc(p)}</p></li>`
+    )
+    .join("");
+
+  const ing = r.ingredientes
+    .map(
+      (i) =>
+        `<li><span class="in">${esc(i.nome)}</span><span class="q">${esc(i.qtd)}</span>` +
+        `<button class="add-ing" type="button" data-action="add-ing" data-nome="${esc(i.nome)}" data-qtd="${esc(i.qtd)}" aria-label="Adicionar ${esc(i.nome)}">＋</button></li>`
+    )
+    .join("");
+
+  el.setAttribute("data-id", r.id);
+  el.innerHTML = `
+    <div class="recipe-hero" data-reveal>
+      <img class="recipe-photo" src="${esc(r.foto)}" alt="${esc(r.nome)}" referrerpolicy="no-referrer"
+           onerror="this.onerror=null;this.src=PLACEHOLDER" />
+      <div class="recipe-hero-tint"></div>
+      <div class="recipe-hero-body">
+        <div class="day-eyebrow">${esc(r.categoria)}</div>
+        <h1 class="recipe-title">${esc(r.nome)}</h1>
+        <p class="recipe-sub">${esc(r.nomeOrig)}</p>
+        <div class="meta">
+          <span class="badge price">${money(r.preco)} / dose</span>
+          <span class="badge time">⏱ ${r.tempo} min</span>
+          <span class="badge method">${metodoInfo.emoji} ${metodoInfo.label}</span>
+          ${algs}
+        </div>
+      </div>
+    </div>
+
+    <div class="recipe-content">
+      <div class="recipe-actions" data-reveal>
+        <button class="btn btn-primary" type="button" data-action="fav">${favActive ? "★ Guardada" : "☆ Guardar"}</button>
+        <button class="btn btn-swap" type="button" data-action="add-all">🛒 Adicionar à lista</button>
+      </div>
+
+      <div class="card" data-reveal>
+        <h2 class="card-title"><span class="ico">🧾</span> Ingredientes (${r.ingredientes.length})</h2>
+        <ul class="ing-list ing-list--open">${ing}</ul>
+      </div>
+
+      <div class="card" data-reveal>
+        <h2 class="card-title"><span class="ico">👨‍🍳</span> Passo a passo</h2>
+        <ol class="steps">${passos}</ol>
+      </div>
+
+      <p class="dica"><strong>💡 Dica:</strong> ${esc(r.dica)}</p>
+    </div>`;
+  observeReveals();
 }
 
 /* ================= Receitas (browse por método) ================= */
@@ -902,18 +990,19 @@ function homeView() {
 
 function activeTabFor(viewId) {
   if (viewId === "config" || viewId === "plan") return "home";
+  if (viewId === "recipe") return recipeReturnView === "plan" ? "home" : "receitas";
   if (viewId === "receitas" || viewId === "favorites") return "receitas";
   if (viewId === "cart" || viewId === "foods") return "ingredientes";
   return "conta";
 }
 
 function show(viewId) {
-  ["config", "plan", "cart", "foods", "account", "favorites", "receitas"].forEach((v) => {
+  ["config", "plan", "cart", "foods", "account", "favorites", "receitas", "recipe"].forEach((v) => {
     $("#view-" + v).hidden = v !== viewId;
   });
   currentView = viewId;
   if (viewId === "plan" || viewId === "config") lastMainView = viewId;
-  const showBack = (viewId === "foods" || viewId === "favorites") && !isGate;
+  const showBack = (viewId === "foods" || viewId === "favorites" || viewId === "recipe") && !isGate;
   $("#btn-back").hidden = !showBack;
   $("#btn-settings").hidden = isGate;
   $("#tabbar").hidden = isGate;
@@ -982,14 +1071,18 @@ function recipeCard(r, opts = {}) {
   const eyebrow = diaIndex != null
     ? `${esc(DIAS[diaIndex])} · ${esc(r.categoria)}`
     : esc(r.categoria);
+  const passosBtn = `<button class="btn btn-passos" type="button" data-action="passos">👨‍🍳 Passo a passo</button>`;
   let actions;
   if (isFav) {
-    actions = `<button class="btn btn-swap" type="button" data-action="fav">☆ Remover</button>
+    actions = `${passosBtn}
+       <button class="btn btn-swap" type="button" data-action="fav">☆ Remover</button>
        <button class="btn btn-primary" type="button" data-action="add-all">🛒 Adicionar à lista</button>`;
   } else if (browse) {
-    actions = `<button class="btn btn-primary" type="button" data-action="add-all">🛒 Adicionar à lista</button>`;
+    actions = `${passosBtn}
+       <button class="btn btn-primary" type="button" data-action="add-all">🛒 Adicionar à lista</button>`;
   } else {
-    actions = `<button class="btn btn-swap" type="button" data-action="swap">🔁 Trocar</button>
+    actions = `${passosBtn}
+       <button class="btn btn-swap" type="button" data-action="swap">🔁 Trocar</button>
        <button class="btn btn-primary" type="button" data-action="add-all">🛒 Adicionar à lista</button>`;
   }
 
@@ -1283,6 +1376,7 @@ function init() {
   $("#btn-back").addEventListener("click", () => {
     if (currentView === "foods") show("config");
     else if (currentView === "favorites") show("receitas");
+    else if (currentView === "recipe") show(recipeReturnView || homeView());
     else show(homeView());
   });
 
@@ -1300,6 +1394,7 @@ function init() {
   $("#plan-days").addEventListener("click", handleRecipeAction);
   $("#favorites-list").addEventListener("click", handleRecipeAction);
   $("#receitas-list").addEventListener("click", handleRecipeAction);
+  $("#recipe-detail").addEventListener("click", handleRecipeAction);
 
   $("#cart-items").addEventListener("click", (e) => {
     const rm = e.target.closest("[data-cart-remove]");

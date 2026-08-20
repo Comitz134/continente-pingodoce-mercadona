@@ -939,8 +939,9 @@ main {
 }
 .ing-list .add-ing:active { transform: scale(.88); background: var(--tomato-700); }
 
-.day-actions { display: flex; gap: 8px; }
-.day-actions .btn { flex: 1; padding: 13px 12px; font-size: var(--text-label); }
+.day-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.day-actions .btn { flex: 1 1 auto; padding: 13px 12px; font-size: var(--text-label); }
+.day-actions .btn-passos { flex-basis: 100%; }
 
 .empty {
   text-align: center;
@@ -952,6 +953,65 @@ main {
   box-shadow: var(--shadow-sm);
 }
 .empty .big { font-size: 3rem; margin: 0 0 8px; }
+
+/* ============================ Detalhe da receita ============================ */
+.btn-passos {
+  background: var(--sun-400);
+  color: var(--char-900);
+  box-shadow: 0 4px 14px rgba(255, 180, 61, .35);
+}
+.btn-passos:hover { background: var(--sun-200); transform: translateY(var(--lift-hover)); }
+
+.recipe-hero {
+  position: relative;
+  height: 340px;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  margin-bottom: 14px;
+  box-shadow: var(--shadow-md);
+}
+.recipe-photo { width: 100%; height: 100%; object-fit: cover; display: block; }
+.recipe-hero-tint {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(46, 29, 25, 0) 30%, rgba(46, 29, 25, .72) 100%);
+  pointer-events: none;
+}
+.recipe-hero-body { position: absolute; left: 18px; right: 18px; bottom: 16px; color: #fff; }
+.recipe-hero-body .day-eyebrow { color: var(--sun-200); }
+.recipe-title {
+  font-size: clamp(26px, 8vw, 40px);
+  margin: 0 0 4px;
+  line-height: 1.02;
+  text-shadow: 0 2px 14px rgba(46, 29, 25, .45);
+}
+.recipe-hero-body .recipe-sub { color: rgba(255, 251, 244, .9); margin: 0 0 10px; }
+
+.recipe-content { padding: 0 2px 10px; }
+.recipe-actions { display: flex; gap: 8px; margin-bottom: 14px; }
+.recipe-actions .btn { flex: 1; }
+
+.ing-list--open { padding: 0 2px 2px; }
+
+.steps { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.step { display: flex; gap: 12px; align-items: flex-start; }
+.step-num {
+  flex: 0 0 auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--tomato-500);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+  box-shadow: var(--shadow-brand);
+}
+.step-text { margin: 3px 0 0; color: var(--char-800); font-size: var(--text-body-sm); line-height: 1.5; }
 
 /* ============================ FAB ============================ */
 .fab {

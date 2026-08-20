@@ -86,6 +86,33 @@ window.METODOS = {
   "panquecas-banana": "microondas",
   // Marisco
   "empanadas-camarao": "forno",
+  "tortilha-chourico": "fogao",
+  "panquecas": "fogao",
+  "panquecas-aveia": "fogao",
+  "sopa-abobora": "fogao",
+  "sopa-tomate": "fogao",
+  "sopa-grao": "fogao",
+  "kofta-burgers": "fogao",
+  "almondegas-borrego": "fogao",
+  "caril-katsu": "fogao",
+  "caril-verde": "fogao",
+  "frango-assado-argelino": "forno",
+  "costeletas-crioula": "fogao",
+  "bolo-chocolate-vegan": "forno",
+  "brownies": "forno",
+  "cheesecake": "forno",
+  "risotto-salmao": "fogao",
+  "bourguignon": "fogao",
+  "estufado-lemongrass": "fogao",
+  "sopa-noodles-salmao": "fogao",
+  "camaroes-kungpo": "fogao",
+  "tagine": "fogao",
+  "tonkatsu": "fogao",
+  "pho-vaca": "fogao",
+  "macarrao-pie": "forno",
+  "salada-papaia": "sem",
+  "batatas-pequeno-almoco": "fogao",
+  "estufado-irlandes": "forno"
 };
 
 window.METODO_LABELS = {
@@ -112,6 +139,7 @@ window.RECIPES = [
       { nome: "Batatas", qtd: "400 g" },
       { nome: "Pimentos", qtd: "2 unidades" },
     ],
+    passos: ["Liga o grelhador ou o forno no máximo e arranja as sardinhas (pede para as amanharem na peixaria).", "Tempera com sal grosso e pincela com um fio de azeite.", "Grelha ou assa 3–4 minutos de cada lado até a pele ficar dourada.", "Serve com batatas cozidas, pimentos assados e gomos de limão."],
   },
   {
     id: "caldeirada", nome: "Caldeirada de peixe", nomeOrig: "Portuguese fish stew",
@@ -127,6 +155,7 @@ window.RECIPES = [
       { nome: "Pimento", qtd: "1 unidade" },
       { nome: "Azeite", qtd: "4 c. sopa" },
     ],
+    passos: ["Corta o peixe em postas e tempera com sal. Reserva enquanto preparas o refogado.", "Num tacho largo, aquece o azeite e refoga a cebola, o pimento e o tomate picados.", "Junta as batatas às rodelas e água quente até quase cobrir. Deixa cozer 10 minutos.", "Adiciona o peixe e cozinha em lume brando mais 10–15 minutos, sem mexer muito."],
   },
   {
     id: "salada-salmao", nome: "Salada de salmão e abacate", nomeOrig: "Salmon avocado salad",
@@ -142,6 +171,7 @@ window.RECIPES = [
       { nome: "Limão", qtd: "1 unidade" },
       { nome: "Azeite", qtd: "2 c. sopa" },
     ],
+    passos: ["Grelha ou passa o salmão na frigideira com um fio de azeite, 2–3 minutos de cada lado.", "Corta o abacate e o pepino e dispõe com a alface numa taça.", "Desfaz o salmão em lascas por cima da salada.", "Tempera com sumo de limão, azeite e sal."],
   },
   {
     id: "salmao-teriyaki", nome: "Salmão teriyaki", nomeOrig: "Honey teriyaki salmon",
@@ -156,6 +186,7 @@ window.RECIPES = [
       { nome: "Alho", qtd: "2 dentes" },
       { nome: "Gengibre", qtd: "1 colher" },
     ],
+    passos: ["Mistura o molho de soja, o mel, o alho picado e o gengibre.", "Marina os lombos de salmão na mistura durante 10–15 minutos.", "Grelha ou assa os lombos 3–4 minutos de cada lado, pincelando com a marinada.", "Serve com arroz branco e o molho restante."],
   },
   {
     id: "salmao-forno", nome: "Salmão no forno com funcho", nomeOrig: "Baked salmon with fennel & tomatoes",
@@ -170,6 +201,7 @@ window.RECIPES = [
       { nome: "Azeite", qtd: "2 c. sopa" },
       { nome: "Limão", qtd: "1 unidade" },
     ],
+    passos: ["Pré-aquece o forno a 200 °C.", "Corta o funcho fino e dispõe com o tomate cereja num tabuleiro.", "Coloca o salmão por cima, tempera e rega com azeite e limão.", "Assa 18–20 minutos até o salmão estar cozinhado."],
   },
   {
     id: "empadao-peixe", nome: "Empadão de peixe", nomeOrig: "Fish pie",
@@ -185,6 +217,7 @@ window.RECIPES = [
       { nome: "Farinha", qtd: "2 c. sopa" },
       { nome: "Ervilhas", qtd: "100 g" },
     ],
+    passos: ["Coze o peixe em leite com uma folha de louro. Reserva o leite e desfaz o peixe.", "Coze as batatas e esmaga-as com manteiga e um pouco do leite.", "Faz um creme com a farinha e o leite, junta o peixe e as ervilhas.", "Monta com o peixe por baixo e o puré por cima; leva ao forno a 200 °C até dourar."],
   },
   {
     id: "paella", nome: "Paella", nomeOrig: "Paella",
@@ -200,6 +233,7 @@ window.RECIPES = [
       { nome: "Pimento", qtd: "1 unidade" },
       { nome: "Açafrão", qtd: "1 pitada" },
     ],
+    passos: ["Refoga o pimento e o alho no azeite.", "Junta o arroz e mexe, depois adiciona o açafrão e caldo quente (o dobro do volume do arroz).", "A meio da cozedura junta o camarão, as lulas e os mexilhões.", "Tapa e cozinha em lume brando 18–20 minutos, até o arroz absorver o líquido."],
   },
   {
     id: "atum-nicoise", nome: "Salada niçoise de atum", nomeOrig: "Tuna nicoise",
@@ -215,6 +249,7 @@ window.RECIPES = [
       { nome: "Azeitonas", qtd: "50 g" },
       { nome: "Azeite", qtd: "2 c. sopa" },
     ],
+    passos: ["Coze as batatas, os ovos e o feijão-verde (os ovos 9–10 minutos).", "Escorre o atum e dispõe tudo numa travessa.", "Junta as azeitonas e tempera com azeite, sal e pimenta.", "Serve frio ou morno."],
   },
 
   // ---------- Frango ----------
@@ -232,6 +267,7 @@ window.RECIPES = [
       { nome: "Couve branca", qtd: "200 g" },
       { nome: "Cenoura", qtd: "1 unidade" },
     ],
+    passos: ["Tempera o frango com piripiri, alho, limão e sal. Deixa marinar (ideal 30 minutos).", "Grelha ou assa o frango até ficar dourado e cozinhado.", "Prepara a salada ralando a cenoura e fatiando a couve.", "Serve o frango com a salada por cima."],
   },
   {
     id: "frango-basco", nome: "Frango à basca", nomeOrig: "Chicken basquaise",
@@ -247,6 +283,7 @@ window.RECIPES = [
       { nome: "Vinho branco", qtd: "100 ml" },
       { nome: "Azeite", qtd: "2 c. sopa" },
     ],
+    passos: ["Aloura o frango no azeite em lume médio-alto. Retira.", "Na mesma panela refoga o pimento, a cebola e o alho.", "Junta o tomate e deixa apurar, depois volta a colocar o frango.", "Tapa e cozinha 20–25 minutos até o molho engrossar."],
   },
   {
     id: "cuscuz-frango", nome: "Cuscuz de frango", nomeOrig: "Chicken couscous",
@@ -262,6 +299,7 @@ window.RECIPES = [
       { nome: "Cebola", qtd: "1 unidade" },
       { nome: "Cominhos", qtd: "1 c. chá" },
     ],
+    passos: ["Salteia o frango temperado no azeite até dourar.", "Junta legumes a gosto e água ou caldo; deixa cozinhar.", "Hidrata o cuscuz com água a ferver (mesmo volume) e um fio de azeite; tapa 5 minutos.", "Solta o cuscuz com um garfo e serve com o frango."],
   },
   {
     id: "arroz-frango-chourico", nome: "Arroz de frango e chouriço", nomeOrig: "Chicken & chorizo rice pot",
@@ -277,6 +315,7 @@ window.RECIPES = [
       { nome: "Tomate", qtd: "2 unidades" },
       { nome: "Caldo de galinha", qtd: "600 ml" },
     ],
+    passos: ["Refoga a cebola e o alho no azeite.", "Junta o frango e o chouriço às rodelas e deixa ganhar cor.", "Adiciona o arroz e mexe; junta caldo quente (o dobro do volume).", "Tapa e cozinha em lume brando até o arroz estar pronto."],
   },
   {
     id: "frango-teriyaki", nome: "Frango teriyaki gratinado", nomeOrig: "Teriyaki chicken casserole",
@@ -291,6 +330,7 @@ window.RECIPES = [
       { nome: "Gengibre", qtd: "1 colher" },
       { nome: "Arroz", qtd: "250 g" },
     ],
+    passos: ["Tempera as coxas de frango e coloca num tabuleiro.", "Mistura o molho teriyaki (soja, mel e alho) e rega o frango.", "Assa a 200 °C, virando a meio, até caramelizar (25–30 minutos).", "Serve com arroz e cebolinho."],
   },
 
   // ---------- Carne ----------
@@ -308,6 +348,7 @@ window.RECIPES = [
       { nome: "Piripiri", qtd: "q.b." },
       { nome: "Mostarda", qtd: "1 c. chá" },
     ],
+    passos: ["Tempera os bifes com sal, alho e piripiri verde.", "Aquece uma frigideira bem quente com azeite e frita os bifes 1–2 minutos de cada lado.", "Tosta o pão na gordura do bife.", "Monta o prego no pão e serve logo."],
   },
   {
     id: "febras", nome: "Febras assadas", nomeOrig: "Portuguese barbecued pork",
@@ -323,6 +364,7 @@ window.RECIPES = [
       { nome: "Azeite", qtd: "3 c. sopa" },
       { nome: "Limão", qtd: "1 unidade" },
     ],
+    passos: ["Tempera as febras com sal, alho, louro e um fio de azeite.", "Grelha ou assa na airfryer até ficarem douradas e cozinhadas.", "Deixa repousar 2 minutos antes de servir.", "Serve com arroz e salada."],
   },
   {
     id: "strogonoff", nome: "Strogonoff de vaca", nomeOrig: "Beef stroganoff",
@@ -338,6 +380,7 @@ window.RECIPES = [
       { nome: "Mostarda", qtd: "1 c. sopa" },
       { nome: "Arroz", qtd: "250 g" },
     ],
+    passos: ["Aloura a carne cortada em tiras no azeite ou manteiga. Retira.", "Refoga a cebola e os cogumelos; junta mostarda e um pouco de caldo.", "Volta a colocar a carne e junta as natas.", "Cozinha 5 minutos e serve com arroz ou puré."],
   },
   {
     id: "vaca-brocolos", nome: "Vaca salteada com brócolos", nomeOrig: "Beef and broccoli stir-fry",
@@ -353,6 +396,7 @@ window.RECIPES = [
       { nome: "Óleo de sésamo", qtd: "1 c. chá" },
       { nome: "Arroz", qtd: "250 g" },
     ],
+    passos: ["Salteia a carne em tiras num wok bem quente. Retira.", "Salteia os brócolos com o alho e o gengibre.", "Junta a carne, o molho de soja e um pouco de água.", "Cozinha 2–3 minutos e serve com arroz."],
   },
   {
     id: "moussaka", nome: "Moussaka", nomeOrig: "Moussaka",
@@ -368,6 +412,7 @@ window.RECIPES = [
       { nome: "Molho bechamel", qtd: "300 ml" },
       { nome: "Queijo ralado", qtd: "50 g" },
     ],
+    passos: ["Frita ou assa as rodelas de beringela até ficarem macias.", "Prepara o recheio de carne com tomate e especiarias.", "Monta camadas de beringela, carne e bechamel.", "Assa a 180 °C até dourar (35–40 minutos)."],
   },
 
   // ---------- Massas ----------
@@ -384,6 +429,7 @@ window.RECIPES = [
       { nome: "Queijo pecorino", qtd: "50 g" },
       { nome: "Pimenta preta", qtd: "q.b." },
     ],
+    passos: ["Coze o esparguete em água com sal.", "Salteia a pancetta até ficar crocante.", "Mistura as gemas com o pecorino e pimenta.", "Junta a massa à pancetta, tira do lume e envolve com as gemas até formar o creme."],
   },
   {
     id: "bolonhesa", nome: "Esparguete à bolonhesa", nomeOrig: "Spaghetti bolognese",
@@ -399,6 +445,7 @@ window.RECIPES = [
       { nome: "Cebola", qtd: "1 unidade" },
       { nome: "Queijo ralado", qtd: "40 g" },
     ],
+    passos: ["Refoga a cebola, o alho e a cenoura.", "Junta a carne picada e deixa alourar.", "Adiciona o tomate, a polpa e um pouco de caldo; cozinha 30 minutos em lume brando.", "Coze o esparguete e serve com o molho e parmesão."],
   },
   {
     id: "lasanha", nome: "Lasanha", nomeOrig: "Lasagne",
@@ -413,6 +460,7 @@ window.RECIPES = [
       { nome: "Molho bechamel", qtd: "300 ml" },
       { nome: "Queijo ralado", qtd: "100 g" },
     ],
+    passos: ["Prepara o molho bolonhesa e o bechamel.", "Monta camadas de placas, carne e bechamel num tabuleiro.", "Termina com bechamel e queijo.", "Assa a 180 °C durante 35–40 minutos."],
   },
   {
     id: "fettuccine", nome: "Fettuccine Alfredo", nomeOrig: "Fettuccine alfredo",
@@ -427,6 +475,7 @@ window.RECIPES = [
       { nome: "Parmesão", qtd: "60 g" },
       { nome: "Alho", qtd: "1 dente" },
     ],
+    passos: ["Coze o fettuccine em água com sal.", "Derrete a manteiga e junta as natas e o parmesão até engrossar.", "Envolve a massa no molho.", "Serve com mais parmesão e pimenta."],
   },
   {
     id: "arrabiata", nome: "Penne all'arrabbiata", nomeOrig: "Spicy arrabiata penne",
@@ -441,6 +490,7 @@ window.RECIPES = [
       { nome: "Malagueta", qtd: "1 unidade" },
       { nome: "Azeite", qtd: "3 c. sopa" },
     ],
+    passos: ["Refoga o alho e a malagueta no azeite.", "Junta o tomate e deixa apurar 10–15 minutos.", "Coze o penne e envolve no molho.", "Serve com salsa e parmesão."],
   },
 
   // ---------- Vegetariano ----------
@@ -457,6 +507,7 @@ window.RECIPES = [
       { nome: "Azeite", qtd: "150 ml" },
       { nome: "Sal", qtd: "q.b." },
     ],
+    passos: ["Bate os ovos com sal.", "Salteia a batata e a cebola até ficarem macias.", "Mistura os legumes nos ovos.", "Coze dos dois lados numa frigideira (ou no microondas num recipiente untado)."],
   },
   {
     id: "shakshuka", nome: "Shakshuka", nomeOrig: "Shakshuka",
@@ -472,6 +523,7 @@ window.RECIPES = [
       { nome: "Cominhos", qtd: "1 c. chá" },
       { nome: "Azeite", qtd: "2 c. sopa" },
     ],
+    passos: ["Refoga a cebola, o pimento e o alho.", "Junta o tomate e as especiarias; cozinha até engrossar.", "Abre buracos e parte os ovos por cima.", "Tapa e cozinha até as claras firmarem."],
   },
   {
     id: "chili-vegetariano", nome: "Chili vegetariano", nomeOrig: "Vegetarian chilli",
@@ -487,6 +539,7 @@ window.RECIPES = [
       { nome: "Pimento", qtd: "1 unidade" },
       { nome: "Cominhos", qtd: "1 c. chá" },
     ],
+    passos: ["Refoga a cebola, o alho e o pimento.", "Junta o feijão, o tomate, o milho e as especiarias.", "Deixa cozinhar 15–20 minutos.", "Serve com arroz ou tortilhas."],
   },
   {
     id: "falafel", nome: "Falafel", nomeOrig: "Falafel",
@@ -502,6 +555,7 @@ window.RECIPES = [
       { nome: "Pão pita", qtd: "4 unidades" },
       { nome: "Tahini", qtd: "2 c. sopa" },
     ],
+    passos: ["Tritura o grão-de-bico com a cebola, o alho, a salsa e as especiarias.", "Forma bolinhas ou discos.", "Coze na airfryer (ou frita) até dourar.", "Serve com pão pita, iogurte e salada."],
   },
   {
     id: "ratatouille", nome: "Ratatouille", nomeOrig: "Ratatouille",
@@ -517,6 +571,7 @@ window.RECIPES = [
       { nome: "Cebola", qtd: "1 unidade" },
       { nome: "Azeite", qtd: "3 c. sopa" },
     ],
+    passos: ["Corta a beringela, a curgete, o pimento e o tomate em rodelas ou cubos.", "Refoga a cebola e o alho; junta os legumes em camadas.", "Rega com azeite e tomilho.", "Assa a 190 °C até os legumes ficarem macios (35–40 minutos)."],
   },
   {
     id: "fajitas-grao", nome: "Fajitas de grão-de-bico", nomeOrig: "Chickpea fajitas",
@@ -531,6 +586,7 @@ window.RECIPES = [
       { nome: "Cebola", qtd: "1 unidade" },
       { nome: "Paprika", qtd: "1 c. chá" },
     ],
+    passos: ["Salteia a cebola e o pimento.", "Junta o grão-de-bico e as especiarias.", "Aquece as tortilhas.", "Recheia e serve com iogurte ou abacate."],
   },
   {
     id: "lentilhas-abobora", nome: "Chili de lentilhas e abóbora", nomeOrig: "Smoky lentil chili with squash",
@@ -545,6 +601,7 @@ window.RECIPES = [
       { nome: "Cebola", qtd: "1 unidade" },
       { nome: "Paprika fumada", qtd: "1 c. chá" },
     ],
+    passos: ["Refoga a cebola e o alho.", "Junta a abóbora, as lentilhas e o caldo.", "Cozinha 20–25 minutos até a abóbora desfazer.", "Tempera com cominhos e pimenta e serve."],
   },
   {
     id: "dal", nome: "Caril de lentilhas", nomeOrig: "Dal fry",
@@ -559,6 +616,7 @@ window.RECIPES = [
       { nome: "Curcuma", qtd: "1 c. chá" },
       { nome: "Gengibre", qtd: "1 colher" },
     ],
+    passos: ["Lava as lentilhas e coze-as com água e curcuma.", "Noutra panela, faz o tempero com alho, gengibre e especiarias no azeite.", "Junta o tempero às lentilhas e cozinha mais 5 minutos.", "Serve com arroz."],
   },
   {
     id: "feijao-curry", nome: "Caril de feijão", nomeOrig: "Kidney bean curry",
@@ -573,6 +631,7 @@ window.RECIPES = [
       { nome: "Garam masala", qtd: "1 c. chá" },
       { nome: "Arroz", qtd: "250 g" },
     ],
+    passos: ["Refoga a cebola, o alho e o gengibre.", "Junta o caril e o tomate; cozinha 5 minutos.", "Adiciona o feijão e o leite de coco.", "Cozinha 10 minutos e serve com arroz."],
   },
   {
     id: "rotolo", nome: "Rotolo de cogumelos e castanhas", nomeOrig: "Mushroom & chestnut rotolo",
@@ -588,6 +647,7 @@ window.RECIPES = [
       { nome: "Ricotta", qtd: "250 g" },
       { nome: "Queijo ralado", qtd: "50 g" },
     ],
+    passos: ["Salteia os cogumelos com o alho e os espinafres.", "Estende a massa, cobre com o recheio e enrola.", "Envolve em película e coze 20 minutos (ou assa).", "Corta em fatias e serve com molho de tomate."],
   },
   {
     id: "batatas-bravas", nome: "Patatas bravas", nomeOrig: "Patatas bravas",
@@ -602,6 +662,7 @@ window.RECIPES = [
       { nome: "Paprika", qtd: "1 c. chá" },
       { nome: "Azeite", qtd: "3 c. sopa" },
     ],
+    passos: ["Corta as batatas em cubos e tempera.", "Assa na airfryer ou forno até ficarem douradas e crocantes.", "Prepara o molho bravo com tomate, alho e malagueta.", "Serve as batatas com o molho por cima."],
   },
   {
     id: "salada-massa", nome: "Salada de massa mediterrânica", nomeOrig: "Mediterranean pasta salad",
@@ -616,6 +677,7 @@ window.RECIPES = [
       { nome: "Queijo feta", qtd: "100 g" },
       { nome: "Azeite", qtd: "3 c. sopa" },
     ],
+    passos: ["Coze a massa e arrefece em água fria.", "Junta o tomate, o pepino, o pimento, as azeitonas e o feta.", "Tempera com azeite, limão e orégãos.", "Serve fria."],
   },
 
   // ---------- Sobremesas & pequeno-almoço ----------
@@ -633,6 +695,7 @@ window.RECIPES = [
       { nome: "Farinha", qtd: "2 c. sopa" },
       { nome: "Canela", qtd: "q.b." },
     ],
+    passos: ["Aquece o leite com o açúcar e a canela.", "Junta a farinha e as gemas, mexendo até engrossar (creme).", "Forra as formas com massa folhada e enche com o creme.", "Assa a 250 °C até queimar ligeiramente por cima."],
   },
   {
     id: "crumble", nome: "Crumble de maçã", nomeOrig: "Apple & blackberry crumble",
@@ -647,6 +710,7 @@ window.RECIPES = [
       { nome: "Açúcar", qtd: "100 g" },
       { nome: "Canela", qtd: "1 c. chá" },
     ],
+    passos: ["Descasca e corta as maçãs; coze com açúcar e canela.", "Mistura a farinha, a manteiga e o açúcar até formar migalhas.", "Deita a fruta num tabuleiro e cobre com o crumble.", "Assa a 180 °C até dourar (30 minutos)."],
   },
   {
     id: "bolo-cenoura", nome: "Bolo de cenoura", nomeOrig: "Carrot cake",
@@ -662,6 +726,7 @@ window.RECIPES = [
       { nome: "Nozes", qtd: "80 g" },
       { nome: "Óleo", qtd: "150 ml" },
     ],
+    passos: ["Rala a cenoura e mistura com os secos (farinha e açúcar).", "Junta os ovos, o óleo e as nozes.", "Deita numa forma e assa a 180 °C durante 40–45 minutos.", "Deixa arrefecer antes de desenformar."],
   },
   {
     id: "panquecas-banana", nome: "Panquecas de banana", nomeOrig: "Banana pancakes",
@@ -676,6 +741,7 @@ window.RECIPES = [
       { nome: "Ovos", qtd: "2 unidades" },
       { nome: "Fermento", qtd: "1 c. chá" },
     ],
+    passos: ["Esmaga as bananas e mistura com os ovos, o leite e a farinha.", "Junta o fermento e mexe até ficar homogéneo.", "Coze pequenas porções na frigideira até dourar dos dois lados.", "Serve com mel ou fruta."],
   },
 
   // ---------- Marisco ----------
@@ -692,5 +758,277 @@ window.RECIPES = [
       { nome: "Alho", qtd: "2 dentes" },
       { nome: "Ovo (pincelar)", qtd: "1 unidade" },
     ],
+    passos: ["Salteia o camarão com o alho e o cebolinho. Deixa arrefecer.", "Corta círculos na massa quebrada.", "Recheia, fecha e pincela com ovo.", "Assa ou frita até dourar."],
+  },
+
+
+  {
+    id: "tortilha-chourico", nome: "Tortilha de chouriço e batata", nomeOrig: "Chorizo, potato & cheese omelette",
+    categoria: "Pequeno-almoço", tempo: 25, preco: 1.8, alergenios: ["ovo", "lactose"],
+    lojas: ["continente", "pingoDoce", "mercadona"],
+    foto: "https://www.themealdb.com/images/media/meals/0y6uvc1763258983.jpg",
+    dica: "Fica ótimo com pão torrado ao pequeno-almoço.",
+    ingredientes: [{ nome: "Batatas", qtd: "300 g" }, { nome: "Azeite", qtd: "1 c. sopa" }, { nome: "Chouriço", qtd: "100 g" }, { nome: "Ovos", qtd: "6 unidades" }, { nome: "Queijo cheddar", qtd: "50 g" }, { nome: "Salsa", qtd: "q.b." }],
+    passos: ["Coze as batatas em água a ferver 8–10 minutos, escorre e deixa secar.", "Aquece o azeite, junta o chouriço e cozinha 2 minutos; adiciona as batatas e deixa dourar mais 5 minutos.", "Bate os ovos com sal e verte na frigideira com o chouriço e as batatas.", "Quando estiver quase pronta, espalha o queijo e a salsa por cima."],
+  },
+
+  {
+    id: "panquecas", nome: "Panquecas", nomeOrig: "Pancakes",
+    categoria: "Pequeno-almoço", tempo: 25, preco: 1.2, alergenios: ["ovo", "lactose", "gluten"],
+    lojas: ["continente", "pingoDoce", "mercadona"],
+    foto: "https://www.themealdb.com/images/media/meals/rwuyqx1511383174.jpg",
+    dica: "Dobra a receita e congela as panquecas para a semana.",
+    ingredientes: [{ nome: "Farinha", qtd: "200 g" }, { nome: "Ovos", qtd: "2 unidades" }, { nome: "Leite", qtd: "300 ml" }, { nome: "Óleo", qtd: "1 c. sopa" }, { nome: "Açúcar", qtd: "2 c. sopa" }, { nome: "Framboesas", qtd: "q.b." }],
+    passos: ["Mistura a farinha, os ovos, o leite, o óleo e uma pitada de sal até obter uma massa lisa.", "Deixa repousar 30 minutos (ou cozinha já).", "Aquece uma frigideira untada e cozinha as panquecas 1 minuto de cada lado, até dourar.", "Serve com açúcar e framboesas por cima."],
+  },
+
+  {
+    id: "panquecas-aveia", nome: "Panquecas de aveia", nomeOrig: "Oatmeal pancakes",
+    categoria: "Pequeno-almoço", tempo: 25, preco: 1.0, alergenios: ["ovo", "lactose", "gluten"],
+    lojas: ["continente", "pingoDoce", "mercadona"],
+    foto: "https://www.themealdb.com/images/media/meals/c400ok1764439058.jpg",
+    dica: "Usa aveia normal triturada no liquidificador.",
+    ingredientes: [{ nome: "Ovos", qtd: "1 unidade" }, { nome: "Leite", qtd: "80 ml" }, { nome: "Açúcar", qtd: "1 c. sopa" }, { nome: "Fermento", qtd: "1 c. chá" }, { nome: "Aveia", qtd: "150 g" }, { nome: "Manteiga", qtd: "1 c. sopa" }, { nome: "Morangos", qtd: "q.b." }],
+    passos: ["Bate todos os ingredientes (menos os morangos) até ficar homogéneo.", "Deixa a massa repousar 10 minutos.", "Unta uma frigideira com manteiga e coze pequenas porções, virando quando borbulhar.", "Serve com os morangos e um fio de mel."],
+  },
+
+  {
+    id: "sopa-abobora", nome: "Sopa de abóbora tailandesa", nomeOrig: "Thai pumpkin soup",
+    categoria: "Sopa", tempo: 45, preco: 1.5, alergenios: [],
+    lojas: ["continente", "mercadona"],
+    foto: "https://www.themealdb.com/images/media/meals/1brbso1763585098.jpg",
+    dica: "Um fio de leite de coco extra na hora de servir.",
+    ingredientes: [{ nome: "Abóbora", qtd: "1,2 kg" }, { nome: "Óleo", qtd: "2 c. sopa" }, { nome: "Cebola", qtd: "1 unidade" }, { nome: "Gengibre", qtd: "1 c. sopa" }, { nome: "Erva-príncipe", qtd: "1 haste" }, { nome: "Pasta de caril vermelho", qtd: "2 c. sopa" }, { nome: "Leite de coco", qtd: "400 ml" }, { nome: "Caldo de legumes", qtd: "800 ml" }, { nome: "Malagueta", qtd: "1 unidade" }],
+    passos: ["Assa a abóbora aos cubos com metade do óleo a 200 °C durante 30 minutos, até dourar.", "Refoga a cebola, o gengibre e a erva-príncipe no óleo restante.", "Junta a pasta de caril, a abóbora, o leite de coco e o caldo; cozinha 5 minutos.", "Tritura tudo e serve com malagueta fresca."],
+  },
+
+  {
+    id: "sopa-tomate", nome: "Sopa de tomate cremosa", nomeOrig: "Creamy tomato soup",
+    categoria: "Sopa", tempo: 40, preco: 1.3, alergenios: ["lactose"],
+    lojas: ["continente", "pingoDoce", "mercadona"],
+    foto: "https://www.themealdb.com/images/media/meals/stpuws1511191310.jpg",
+    dica: "Acompanha com croutons e manjericão.",
+    ingredientes: [{ nome: "Azeite", qtd: "2 c. sopa" }, { nome: "Cebola", qtd: "1 unidade" }, { nome: "Aipo", qtd: "2 talos" }, { nome: "Cenoura", qtd: "1 unidade" }, { nome: "Batatas", qtd: "300 g" }, { nome: "Polpa de tomate", qtd: "3 c. sopa" }, { nome: "Tomate picado", qtd: "1 lata" }, { nome: "Caldo de legumes", qtd: "2 cubos" }, { nome: "Leite", qtd: "200 ml" }],
+    passos: ["Refoga o azeite com a cebola, o aipo, a cenoura, as batatas e o louro durante 10–15 minutos.", "Junta a polpa, o tomate, os cubos de caldo e 1 L de água a ferver; coze 15 minutos.", "Tritura até ficar cremosa.", "Junta o leite, aquece sem ferver e serve."],
+  },
+
+  {
+    id: "sopa-grao", nome: "Sopa de grão-de-bico", nomeOrig: "Leblebi soup",
+    categoria: "Sopa", tempo: 45, preco: 1.0, alergenios: [],
+    lojas: ["continente", "mercadona"],
+    foto: "https://www.themealdb.com/images/media/meals/x2fw9e1560460636.jpg",
+    dica: "Serve com pão pita tostado.",
+    ingredientes: [{ nome: "Azeite", qtd: "2 c. sopa" }, { nome: "Cebola", qtd: "1 unidade" }, { nome: "Grão-de-bico", qtd: "400 g" }, { nome: "Caldo de legumes", qtd: "1 L" }, { nome: "Cominhos", qtd: "1 c. chá" }, { nome: "Alho", qtd: "3 dentes" }, { nome: "Harissa", qtd: "1 c. chá" }, { nome: "Limão", qtd: "1 unidade" }],
+    passos: ["Refoga a cebola no azeite até ficar macia.", "Junta o grão-de-bico e o caldo; deixa ferver e cozinha 20 minutos.", "Torra os cominhos, pisa com o alho e a harissa e junta à sopa.", "Serve com sumo de limão e um fio de azeite."],
+  },
+
+  {
+    id: "kofta-burgers", nome: "Hambúrgueres kofta", nomeOrig: "Kofta burgers",
+    categoria: "Borrego", tempo: 35, preco: 3.5, alergenios: ["lactose", "gluten"],
+    lojas: ["continente", "pingoDoce", "mercadona"],
+    foto: "https://www.themealdb.com/images/media/meals/lgmnff1763789847.jpg",
+    dica: "Molda com as mãos húmidas para não colar.",
+    ingredientes: [{ nome: "Borrego picado", qtd: "600 g" }, { nome: "Cebola", qtd: "1 unidade" }, { nome: "Alho", qtd: "3 dentes" }, { nome: "Garam masala", qtd: "1 c. sopa" }, { nome: "Coentros", qtd: "1 maço" }, { nome: "Molho de malagueta", qtd: "1 c. sopa" }, { nome: "Pão pita", qtd: "4 unidades" }, { nome: "Tomate", qtd: "2 unidades" }, { nome: "Couve roxa", qtd: "100 g" }, { nome: "Iogurte", qtd: "1 embalagem" }],
+    passos: ["Mistura a carne com a cebola, o alho, o garam masala, os coentros e o molho de malagueta.", "Forma 8 hambúrgueres pequenos e achata.", "Grelha 3–4 minutos de cada lado até ficarem dourados.", "Serve no pão pita com tomate, couve roxa e iogurte."],
+  },
+
+  {
+    id: "almondegas-borrego", nome: "Almôndegas de borrego com alperce", nomeOrig: "Lamb & apricot meatballs",
+    categoria: "Borrego", tempo: 35, preco: 3.8, alergenios: ["gluten"],
+    lojas: ["continente", "pingoDoce", "mercadona"],
+    foto: "https://www.themealdb.com/images/media/meals/72fgzj1764109947.jpg",
+    dica: "Os alperces dão um toque agridoce surpreendente.",
+    ingredientes: [{ nome: "Azeite", qtd: "2 c. sopa" }, { nome: "Cebola roxa", qtd: "1 unidade" }, { nome: "Alho", qtd: "4 dentes" }, { nome: "Cominhos", qtd: "1 c. chá" }, { nome: "Tomate picado", qtd: "1 lata" }, { nome: "Borrego picado", qtd: "500 g" }, { nome: "Alperces secos", qtd: "8 unidades" }, { nome: "Pão ralado", qtd: "50 g" }, { nome: "Hortelã", qtd: "q.b." }, { nome: "Pão pita", qtd: "4 unidades" }],
+    passos: ["Refoga a cebola no azeite; junta o alho e as especiarias e cozinha mais 2 minutos.", "Reserva metade; à restante junta o tomate e deixa apurar 10 minutos.", "Mistura a carne com a cebola reservada, os alperces picados, o pão ralado e a hortelã; forma almôndegas.", "Cozinha as almôndegas no molho 15 minutos e serve com pão pita."],
+  },
+
+  {
+    id: "caril-katsu", nome: "Caril katsu de frango", nomeOrig: "Katsu chicken curry",
+    categoria: "Frango", tempo: 45, preco: 3.0, alergenios: ["gluten", "ovo", "soja"],
+    lojas: ["continente", "pingoDoce", "mercadona"],
+    foto: "https://www.themealdb.com/images/media/meals/vwrpps1503068729.jpg",
+    dica: "Corta o frango panado ainda quente para não soltar o pão ralado.",
+    ingredientes: [{ nome: "Peito de frango", qtd: "600 g" }, { nome: "Farinha", qtd: "3 c. sopa" }, { nome: "Ovos", qtd: "1 unidade" }, { nome: "Pão ralado", qtd: "100 g" }, { nome: "Óleo", qtd: "q.b." }, { nome: "Cebola", qtd: "1 unidade" }, { nome: "Cenoura", qtd: "1 unidade" }, { nome: "Alho", qtd: "3 dentes" }, { nome: "Caril em pó", qtd: "2 c. sopa" }, { nome: "Caldo de galinha", qtd: "500 ml" }, { nome: "Mel", qtd: "1 c. sopa" }, { nome: "Molho de soja", qtd: "2 c. sopa" }],
+    passos: ["Panha o peito de frango em farinha, ovo e pão ralado e frita até dourar.", "Para o molho, refoga a cebola, o alho e a cenoura; junta a farinha e o caril.", "Adiciona o caldo, o mel e o molho de soja e deixa engrossar 15 minutos.", "Corta o frango panado em tiras e serve com o molho e arroz."],
+  },
+
+  {
+    id: "caril-verde", nome: "Caril verde tailandês", nomeOrig: "Thai green curry",
+    categoria: "Frango", tempo: 35, preco: 3.2, alergenios: ["peixe"],
+    lojas: ["continente", "mercadona"],
+    foto: "https://www.themealdb.com/images/media/meals/sstssx1487349585.jpg",
+    dica: "Ajusta a malagueta ao teu gosto.",
+    ingredientes: [{ nome: "Batatas", qtd: "300 g" }, { nome: "Feijão-verde", qtd: "150 g" }, { nome: "Óleo", qtd: "1 c. sopa" }, { nome: "Alho", qtd: "2 dentes" }, { nome: "Pasta de caril verde", qtd: "2 c. sopa" }, { nome: "Leite de coco", qtd: "400 ml" }, { nome: "Molho de peixe", qtd: "1 c. chá" }, { nome: "Frango", qtd: "450 g" }, { nome: "Manjericão", qtd: "1 maço" }, { nome: "Arroz", qtd: "300 g" }],
+    passos: ["Coze as batatas 5 minutos; junta o feijão-verde e coze mais 3 minutos. Escorre.", "Aquece o óleo, salteia o alho e junta a pasta de caril.", "Adiciona o leite de coco, o molho de peixe e o frango; cozinha 10 minutos.", "Junta as batatas, o feijão e o manjericão; serve com arroz."],
+  },
+
+  {
+    id: "frango-assado-argelino", nome: "Frango assado à argelina", nomeOrig: "Algerian roast chicken",
+    categoria: "Frango", tempo: 70, preco: 2.8, alergenios: [],
+    lojas: ["continente", "pingoDoce", "mercadona"],
+    foto: "https://www.themealdb.com/images/media/meals/nlxald1764112200.jpg",
+    dica: "Deixa marinar de um dia para o outro para mais sabor.",
+    ingredientes: [{ nome: "Frango inteiro", qtd: "1 unidade" }, { nome: "Cebola", qtd: "1 unidade" }, { nome: "Azeite", qtd: "5 c. sopa" }, { nome: "Vinagre balsâmico", qtd: "2 c. sopa" }, { nome: "Mostarda Dijon", qtd: "1 c. sopa" }, { nome: "Alho", qtd: "3 dentes" }, { nome: "Pimenta preta", qtd: "1 c. chá" }, { nome: "Cayenne", qtd: "1 c. chá" }],
+    passos: ["Mistura a cebola, o azeite, o vinagre, a mostarda, o alho e as pimentas num recipiente.", "Envolve o frango na marinada e deixa repousar (ideal 1 hora ou de um dia para o outro).", "Leva ao forno a 175 °C durante 60–75 minutos, regando de vez em quando.", "Deixa repousar 10 minutos antes de trinchar."],
+  },
+
+  {
+    id: "costeletas-crioula", nome: "Costeletas de porco à crioula", nomeOrig: "Pork chops in creole sauce",
+    categoria: "Porco", tempo: 30, preco: 3.0, alergenios: [],
+    lojas: ["continente", "pingoDoce", "mercadona"],
+    foto: "https://www.themealdb.com/images/media/meals/087fu71783802698.jpg",
+    dica: "Serve com arroz branco e feijão preto.",
+    ingredientes: [{ nome: "Costeletas de porco", qtd: "4 unidades" }, { nome: "Óleo", qtd: "2 c. sopa" }, { nome: "Alho", qtd: "3 dentes" }, { nome: "Mostarda", qtd: "1 c. sopa" }, { nome: "Cominhos", qtd: "1 c. sopa" }, { nome: "Tomate", qtd: "3 unidades" }, { nome: "Cebola", qtd: "1 unidade" }, { nome: "Coentros", qtd: "q.b." }],
+    passos: ["Marina as costeletas com mostarda, cominhos, alho, sal e pimenta (ideal 1 hora).", "Aloura as costeletas no óleo 3 minutos de cada lado; retira.", "Refoga a cebola e o tomate na mesma frigideira até apurar.", "Volta a colocar as costeletas no molho, cozinha 5 minutos e serve com coentros."],
+  },
+
+  {
+    id: "bolo-chocolate-vegan", nome: "Bolo de chocolate vegan", nomeOrig: "Vegan chocolate cake",
+    categoria: "Sobremesa", tempo: 55, preco: 1.0, alergenios: ["frutosSecos"],
+    lojas: ["continente", "pingoDoce", "mercadona"],
+    foto: "https://www.themealdb.com/images/media/meals/qxutws1486978099.jpg",
+    dica: "Decora com framboesas para um contraste bonito.",
+    ingredientes: [{ nome: "Farinha com fermento", qtd: "180 g" }, { nome: "Açúcar de coco", qtd: "100 g" }, { nome: "Cacau", qtd: "40 g" }, { nome: "Fermento", qtd: "1 c. chá" }, { nome: "Sementes de linhaça", qtd: "2 c. sopa" }, { nome: "Leite de amêndoa", qtd: "120 ml" }, { nome: "Baunilha", qtd: "1 c. chá" }, { nome: "Água a ferver", qtd: "120 ml" }],
+    passos: ["Prepara o ovo de linhaça: mistura as sementes com 5 c. sopa de água e deixa 10 minutos.", "Mistura os secos e depois junta os molhados e a linhaça.", "Junta a água a ferver e mexe até ficar liso.", "Assa a 180 °C durante 45 minutos e decora com chocolate derretido."],
+  },
+
+  {
+    id: "brownies", nome: "Brownies de framboesa", nomeOrig: "Chocolate raspberry brownies",
+    categoria: "Sobremesa", tempo: 40, preco: 1.2, alergenios: ["ovo", "lactose", "gluten"],
+    lojas: ["continente", "pingoDoce", "mercadona"],
+    foto: "https://www.themealdb.com/images/media/meals/yypvst1511386427.jpg",
+    dica: "Corta em quadrados só depois de arrefecer.",
+    ingredientes: [{ nome: "Chocolate negro", qtd: "200 g" }, { nome: "Chocolate de leite", qtd: "100 g" }, { nome: "Manteiga", qtd: "250 g" }, { nome: "Açúcar amarelo", qtd: "400 g" }, { nome: "Ovos", qtd: "4 unidades" }, { nome: "Farinha", qtd: "140 g" }, { nome: "Cacau", qtd: "50 g" }, { nome: "Framboesas", qtd: "200 g" }],
+    passos: ["Derrete o chocolate, a manteiga e o açúcar em lume brando.", "Junta os ovos um a um, depois a farinha e o cacau peneirados.", "Envolve metade das framboesas e verte no tabuleiro; espalha o resto por cima.", "Assa a 180 °C durante 30–35 minutos."],
+  },
+
+  {
+    id: "cheesecake", nome: "Cheesecake de Nova Iorque", nomeOrig: "New York cheesecake",
+    categoria: "Sobremesa", tempo: 60, preco: 1.5, alergenios: ["lactose", "gluten", "ovo"],
+    lojas: ["continente", "pingoDoce", "mercadona"],
+    foto: "https://www.themealdb.com/images/media/meals/swttys1511385853.jpg",
+    dica: "Deixa no frio de um dia para o outro para firmar.",
+    ingredientes: [{ nome: "Manteiga", qtd: "85 g" }, { nome: "Bolachas", qtd: "200 g" }, { nome: "Açúcar", qtd: "2 c. sopa" }, { nome: "Queijo creme", qtd: "900 g" }, { nome: "Açúcar em pó", qtd: "250 g" }, { nome: "Farinha", qtd: "3 c. sopa" }, { nome: "Sumo de limão", qtd: "2 c. sopa" }, { nome: "Ovos", qtd: "3 unidades" }, { nome: "Natas azedas", qtd: "300 ml" }],
+    passos: ["Derrete a manteiga, mistura com as bolachas trituradas e o açúcar; pressiona na base da forma.", "Assa a base 10 minutos a 180 °C e deixa arrefecer.", "Bate o queijo creme com o açúcar, a farinha, o limão e os ovos; junta as natas.", "Deita sobre a base e assa 45 minutos; deixa arrefecer antes de servir."],
+  },
+
+  {
+    id: "risotto-salmao", nome: "Risotto de salmão e camarão", nomeOrig: "Salmon & prawn risotto",
+    categoria: "Peixe", tempo: 40, preco: 4.5, alergenios: ["peixe", "marisco", "lactose"],
+    lojas: ["continente", "pingoDoce", "mercadona"],
+    foto: "https://www.themealdb.com/images/media/meals/xxrxux1503070723.jpg",
+    dica: "Usa arroz arbóreo para um risotto mais cremoso.",
+    ingredientes: [{ nome: "Manteiga", qtd: "50 g" }, { nome: "Cebola", qtd: "1 unidade" }, { nome: "Arroz para risotto", qtd: "300 g" }, { nome: "Vinho branco", qtd: "125 ml" }, { nome: "Caldo de legumes", qtd: "1 L" }, { nome: "Limão", qtd: "1 unidade" }, { nome: "Camarão", qtd: "240 g" }, { nome: "Salmão", qtd: "300 g" }, { nome: "Espargos", qtd: "100 g" }, { nome: "Parmesão", qtd: "50 g" }],
+    passos: ["Derrete a manteiga e refoga a cebola sem deixar ganhar cor.", "Junta o arroz e mexe; adiciona o vinho e deixa absorver.", "Adiciona o caldo aos poucos, mexendo, até o arroz ficar cremoso.", "Junta o salmão, o camarão, os espargos e o limão; cozinha 3 minutos e serve com parmesão."],
+  },
+
+  {
+    id: "bourguignon", nome: "Vaca à bourguignon", nomeOrig: "Beef bourguignon",
+    categoria: "Carne", tempo: 150, preco: 5.0, alergenios: [],
+    lojas: ["continente", "pingoDoce", "mercadona"],
+    foto: "https://www.themealdb.com/images/media/meals/vtqxtu1511784197.jpg",
+    dica: "Melhor no dia seguinte — os sabores intensificam.",
+    ingredientes: [{ nome: "Carne de vaca para estufar", qtd: "800 g" }, { nome: "Bacon", qtd: "100 g" }, { nome: "Cebolinhas", qtd: "200 g" }, { nome: "Cogumelos", qtd: "250 g" }, { nome: "Alho", qtd: "2 dentes" }, { nome: "Polpa de tomate", qtd: "1 c. sopa" }, { nome: "Vinho tinto", qtd: "750 ml" }, { nome: "Cenoura", qtd: "1 unidade" }, { nome: "Tomilho", qtd: "q.b." }, { nome: "Louro", qtd: "2 folhas" }],
+    passos: ["Aloura a carne em pedaços numa panela bem quente, em várias vezes.", "Na mesma panela, frita o bacon, as cebolinhas, os cogumelos e o alho.", "Junta a carne, a polpa de tomate, o vinho e as ervas; tapa e cozinha 2 horas em lume brando.", "Serve com puré ou batatas assadas."],
+  },
+
+  {
+    id: "estufado-lemongrass", nome: "Estufado de vaca com erva-príncipe", nomeOrig: "Lemongrass beef stew with noodles",
+    categoria: "Carne", tempo: 100, preco: 3.5, alergenios: ["soja", "gluten"],
+    lojas: ["continente", "mercadona"],
+    foto: "https://www.themealdb.com/images/media/meals/ntafxw1763586291.jpg",
+    dica: "Serve com noodles e coentros frescos.",
+    ingredientes: [{ nome: "Gengibre", qtd: "1 c. sopa" }, { nome: "Alho", qtd: "2 dentes" }, { nome: "Erva-príncipe", qtd: "3 hastes" }, { nome: "Coentros", qtd: "1 maço" }, { nome: "Malagueta", qtd: "2 unidades" }, { nome: "Óleo", qtd: "2 c. sopa" }, { nome: "Carne de vaca", qtd: "500 g" }, { nome: "Molho de soja", qtd: "2 c. sopa" }, { nome: "Cinco especiarias", qtd: "1 c. chá" }, { nome: "Caldo de carne", qtd: "400 ml" }, { nome: "Noodles de arroz", qtd: "200 g" }],
+    passos: ["Tritura o gengibre, o alho, a erva-príncipe, os coentros e 1 malagueta.", "Refoga esta pasta no óleo 5 minutos; junta a carne, o molho de soja, as especiarias e o caldo.", "Tapa e cozinha 1 h 15, depois destapa mais 15 minutos até a carne ficar tenra.", "Coze os noodles e serve com o estufado e limão."],
+  },
+
+  {
+    id: "sopa-noodles-salmao", nome: "Sopa de noodles de salmão", nomeOrig: "Salmon noodle soup",
+    categoria: "Peixe", tempo: 20, preco: 3.5, alergenios: ["peixe", "soja"],
+    lojas: ["continente", "mercadona"],
+    foto: "https://www.themealdb.com/images/media/meals/ikizdm1763760862.jpg",
+    dica: "Um caldo rápido que se faz em 20 minutos.",
+    ingredientes: [{ nome: "Caldo de galinha", qtd: "1 L" }, { nome: "Pasta de caril vermelho", qtd: "1 c. chá" }, { nome: "Noodles de arroz", qtd: "100 g" }, { nome: "Cogumelos shiitake", qtd: "150 g" }, { nome: "Milho", qtd: "125 g" }, { nome: "Salmão", qtd: "2 postas" }, { nome: "Limão", qtd: "1 unidade" }, { nome: "Molho de soja", qtd: "1 c. sopa" }, { nome: "Coentros", qtd: "q.b." }],
+    passos: ["Ferve o caldo com a pasta de caril.", "Junta os noodles e coze 8 minutos; adiciona os cogumelos e o milho e coze mais 2 minutos.", "Junta o salmão e cozinha 3 minutos até estar no ponto.", "Tira do lume, junta o limão e o molho de soja e serve com coentros."],
+  },
+
+  {
+    id: "camaroes-kungpo", nome: "Camarões kung po", nomeOrig: "Kung po prawns",
+    categoria: "Marisco", tempo: 25, preco: 4.0, alergenios: ["marisco", "amendoim", "soja"],
+    lojas: ["continente", "pingoDoce", "mercadona"],
+    foto: "https://www.themealdb.com/images/media/meals/1525873040.jpg",
+    dica: "Serve com arroz de jasmim.",
+    ingredientes: [{ nome: "Camarão", qtd: "400 g" }, { nome: "Molho de soja", qtd: "2 c. sopa" }, { nome: "Polpa de tomate", qtd: "1 c. chá" }, { nome: "Farinha de milho", qtd: "1 c. chá" }, { nome: "Açúcar", qtd: "1 c. chá" }, { nome: "Óleo", qtd: "1 c. sopa" }, { nome: "Amendoim", qtd: "85 g" }, { nome: "Malagueta", qtd: "3 unidades" }, { nome: "Alho", qtd: "6 dentes" }, { nome: "Gengibre", qtd: "q.b." }],
+    passos: ["Marina os camarões com a farinha de milho e 1 c. sopa de molho de soja durante 10 minutos.", "Mistura o vinagre, o resto do molho de soja, a polpa, o açúcar e 2 c. sopa de água.", "Salteia os camarões num wok bem quente; retira.", "Salteia o alho, o gengibre e a malagueta, junta o molho e os camarões; serve com amendoim."],
+  },
+
+  {
+    id: "tagine", nome: "Tagine de borrego", nomeOrig: "Lamb tagine",
+    categoria: "Borrego", tempo: 90, preco: 4.0, alergenios: [],
+    lojas: ["continente", "pingoDoce", "mercadona"],
+    foto: "https://www.themealdb.com/images/media/meals/yuwtuu1511295751.jpg",
+    dica: "Acompanha com cuscuz solto e salsa.",
+    ingredientes: [{ nome: "Azeite", qtd: "2 c. sopa" }, { nome: "Cebola", qtd: "1 unidade" }, { nome: "Cenoura", qtd: "1 unidade" }, { nome: "Borrego", qtd: "500 g" }, { nome: "Alho", qtd: "2 dentes" }, { nome: "Cominhos", qtd: "1 c. chá" }, { nome: "Gengibre", qtd: "1 c. chá" }, { nome: "Canela", qtd: "1 c. chá" }, { nome: "Mel", qtd: "1 c. sopa" }, { nome: "Alperces", qtd: "100 g" }, { nome: "Abóbora", qtd: "300 g" }, { nome: "Cuscuz", qtd: "300 g" }],
+    passos: ["Refoga a cebola e a cenoura no azeite.", "Junta o borrego aos cubos e aloura; adiciona o alho e as especiarias.", "Junta o mel, os alperces, a abóbora e água até cobrir; cozinha 45–60 minutos em lume brando.", "Serve com cuscuz e salsa picada."],
+  },
+
+  {
+    id: "tonkatsu", nome: "Porco panado tonkatsu", nomeOrig: "Tonkatsu pork",
+    categoria: "Porco", tempo: 30, preco: 2.8, alergenios: ["gluten", "ovo", "soja"],
+    lojas: ["continente", "pingoDoce", "mercadona"],
+    foto: "https://www.themealdb.com/images/media/meals/lwsnkl1604181187.jpg",
+    dica: "Não sobreponhas as costeletas ao fritar.",
+    ingredientes: [{ nome: "Costeletas de porco", qtd: "4 unidades" }, { nome: "Farinha", qtd: "100 g" }, { nome: "Ovos", qtd: "2 unidades" }, { nome: "Pão ralado", qtd: "100 g" }, { nome: "Óleo", qtd: "q.b." }, { nome: "Ketchup", qtd: "2 c. sopa" }, { nome: "Molho inglês", qtd: "2 c. sopa" }, { nome: "Molho de ostra", qtd: "1 c. sopa" }, { nome: "Açúcar", qtd: "1 c. sopa" }],
+    passos: ["Espalma as costeletas entre duas folhas de papel vegetal até ~1 cm.", "Panha em farinha, ovo e pão ralado.", "Frita em óleo quente até dourar dos dois lados.", "Mistura os molhos com o açúcar e serve por cima, com arroz."],
+  },
+
+  {
+    id: "pho-vaca", nome: "Pho de vaca", nomeOrig: "Beef pho",
+    categoria: "Carne", tempo: 40, preco: 3.8, alergenios: ["peixe"],
+    lojas: ["continente", "mercadona"],
+    foto: "https://www.themealdb.com/images/media/meals/pbzcrx1763765096.jpg",
+    dica: "Faz o caldo com antecedência para mais sabor.",
+    ingredientes: [{ nome: "Caldo de carne", qtd: "1 L" }, { nome: "Cebola", qtd: "1 unidade" }, { nome: "Gengibre", qtd: "1 pedaço" }, { nome: "Canela em pau", qtd: "1 unidade" }, { nome: "Anis estrelado", qtd: "2 unidades" }, { nome: "Bife de lombo", qtd: "300 g" }, { nome: "Molho de peixe", qtd: "1 c. sopa" }, { nome: "Noodles de arroz", qtd: "200 g" }, { nome: "Cebolinho", qtd: "2 talos" }, { nome: "Manjericão", qtd: "q.b." }, { nome: "Limão", qtd: "1 unidade" }],
+    passos: ["Chama a cebola e o gengibre numa frigideira bem quente até queimarem; junta ao caldo com as especiarias.", "Deixa o caldo ferver 20 minutos e tempera com molho de peixe.", "Coze os noodles e distribui pelas taças; cobre com o bife fatiado fino.", "Verte o caldo a ferver por cima e serve com ervas e limão."],
+  },
+
+  {
+    id: "macarrao-pie", nome: "Empadão de macarrão", nomeOrig: "Macaroni pie",
+    categoria: "Massas", tempo: 40, preco: 1.8, alergenios: ["gluten", "ovo", "lactose"],
+    lojas: ["continente", "pingoDoce", "mercadona"],
+    foto: "https://www.themealdb.com/images/media/meals/kpiu4t1782242131.jpg",
+    dica: "Usa macarrão curto para segurar o molho.",
+    ingredientes: [{ nome: "Macarrão", qtd: "250 g" }, { nome: "Manteiga", qtd: "2 c. sopa" }, { nome: "Queijo cheddar", qtd: "250 g" }, { nome: "Ovos", qtd: "1 unidade" }, { nome: "Leite", qtd: "250 ml" }, { nome: "Mostarda", qtd: "1 c. chá" }, { nome: "Pão ralado", qtd: "2 c. sopa" }],
+    passos: ["Coze o macarrão em água com sal; escorre e mistura com a manteiga.", "Mistura o queijo ralado com o macarrão ainda quente.", "Bate o ovo com o leite e a mostarda e envolve no macarrão.", "Verte numa forma, cobre com pão ralado e assa a 180 °C durante 25–30 minutos."],
+  },
+
+  {
+    id: "salada-papaia", nome: "Salada de papaia", nomeOrig: "Papaya salad",
+    categoria: "Salada", tempo: 20, preco: 1.5, alergenios: ["amendoim"],
+    lojas: ["continente", "pingoDoce", "mercadona"],
+    foto: "https://www.themealdb.com/images/media/meals/7ytdtz1784833420.jpg",
+    dica: "Rala a papaia bem fria para ficar crocante.",
+    ingredientes: [{ nome: "Papaia verde", qtd: "1/2 unidade" }, { nome: "Sumo de limão", qtd: "1 c. sopa" }, { nome: "Cenoura", qtd: "1 unidade" }, { nome: "Tomate cereja", qtd: "1 chávena" }, { nome: "Cebolinho", qtd: "2 talos" }, { nome: "Amendoim torrado", qtd: "50 g" }, { nome: "Alho", qtd: "1 dente" }],
+    passos: ["Descasca e rala a papaia e a cenoura.", "Corta o cebolinho e os tomates ao meio.", "Mistura tudo numa taça com o alho picado e o sumo de limão.", "Salpica com o amendoim por cima."],
+  },
+
+  {
+    id: "batatas-pequeno-almoco", nome: "Batatas de pequeno-almoço", nomeOrig: "Breakfast potatoes",
+    categoria: "Pequeno-almoço", tempo: 30, preco: 1.5, alergenios: [],
+    lojas: ["continente", "pingoDoce", "mercadona"],
+    foto: "https://www.themealdb.com/images/media/meals/1550441882.jpg",
+    dica: "Perfeitas para acompanhar ovos e bacon.",
+    ingredientes: [{ nome: "Batatas", qtd: "3 unidades" }, { nome: "Azeite", qtd: "1 c. sopa" }, { nome: "Bacon", qtd: "2 fatias" }, { nome: "Alho", qtd: "1 dente" }, { nome: "Xarope de ácer", qtd: "1 c. sopa" }, { nome: "Salsa", qtd: "q.b." }],
+    passos: ["Corta as batatas em cubos e lava em água fria.", "Aquece o azeite numa frigideira e cozinha as batatas até dourar.", "Junta o bacon picado e o alho; cozinha até o bacon ficar crocante.", "Rega com o xarope de ácer e serve com salsa."],
+  },
+
+  {
+    id: "estufado-irlandes", nome: "Estufado irlandês", nomeOrig: "Irish stew",
+    categoria: "Carne", tempo: 120, preco: 4.5, alergenios: [],
+    lojas: ["continente", "pingoDoce", "mercadona"],
+    foto: "https://www.themealdb.com/images/media/meals/sxxpst1468569714.jpg",
+    dica: "O segredo é cozinhar devagar até a carne desfazer.",
+    ingredientes: [{ nome: "Borrego", qtd: "1 kg" }, { nome: "Azeite", qtd: "2 c. sopa" }, { nome: "Cebolinhas", qtd: "200 g" }, { nome: "Cenoura", qtd: "2 unidades" }, { nome: "Nabo", qtd: "1 unidade" }, { nome: "Batatas", qtd: "400 g" }, { nome: "Vinho branco", qtd: "150 ml" }, { nome: "Caldo de galinha", qtd: "450 ml" }, { nome: "Tomilho", qtd: "4 hastes" }],
+    passos: ["Tempera o borrego e aloura em lume alto, em várias vezes.", "Junta as cebolinhas, a cenoura, o nabo e as batatas.", "Adiciona o vinho, o caldo e o tomilho; tapa.", "Leva ao forno a 180 °C (ou lume brando) durante 1 h 30, até a carne desfazer."],
   },
 ];

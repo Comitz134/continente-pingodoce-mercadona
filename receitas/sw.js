@@ -2,7 +2,7 @@
    - App shell: network-first (recebe atualizações) com fallback offline.
    - Imagens das receitas: cache-first (poupam dados e funcionam offline). */
 
-const CACHE = "prato-da-semana:v3";
+const CACHE = "prato-da-semana:v4";
 const ASSETS = [
   "./",
   "./index.html",
