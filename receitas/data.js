@@ -139,7 +139,7 @@ window.RECIPES = [
       { nome: "Batatas", qtd: "400 g" },
       { nome: "Pimentos", qtd: "2 unidades" },
     ],
-    passos: ["Liga o grelhador no máximo ou o forno a 240 °C e arranja as sardinhas (pede para as amanharem na peixaria).", "Tempera com sal grosso e pincela com um fio de azeite.", "Grelha ou assa a lume forte, 3–4 minutos de cada lado, até a pele ficar dourada.", "Serve com batatas cozidas, pimentos assados e gomos de limão."],
+    passos: ["Coloque todos os ingredientes, exceto a sardinha, numa tigela e misture com um pouco de tempero. Deite numa assadeira, adicione as sardinhas e misture bem. Tape e leve ao frigorífico por algumas horas.", "Aqueça um grelhador ou frigideira até ficar bem quente. Cozinhe as sardinhas durante 4-5 minutos de cada lado ou até ficarem bem caramelizadas e carbonizadas.", "Coloque num prato de servir, regue com azeite, polvilhe com mais um pouco de pimentão doce e esprema as rodelas de limão."],
   },
   {
     id: "caldeirada", nome: "Caldeirada de peixe", nomeOrig: "Portuguese fish stew",
@@ -155,7 +155,7 @@ window.RECIPES = [
       { nome: "Pimento", qtd: "1 unidade" },
       { nome: "Azeite", qtd: "4 c. sopa" },
     ],
-    passos: ["Corta o peixe em postas e tempera com sal. Reserva enquanto preparas o refogado.", "Num tacho largo, aquece o azeite em lume médio e refoga a cebola, o pimento e o tomate picados.", "Junta as batatas às rodelas e água quente até quase cobrir. Deixa cozer 10 minutos em lume médio.", "Adiciona o peixe e cozinha em lume brando mais 10–15 minutos, sem mexer muito."],
+    passos: ["Aqueça um fio de azeite numa frigideira grande e funda e frite a cebola e o pimento em lume médio até ficarem macios, mas não dourados.", "Pique finamente os pés dos coentros (guarde as folhas para mais tarde) e coloque na frigideira com a malagueta e os alhos picados. Frite por mais alguns minutos.", "Adicione o vinho, o açafrão e o louro e deixe ferver até reduzir a metade. Adicione as batatas, os tomates e 300ml de água e deixe ferver suavemente.", "Parta os tomates com uma colher na lateral da panela e deixe cozinhar durante 20-25 minutos até que as batatas estejam macias e os tomates partidos.", "Tempere bem, de seguida, coloque delicadamente o peixe no molho e disponha as lulas, os camarões, as amêijoas e os mexilhões à superfície.", "Tape e deixe cozinhar durante 6-8 minutos até que as cascas dos mexilhões e das amêijoas se abram, os camarões estejam cozidos e o peixe esteja em flocos.", "Torre o pão, esfregue ligeiramente com o dente de alho cortado ao meio e regue com azeite. Sirva o guisado polvilhado com folhas de coentros picadas e as tostas a demolhar."],
   },
   {
     id: "salada-salmao", nome: "Salada de salmão e abacate", nomeOrig: "Salmon avocado salad",
@@ -171,7 +171,7 @@ window.RECIPES = [
       { nome: "Limão", qtd: "1 unidade" },
       { nome: "Azeite", qtd: "2 c. sopa" },
     ],
-    passos: ["Grelha ou passa o salmão na frigideira em lume médio-alto com um fio de azeite, 2–3 minutos de cada lado.", "Corta o abacate e o pepino e dispõe com a alface numa taça.", "Desfaz o salmão em lascas por cima da salada.", "Tempera com sumo de limão, azeite e sal."],
+    passos: ["Tempere o salmão e esfregue com azeite. Misture os ingredientes do molho. Corte os abacates ao meio, retire as pedras, descasque e corte em fatias.", "Corte o pepino ao meio e em quartos no sentido do comprimento e depois corte em rodelas. Divida a salada, o abacate e o pepino por quatro pratos e regue com metade do molho. Aqueça uma frigideira antiaderente.", "Adicione o salmão e frite durante 3-4 minutos de cada lado até ficar crocante, mas ainda húmido por dentro. Coloque um filete de salmão por cima de cada salada e regue com o restante molho. Sirva quente."],
   },
   {
     id: "salmao-teriyaki", nome: "Salmão teriyaki", nomeOrig: "Honey teriyaki salmon",
@@ -186,7 +186,7 @@ window.RECIPES = [
       { nome: "Alho", qtd: "2 dentes" },
       { nome: "Gengibre", qtd: "1 colher" },
     ],
-    passos: ["Mistura o molho de soja, o mel, o alho picado e o gengibre.", "Marina os lombos de salmão na mistura durante 10–15 minutos.", "Grelha ou assa os lombos a 200 °C, 3–4 minutos de cada lado, pincelando com a marinada.", "Serve com arroz branco e o molho restante."],
+    passos: ["Misture todos os ingredientes do Glaze Honey Teriyaki. Bata para misturar bem. Combine o salmão e o Glaze. Aqueça uma frigideira em lume médio-baixo.", "Adicione o óleo, frite o salmão de ambos os lados até que esteja completamente cozinhado por dentro e a cobertura engrosse. Decore com sementes de sésamo e sirva imediatamente."],
   },
   {
     id: "salmao-forno", nome: "Salmão no forno com funcho", nomeOrig: "Baked salmon with fennel & tomatoes",
@@ -201,7 +201,7 @@ window.RECIPES = [
       { nome: "Azeite", qtd: "2 c. sopa" },
       { nome: "Limão", qtd: "1 unidade" },
     ],
-    passos: ["Pré-aquece o forno a 200 °C.", "Corta o funcho fino e dispõe com o tomate cereja num tabuleiro.", "Coloca o salmão por cima, tempera e rega com azeite e limão.", "Assa 18–20 minutos a 200 °C até o salmão estar cozinhado."],
+    passos: ["Aqueça o forno a 180 °C / ventilador 160 °C. Corte as folhas da erva-doce e reserve. Corte os bolbos de funcho ao meio e depois corte cada metade em 3 rodelas.", "Coza em água a ferver com sal durante 10 minutos e escorra bem. Pique grosseiramente as folhas de funcho e misture com a salsa e a raspa de limão. Espalhe a erva-doce escorrida num recipiente raso e adicione os tomates.", "Regue com azeite e leve ao forno durante 10 minutos. Aninhe o salmão entre os legumes, polvilhe com sumo de limão e leve ao forno por mais 15 minutos até o peixe estar cozinhado. Espalhe a salsa e sirva."],
   },
   {
     id: "empadao-peixe", nome: "Empadão de peixe", nomeOrig: "Fish pie",
@@ -217,7 +217,7 @@ window.RECIPES = [
       { nome: "Farinha", qtd: "2 c. sopa" },
       { nome: "Ervilhas", qtd: "100 g" },
     ],
-    passos: ["Coze o peixe em leite com uma folha de louro em lume brando, 5–6 minutos. Reserva o leite e desfaz o peixe.", "Coze as batatas 15 minutos em água a ferver; esmaga-as com manteiga e um pouco do leite.", "Faz um creme com a farinha e o leite em lume brando, junta o peixe e as ervilhas.", "Monta com o peixe por baixo e o puré por cima; leva ao forno a 200 °C até dourar (15–20 minutos)."],
+    passos: ["01.Coloque as batatas numa panela grande com água fria e sal e leve ao lume. Baixe o lume, tape e cozinhe em lume brando durante 15 minutos até ficar macio.", "Escorra e volte a colocar na panela em lume brando durante 30 segundos para retirar o excesso de água. Esmague com 1 colher de sopa de azeite e tempere.", "02.Entretanto coloque o leite numa frigideira grande, junte o peixe e deixe ferver. Retire do lume, tape e deixe repousar por 3 minutos.", "Retire o peixe (reservando o leite) e seque com papel de cozinha e, de seguida, desfie-o suavemente para um recipiente de forno, rejeitando a pele e as espinhas. 03.", "Numa frigideira aqueça o restante azeite, junte a farinha e deixe cozer durante 30 segundos. Junte aos poucos 200-250ml do leite reservado (rejeite o restante).", "Rale a noz-moscada, tempere e borbulhe até engrossar. Junte as natas. 04.Pré-aqueça o forno a 190 °C / ventilador 170 °C. Rale as alcachofras e junte ao prato com o alho francês, os camarões e as ervas.", "Misture a raspa e o sumo de limão ao molho e regue. Misture delicadamente com uma colher de pau.", "05.º Coloque o puré sobre a mistura de peixe e, de seguida, utilize um garfo para fazer picos, que ficarão crocantes e dourados à medida que cozem.", "Polvilhe sobre o queijo e leve ao forno durante 35-40 minutos até dourar e borbulhar. Sirva com verduras murchas."],
   },
   {
     id: "paella", nome: "Paella", nomeOrig: "Paella",
@@ -233,7 +233,7 @@ window.RECIPES = [
       { nome: "Pimento", qtd: "1 unidade" },
       { nome: "Açafrão", qtd: "1 pitada" },
     ],
-    passos: ["Refoga o pimento e o alho no azeite em lume médio.", "Junta o arroz e mexe, depois adiciona o açafrão e caldo quente (o dobro do volume do arroz).", "A meio da cozedura junta o camarão, as lulas e os mexilhões.", "Tapa e cozinha em lume brando 18–20 minutos, até o arroz absorver o líquido."],
+    passos: ["Aqueça 1 colher de sopa de óleo numa panela larga e rasa. Adicione as cabeças de camarão e os pés de salsa e frite até as cabeças ficarem rosadas, depois amasse com um esmagador de batatas.", "Regue com o xerez ou o vinho e 300ml de água, tempere com sal e deixe cozer durante 10 minutos para fazer um caldo, esmagando as cabeças dos camarões à medida que cozem.", "Espalhe os mexilhões na panela, cubra-a frouxamente com uma tampa ou um pano de cozinha e leve a lume forte durante 3-4 minutos até que os mexilhões abram.", "Mexa para libertar o sumo do mexilhão e verta o conteúdo da panela para um coador colocado sobre uma tigela grande contendo o açafrão.", "Deixe o açafrão em infusão no caldo – vai precisar de 700ml no total, por isso complete com água se necessário e mexa bem. Retire os mexilhões do coador e reserve. Limpe a panela e adicione o restante azeite.", "Refogue o chouriço até libertar o azeite, depois junte a cebola e o alho e deixe cozinhar até ficar macio. Adicione a lula e vire até ficar branca.", "Adicione os tomates e deixe cozinhar durante um minuto, depois regue com a maior parte do caldo, mexa bem e deixe ferver. Espalhe o arroz sobre o caldo, mexa bem uma vez e deixe ferver energicamente durante 5 minutos.", "Reduza o lume para o mínimo e deixe cozinhar lentamente durante 10 minutos sem mexer até que o arroz tenha absorvido a maior parte do líquido.", "Coloque as caudas de camarão no arroz e deixe cozinhar durante 5 minutos, virando-as até ficarem cozidas. Misture os mexilhões e as favas ou ervilhas.", "Prove o arroz – se ainda estiver um pouco cru mas a panela estiver seca, adicione mais um pouco de caldo e continue a cozinhar; se estiver muito pastoso, aumente o lume para cozer o resto do caldo.", "Assim que o arroz estiver cozido, desligue o lume e cubra com um pano de cozinha durante alguns minutos. Espalhe as folhas de salsa e a raspa de limão e tempere com sal fumado, se desejar.", "Mexa tudo uma vez e sirva diretamente do tacho, com rodelas de limão ao lado."],
   },
   {
     id: "atum-nicoise", nome: "Salada niçoise de atum", nomeOrig: "Tuna nicoise",
@@ -249,7 +249,7 @@ window.RECIPES = [
       { nome: "Azeitonas", qtd: "50 g" },
       { nome: "Azeite", qtd: "2 c. sopa" },
     ],
-    passos: ["Coze as batatas 15 minutos e o feijão-verde 5 minutos em água a ferver; coze os ovos 9–10 minutos.", "Escorre o atum e dispõe tudo numa travessa.", "Junta as azeitonas e tempera com azeite, sal e pimenta.", "Serve frio ou morno."],
+    passos: ["Aqueça o forno a 200 °C / ventilador 180 °C. Misture as batatas com 2 colheres de chá de óleo e um pouco de tempero.", "Coloque num tabuleiro grande e leve ao forno durante 20 minutos, mexendo a meio, até ficar crocante, dourado e cozido.", "Entretanto, coloque os ovos numa panela pequena com água, deixe ferver e cozinhe durante 8 a 10 minutos, dependendo de como gosta deles cozidos. Mergulhe numa tigela com água fria para arrefecer por alguns minutos.", "Retire as cascas e corte ao meio. Numa saladeira grande, misture o restante azeite, o vinagre de vinho tinto, as alcaparras e os tomates picados.", "Tempere, junte a cebola, os espinafres, o atum e as batatas e envolva delicadamente. Cubra com os ovos e sirva de imediato."],
   },
 
   // ---------- Frango ----------
@@ -267,7 +267,7 @@ window.RECIPES = [
       { nome: "Couve branca", qtd: "200 g" },
       { nome: "Cenoura", qtd: "1 unidade" },
     ],
-    passos: ["Tempera o frango com piripiri, alho, limão e sal. Deixa marinar (ideal 30 minutos).", "Grelha a lume médio ou assa a 200 °C, 12–15 minutos de cada lado, até ficar dourado e cozinhado.", "Prepara a salada ralando a cenoura e fatiando a couve.", "Serve o frango com a salada por cima."],
+    passos: ["Misture todos os ingredientes da marinada num pequeno processador de alimentos. Passe a marinada no frango e deixe durante 1 hora à temperatura ambiente. Aqueça o forno a 190 °C / ventilador 170 °C.", "Coloque o frango num tabuleiro de forno e deixe cozinhar durante 1 hora e 20 minutos. Descanse sob papel de alumínio solto durante 20 minutos. Enquanto o frango descansa, misture os ingredientes da salada e tempere.", "Sirva o frango com salada de repolho, batatas fritas e condimentos."],
   },
   {
     id: "frango-basco", nome: "Frango à basca", nomeOrig: "Chicken basquaise",
@@ -283,7 +283,7 @@ window.RECIPES = [
       { nome: "Vinho branco", qtd: "100 ml" },
       { nome: "Azeite", qtd: "2 c. sopa" },
     ],
-    passos: ["Aloura o frango no azeite em lume médio-alto. Retira.", "Na mesma panela refoga o pimento, a cebola e o alho em lume médio.", "Junta o tomate e deixa apurar, depois volta a colocar o frango.", "Tapa e cozinha 20–25 minutos em lume brando até o molho engrossar."],
+    passos: ["Pré-aqueça o forno a 180 °C / Gás marca 4. Deixe os pedaços de frango prontos a cozinhar. Aqueça a manteiga e 3 colheres de sopa de azeite numa caçarola refratária ou numa frigideira grande.", "Aloure os pedaços de frango aos poucos de ambos os lados, temperando-os com sal e pimenta à medida que avança.", "Não sobrecarregue a frigideira - frite o frango em pequenas porções, retirando os pedaços para papel de cozinha à medida que vai sendo confecionado.", "Adicione um pouco mais de azeite à caçarola e frite a cebola em lume médio durante 10 minutos, mexendo sempre, até ficar macia, mas não dourada.", "Adicione o restante azeite, depois os pimentos e deixe cozinhar por mais 5 minutos. Adicione o chouriço, o tomate seco e o alho e deixe cozinhar durante 2-3 minutos.", "Adicione o arroz, mexendo para garantir que fica bem revestido com óleo. Junte a polpa de tomate, o pimentão-doce, o louro e o tomilho picado. Verta o caldo e o vinho.", "Quando o líquido começar a borbulhar, baixe o lume para ferver suavemente. Pressione o arroz no líquido, se ainda não estiver submerso, e coloque o frango por cima.", "Adicione as rodelas de limão e as azeitonas à volta do frango. Tape e leve ao forno durante 50 minutos.", "O arroz deve estar cozido, mas ainda com alguma dentada, e o frango deve ter sucos que escorra claro quando furado na parte mais grossa com uma faca. Caso contrário, cozinhe por mais 5 minutos e verifique novamente."],
   },
   {
     id: "cuscuz-frango", nome: "Cuscuz de frango", nomeOrig: "Chicken couscous",
@@ -299,7 +299,7 @@ window.RECIPES = [
       { nome: "Cebola", qtd: "1 unidade" },
       { nome: "Cominhos", qtd: "1 c. chá" },
     ],
-    passos: ["Salteia o frango temperado no azeite em lume médio-alto até dourar.", "Junta legumes a gosto e água ou caldo; deixa cozinhar em lume médio.", "Hidrata o cuscuz com água a ferver (mesmo volume) e um fio de azeite; tapa 5 minutos.", "Solta o cuscuz com um garfo e serve com o frango."],
+    passos: ["Aqueça o azeite numa frigideira grande e cozinhe a cebola durante 1-2 minutos apenas até ficar macia. Adicione o frango e frite durante 7 a 10 minutos até estar cozinhado e as cebolas alourar.", "Rale o gengibre, misture a harissa para cobrir tudo e deixe cozinhar por mais 1 minuto. Adicione os alperces, o grão-de-bico e o cuscuz, regue com o caldo e mexa uma vez.", "Cubra com uma tampa ou tape bem a panela com papel de alumínio e deixe durante cerca de 5 minutos até que o cuscuz absorva todo o caldo e fique macio.", "Esmague o cuscuz com um garfo e espalhe sobre os coentros para servir. Sirva com harissa extra, se quiser."],
   },
   {
     id: "arroz-frango-chourico", nome: "Arroz de frango e chouriço", nomeOrig: "Chicken & chorizo rice pot",
@@ -315,7 +315,7 @@ window.RECIPES = [
       { nome: "Tomate", qtd: "2 unidades" },
       { nome: "Caldo de galinha", qtd: "600 ml" },
     ],
-    passos: ["Refoga a cebola e o alho no azeite em lume médio.", "Junta o frango e o chouriço às rodelas e deixa ganhar cor.", "Adiciona o arroz e mexe; junta caldo quente (o dobro do volume).", "Tapa e cozinha 15–18 minutos em lume brando até o arroz estar pronto."],
+    passos: ["Aqueça o azeite numa caçarola grande e refratária e aloure os pedaços de frango por todos os lados – talvez seja necessário fazer isto aos poucos. Retire do prato e reserve.", "Baixe o lume, adicione a cebola e o pimento e cozinhe suavemente durante 10 minutos até ficar macio.", "Adicione o alho e o chouriço e deixe cozinhar por mais 2 minutos até que o chouriço liberte um pouco do azeite no prato. Junte o puré de tomate e deixe cozinhar por mais 1 minuto.", "Volte a colocar os pedaços de frango no prato juntamente com o tomilho, o vinho branco e o caldo. Deixe ferver o líquido, tape o prato com uma tampa bem justa e baixe o lume. Cozinhe durante 30 minutos.", "Adicione o arroz e envolva tudo. Tape, leve a lume brando e deixe cozer por mais 15 minutos ou até que o arroz esteja cozido e tenha absorvido a maior parte do líquido da cozedura.", "Retire do lume e deixe o prato repousar durante 10 minutos para absorver o líquido restante. Tempere a gosto e polvilhe com salsa para servir."],
   },
   {
     id: "frango-teriyaki", nome: "Frango teriyaki gratinado", nomeOrig: "Teriyaki chicken casserole",
@@ -330,7 +330,7 @@ window.RECIPES = [
       { nome: "Gengibre", qtd: "1 colher" },
       { nome: "Arroz", qtd: "250 g" },
     ],
-    passos: ["Tempera as coxas de frango e coloca num tabuleiro.", "Mistura o molho teriyaki (soja, mel e alho) e rega o frango.", "Assa a 200 °C, virando a meio, até caramelizar (25–30 minutos).", "Serve com arroz e cebolinho."],
+    passos: ["Pré-aqueça o forno a 350° F. Pulverize uma assadeira de 9 x 13 polegadas com spray antiaderente.", "Junte o molho de soja, ½ chávena de água, o açúcar mascavado, o gengibre e o alho numa panela pequena e tape. Deixe ferver em lume médio. Retire a tampa e deixe cozinhar durante um minuto depois de ferver.", "Entretanto, misture o amido de milho e 2 colheres de sopa de água num prato separado até ficar homogéneo. Assim que o molho estiver a ferver, coloque a mistura na panela e misture bem.", "Cozinhe até o molho começar a engrossar e retire do lume. Coloque os peitos de frango na assadeira preparada. Deite uma chávena de molho por cima do frango.", "Coloque o frango no forno e deixe cozer durante 35 minutos ou até estar cozido.", "Retire do forno e desfie o frango no prato com dois garfos. *Enquanto isso, coza a vapor ou coza os legumes de acordo com as instruções da embalagem. Adicione os legumes cozidos e o arroz à caçarola com o frango.", "Adicione a maior parte do molho restante, reservando um pouco para regar por cima no momento de servir. Delicadamente, misture tudo na caçarola até incorporar. Volte a colocar no forno e deixe cozinhar por 15 minutos.", "Retire do forno e deixe repousar durante 5 minutos antes de servir. Regue cada porção com o restante molho. Aproveitar!"],
   },
 
   // ---------- Carne ----------
@@ -348,7 +348,7 @@ window.RECIPES = [
       { nome: "Piripiri", qtd: "q.b." },
       { nome: "Mostarda", qtd: "1 c. chá" },
     ],
-    passos: ["Tempera os bifes com sal, alho e piripiri verde.", "Aquece uma frigideira bem quente em lume alto com azeite e frita os bifes 1–2 minutos de cada lado.", "Tosta o pão na gordura do bife.", "Monta o prego no pão e serve logo."],
+    passos: ["Esfregue o alho sobre os bifes e coloque-os num saco de sanduíche e adicione o azeite, o vinagre de Xerez e os talos de salsa. Amasse tudo e use um rolo para bater os bifes algumas vezes. Deixe atuar durante 1-2 horas.", "Para fazer o molho, coloque todos os ingredientes no liquidificador com 1 colher de sopa de água e triture até ficar homogéneo.", "Isto renderá mais do que o necessário para a receita, mas poderá ser guardado durante uma semana num frasco hermético. Aqueça uma frigideira ou frigideira bem alta.", "Retire os talos de alho e salsa dos bifes e tempere bem. Sele os bifes durante 2 minutos de cada lado e depois coloque-os num prato.", "Coloque as metades da ciabatta no prato, com o lado torrado virado para baixo, para absorver o sumo. Corte os bifes e recheie os rolinhos com o molho verde e a rúcula."],
   },
   {
     id: "febras", nome: "Febras assadas", nomeOrig: "Portuguese barbecued pork",
@@ -364,7 +364,7 @@ window.RECIPES = [
       { nome: "Azeite", qtd: "3 c. sopa" },
       { nome: "Limão", qtd: "1 unidade" },
     ],
-    passos: ["Tempera as febras com sal, alho, louro e um fio de azeite.", "Grelha a lume médio-alto ou assa na airfryer a 200 °C durante 12–15 minutos, até douradas e cozinhadas.", "Deixa repousar 2 minutos antes de servir.", "Serve com arroz e salada."],
+    passos: ["Corte os lombos em 5 pedaços iguais, deixando as pontas do rabo um pouco mais compridas. Pegue num saco de plástico transparente e coloque uma das peças no seu interior.", "Amasse-o num escalope do tamanho de uma placa lateral com um rolo e repita com as peças restantes. Numa tigela coloque o vinho, o colorau, um pouco de sal e pimenta e o sumo de ½ limão e junte a carne de porco.", "Deixe marinar durante 20-30 minutos, enquanto leva o churrasco ao ponto onde as brasas brilham, mas não há chamas.", "Para fazer as batatas fritas, encha uma bacia com água fria e corte as batatas em lascas com 3cm de espessura. Deixe-os de molho em água durante 5 minutos e depois troque a água. Deixe por mais 5 minutos.", "Escorra e seque sobre uma toalha ou papel de cozinha. Aqueça o óleo numa fritadeira ou panela funda com tampa a 130 °C e coloque os chips no óleo (em lotes). Escalde durante 8 a 10 minutos. Retire do óleo e escorra bem.", "Coloque num tabuleiro para esfriar. Reaqueça o óleo a 180 °C (certifique-se de que está quente ou as suas batatas fritas ficarão encharcadas) e coloque o cesto de batatas fritas no óleo (mais uma vez, faça-o em lotes).", "Deixe cozinhar durante 2 minutos e depois agite um pouco. Cozinhe por mais um minuto ou mais até que fiquem bem coloridos e crocantes ao toque.", "Escorra bem durante alguns minutos, coloque numa tigela e polvilhe com sal marinho. A carne de porco vai cozinhar rapidamente, por isso faça-o em 2 porções.", "Retire os pedaços da marinada, esfregue-os com óleo e coloque-os no grelhador (também pode usar um grelhador). Cozinhe durante 1 minuto de cada lado – podem queimar ao fazê-lo.", "Este deve ser tempo suficiente, pois continuarão a cozinhar. Retire-os da churrasqueira e coloque-os num prato. Repita com o restante lote.", "Sirva empilhando um prato com batatas fritas, coloque a carne de porco em cima de cada pilha e verta o sumo do prato para que as batatas fritas absorvam os sabores. Cubra com uma colher de maionese e uma rodela de limão."],
   },
   {
     id: "strogonoff", nome: "Strogonoff de vaca", nomeOrig: "Beef stroganoff",
@@ -380,7 +380,7 @@ window.RECIPES = [
       { nome: "Mostarda", qtd: "1 c. sopa" },
       { nome: "Arroz", qtd: "250 g" },
     ],
-    passos: ["Aloura a carne cortada em tiras no azeite ou manteiga em lume médio-alto. Retira.", "Refoga a cebola e os cogumelos em lume médio; junta mostarda e um pouco de caldo.", "Volta a colocar a carne e junta as natas.", "Cozinha 5 minutos em lume brando e serve com arroz ou puré."],
+    passos: ["Numa frigideira antiaderente aqueça o azeite, junte a cebola às rodelas e deixe cozer em lume médio até amolecer completamente, cerca de 15 minutos, adicionando um pouco de água se começarem a agarrar.", "Esmague o alho e cozinhe por mais 2-3 minutos, depois adicione a manteiga. Assim que a manteiga espumar um pouco, adicione os cogumelos e deixe cozinhar durante cerca de 5 minutos até ficarem completamente macios.", "Tempere tudo bem e coloque num prato. Coloque a farinha numa tigela com uma pitada grande de sal e pimenta e, em seguida, misture o bife na farinha temperada.", "Adicione os pedaços de bife à frigideira, salpicando um pouco de óleo se a frigideira parecer particularmente seca, e frite durante 3-4 minutos, até ficar bem corada. Coloque as cebolas e os cogumelos de volta na panela.", "Bata o crème fraîche, a mostarda e o caldo de carne e verta para a panela. Cozinhe em lume médio durante cerca de 5 minutos. Polvilhe com salsa e sirva com pappardelle ou arroz."],
   },
   {
     id: "vaca-brocolos", nome: "Vaca salteada com brócolos", nomeOrig: "Beef and broccoli stir-fry",
@@ -396,7 +396,7 @@ window.RECIPES = [
       { nome: "Óleo de sésamo", qtd: "1 c. chá" },
       { nome: "Arroz", qtd: "250 g" },
     ],
-    passos: ["Salteia a carne em tiras num wok em lume alto. Retira.", "Salteia os brócolos com o alho e o gengibre em lume alto.", "Junta a carne, o molho de soja e um pouco de água.", "Cozinha 2–3 minutos em lume forte e serve com arroz."],
+    passos: ["Marinar a carne:\nMisture os ingredientes da marinada de carne (1 colher de chá de molho de soja, 1 colher de chá de vinho de arroz chinês, 1 / 2 colher de chá de amido de milho, 1 / 8 colher de chá de pimenta preta) numa tigela média.", "Adicione as fatias de carne e mexa até ficarem revestidas. Deixe repousar por 10 minutos.", "Prepare o molho:\nMisture os ingredientes do molho (2 colheres de sopa de molho de ostras, 1 colher de chá de vinho de arroz chinês, 1 colher de chá de molho de soja, 1 / 4 de chávena de caldo de galinha) numa tigela pequena. Reserve.", "Escalde ou coza os brócolos a vapor:\nLeve uma panela com água a ferver. Adicione os brócolos e cozinhe até ficarem macios e crocantes, cerca de 2 minutos. Escorra bem.", "Frite a carne:\nAqueça uma frigideira grande ou um wok em lume forte até que uma gota de água chie e evapore instantaneamente ao entrar em contacto. Adicione o óleo alimentar e agite para revestir.", "Adicione a carne e espalhe imediatamente por toda a superfície do wok ou da frigideira numa única camada (de preferência sem tocar). Deixe a carne fritar durante 1 minuto.", "Vire as fatias de carne, coloque o alho na frigideira e frite por mais 30 segundos a 1 minuto até deixar de estar rosado.", "Adicione o molho, o amido de milho e os brócolos:\nDeite o molho e a pasta de amido de milho (1 colher de chá de amido de milho dissolvida em 1 colher de sopa de água).", "Mexa até o molho ferver e engrossar, cerca de 30 segundos. Junte os brócolos. Sirva de imediato, com arroz vaporizado ou sozinho."],
   },
   {
     id: "moussaka", nome: "Moussaka", nomeOrig: "Moussaka",
@@ -412,7 +412,7 @@ window.RECIPES = [
       { nome: "Molho bechamel", qtd: "300 ml" },
       { nome: "Queijo ralado", qtd: "50 g" },
     ],
-    passos: ["Frita ou assa as rodelas de beringela a 200 °C até ficarem macias.", "Prepara o recheio de carne com tomate e especiarias em lume médio.", "Monta camadas de beringela, carne e bechamel.", "Assa a 180 °C até dourar (35–40 minutos)."],
+    passos: ["Aqueça a grelha bem alta. Aloure a carne numa frigideira funda refratária em lume alto durante 5 minutos.", "Entretanto, pique a beringela com um garfo e leve ao microondas na potência máxima durante 3-5 minutos até ficar macia. Misture o iogurte, o ovo e o parmesão e adicione um pouco de tempero.", "Misture o tomate, o puré e as batatas com a carne com um pouco de tempero e aqueça bem. Alise a superfície da mistura de carne com as costas de uma colher, corte a beringela cozida e disponha-a por cima.", "Deite a mistura de iogurte sobre as beringelas, alise uniformemente e grelhe até a cobertura endurecer e ficar dourada."],
   },
 
   // ---------- Massas ----------
@@ -429,7 +429,7 @@ window.RECIPES = [
       { nome: "Queijo pecorino", qtd: "50 g" },
       { nome: "Pimenta preta", qtd: "q.b." },
     ],
-    passos: ["Coze o esparguete em água a ferver com sal durante 8–10 minutos.", "Salteia a pancetta em lume médio até ficar crocante.", "Mistura as gemas com o pecorino e pimenta.", "Junta a massa à pancetta, tira do lume e envolve com as gemas até formar o creme."],
+    passos: ["Coloque uma panela grande com água a ferver. Pique finamente os 100g de pancetta, retirando primeiro a casca. Rale bem 50g de queijo pecorino e 50g de parmesão e misture.", "Numa tigela média bata os 3 ovos grandes e tempere com um pouco de pimenta preta ralada na altura. Deixe tudo de lado.", "Adicione 1 colher de chá de sal à água a ferver, adicione 350g de esparguete e quando a água voltar a ferver, deixe cozer em lume brando constante, tapado, durante 10 minutos ou até ficar al dente (acabado de cozer).", "Esmague 2 dentes de alho descascados e grossos com a lâmina de uma faca, apenas para os magoar. Enquanto o esparguete coze, frite a pancetta com o alho.", "Coloque 50g de manteiga sem sal numa frigideira grande ou wok e, assim que a manteiga derreter, adicione a pancetta e o alho.", "Deixe cozinhar em lume médio durante cerca de 5 minutos, mexendo sempre, até a pancetta ficar dourada e crocante. O alho já deu sabor, por isso retire-o com uma escumadeira e rejeite-o.", "Mantenha o lume baixo sob a pancetta. Quando o macarrão estiver pronto, retire-o da água com um garfo ou uma pinça e coloque-o na frigideira juntamente com a pancetta.", "Não se preocupe se também cair um pouco de água na panela (quer que isso aconteça) e não deite já fora a água da massa. Misture a maior parte do queijo com os ovos, guardando uma mão cheia para polvilhar mais tarde.", "Retire a panela com o esparguete e a pancetta do lume. Agora verta rapidamente os ovos e o queijo.", "Usando a pinça ou um garfo comprido, levante o esparguete para que se misture facilmente com a mistura de ovos, que engrossa, mas não mexe, e tudo fica tapado.", "Adicione água extra para cozer o macarrão para o manter picante (várias colheres de sopa devem ser suficientes). Não quer que fique molhado, apenas húmido. Tempere com um pouco de sal, se necessário.", "Utilize um garfo de ponta longa para torcer a massa no prato ou tigela. Sirva de imediato com um pouco do restante queijo e uma ralada de pimenta preta.", "Se o prato ficar um pouco seco antes de servir, salpique um pouco mais de água quente para os noodles e o sabor brilhante será reavivado."],
   },
   {
     id: "bolonhesa", nome: "Esparguete à bolonhesa", nomeOrig: "Spaghetti bolognese",
@@ -445,7 +445,7 @@ window.RECIPES = [
       { nome: "Cebola", qtd: "1 unidade" },
       { nome: "Queijo ralado", qtd: "40 g" },
     ],
-    passos: ["Refoga a cebola, o alho e a cenoura em lume médio.", "Junta a carne picada e deixa alourar.", "Adiciona o tomate, a polpa e um pouco de caldo; cozinha 30 minutos em lume brando.", "Coze o esparguete 8–10 minutos em água a ferver e serve com o molho e parmesão."],
+    passos: ["Coloque a cebola e o azeite numa panela grande e frite em lume muito alto durante 3-4 minutos. Adicione o alho e pique e frite até ficar dourado. Adicione os cogumelos e as ervas e deixe cozinhar por mais alguns minutos.", "Junte o tomate, o caldo de carne, o ketchup ou puré de tomate, o molho inglês e os temperos. Deixe ferver, reduza o lume, tape e deixe cozinhar, mexendo de vez em quando, durante 30 minutos.", "Entretanto, coza o esparguete numa panela grande com água salgada e fervente, de acordo com as instruções da embalagem.", "Escorra bem, passe água quente, volte a colocar no tacho e adicione um fio de azeite, se gostar, e junte o molho de carne. Sirva em taças quentes e distribua o queijo parmesão para polvilhar por cima."],
   },
   {
     id: "lasanha", nome: "Lasanha", nomeOrig: "Lasagne",
@@ -460,7 +460,7 @@ window.RECIPES = [
       { nome: "Molho bechamel", qtd: "300 ml" },
       { nome: "Queijo ralado", qtd: "100 g" },
     ],
-    passos: ["Prepara o molho bolonhesa e o bechamel.", "Monta camadas de placas, carne e bechamel num tabuleiro.", "Termina com bechamel e queijo.", "Assa a 180 °C durante 35–40 minutos."],
+    passos: ["Aqueça o azeite numa panela grande. Utilize uma tesoura de cozinha para cortar o bacon em pedaços pequenos ou utilize uma faca afiada para o cortar numa tábua de cortar.", "Adicione o bacon à panela e deixe cozinhar por alguns minutos até começar a ficar dourado.", "Adicione a cebola, o aipo e a cenoura e deixe cozinhar em lume médio durante 5 minutos, mexendo de vez em quando, até ficarem macios.", "Adicione o alho e deixe cozinhar durante 1 min, depois adicione a carne picada e deixe cozinhar, mexendo e partindo com uma colher de pau, durante cerca de 6 minutos até ficar completamente dourada.", "Junte o puré de tomate e deixe cozinhar durante 1 min, envolvendo bem com a carne e os legumes. Adicione os tomates picados.", "Encha cada lata até metade com água para enxaguar os tomates que sobraram na lata e coloque na panela. Adicione o mel e tempere a gosto. Cozinhe durante 20 minutos. Aqueça o forno a 200 °C / 180 °C ventoinha.", "Para montar a lasanha, coloque um pouco do molho ragu no fundo do tabuleiro ou caçarola, espalhando o molho por toda a base.", "Coloque 2 folhas de lasanha por cima do molho, sobrepostas para caber, e repita com mais molho e outra camada de massa. Repita com mais 2 camadas de molho e massa, terminando com uma camada de massa.", "Coloque o crème fraîche numa tigela e misture com 2 colheres de sopa de água para o soltar e fazer um molho homogéneo. Deite por cima do macarrão e cubra com a mozarela.", "Polvilhe o parmesão por cima e leve ao forno durante 25–30 minutos até dourar e borbulhar. Sirva polvilhado com manjericão, se gostar."],
   },
   {
     id: "fettuccine", nome: "Fettuccine Alfredo", nomeOrig: "Fettuccine alfredo",
@@ -475,7 +475,7 @@ window.RECIPES = [
       { nome: "Parmesão", qtd: "60 g" },
       { nome: "Alho", qtd: "1 dente" },
     ],
-    passos: ["Coze o fettuccine em água a ferver com sal durante 8–10 minutos.", "Derrete a manteiga em lume brando e junta as natas e o parmesão até engrossar.", "Envolve a massa no molho.", "Serve com mais parmesão e pimenta."],
+    passos: ["Coza o macarrão de acordo com as instruções da embalagem numa panela grande com água a ferver e sal. Adicione as natas e a manteiga a uma frigideira grande em lume médio até o creme borbulhar e a manteiga derreter.", "Junte o parmesão e adicione os temperos (sal e pimenta preta). Deixe o molho engrossar um pouco e depois adicione o macarrão e mexa até ficar coberto com o molho. Decore com salsa e está pronto."],
   },
   {
     id: "arrabiata", nome: "Penne all'arrabbiata", nomeOrig: "Spicy arrabiata penne",
@@ -490,7 +490,7 @@ window.RECIPES = [
       { nome: "Malagueta", qtd: "1 unidade" },
       { nome: "Azeite", qtd: "3 c. sopa" },
     ],
-    passos: ["Refoga o alho e a malagueta no azeite em lume médio.", "Junta o tomate e deixa apurar 10–15 minutos em lume brando.", "Coze o penne 9–11 minutos em água a ferver e envolve no molho.", "Serve com salsa e parmesão."],
+    passos: ["Leve uma panela grande com água a ferver. Adicione sal kosher à água a ferver e, em seguida, adicione o macarrão. Coza de acordo com as instruções da embalagem, cerca de 9 minutos.", "Numa frigideira grande em lume médio-alto, adicione o azeite e aqueça até o óleo começar a brilhar. Adicione o alho e cozinhe, mexendo até ficar perfumado, durante 1 a 2 minutos.", "Adicione os tomates picados, os flocos de pimentão vermelho, o tempero italiano e sal e pimenta a gosto. Deixe ferver e coza durante 5 minutos. Retire do lume e adicione o manjericão picado.", "Escorra o macarrão e adicione ao molho. Decore com flocos de Parmigiano-Reggiano e mais manjericão e sirva quente."],
   },
 
   // ---------- Vegetariano ----------
@@ -507,7 +507,7 @@ window.RECIPES = [
       { nome: "Azeite", qtd: "150 ml" },
       { nome: "Sal", qtd: "q.b." },
     ],
-    passos: ["Bate os ovos com sal.", "Salteia a batata e a cebola em lume médio até ficarem macias.", "Mistura os legumes nos ovos.", "Coze em lume médio-baixo dos dois lados numa frigideira (ou 4–5 minutos a 800 W no microondas num recipiente untado)."],
+    passos: ["Coloque uma frigideira grande antiaderente em lume brando. Cozinhe a cebola lentamente no azeite e na manteiga até ficar macia, mas não alourada – isto deve demorar cerca de 15 minutos.", "Adicione as batatas, tape o tacho e deixe cozinhar por mais 15-20 minutos, mexendo de vez em quando para fritar uniformemente.", "Quando as batatas estiverem macias e a cebola brilhante, esmague 2 dentes de alho e misture, seguidos dos ovos batidos. Volte a tapar a panela e deixe a tortilha cozinhar delicadamente.", "Passados 20 minutos, as bordas e a base devem estar douradas, a parte superior firme, mas o meio ainda um pouco instável.", "Para virar, coloque num prato e coloque outro prato por cima, vire tudo e volte a colocar na panela para terminar de cozinhar.", "Depois de cozida, transfira para um prato e sirva a tortilha quente ou fria, polvilhada com salsa picada.", "Para acompanhar, pegue em fatias de baguete aquecida, pique com um garfo e esfregue com o restante alho, coloque sobre os tomates ralados e tempere com sal marinho e um fio de azeite."],
   },
   {
     id: "shakshuka", nome: "Shakshuka", nomeOrig: "Shakshuka",
@@ -523,7 +523,7 @@ window.RECIPES = [
       { nome: "Cominhos", qtd: "1 c. chá" },
       { nome: "Azeite", qtd: "2 c. sopa" },
     ],
-    passos: ["Refoga a cebola, o pimento e o alho em lume médio.", "Junta o tomate e as especiarias; cozinha 10 minutos até engrossar.", "Abre buracos e parte os ovos por cima.", "Tapa e cozinha 6–8 minutos em lume brando até as claras firmarem."],
+    passos: ["Numa frigideira com tampa aqueça o azeite e amoleça a cebola, a malagueta, o alho e os talos de coentros durante 5 minutos até ficarem macios. Junte o tomate e o açúcar e borbulhe durante 8 a 10 minutos até engrossar.", "Pode ser congelado durante 1 mês. Usando as costas de uma colher grande, faça 4 mergulhos no molho e depois parta um ovo em cada um.", "Tape a panela e deixe cozinhar em lume brando durante 6 a 8 minutos, até que os ovos estejam cozidos ao seu gosto. Polvilhe com as folhas de coentros e sirva com pão crocante."],
   },
   {
     id: "chili-vegetariano", nome: "Chili vegetariano", nomeOrig: "Vegetarian chilli",
@@ -539,7 +539,7 @@ window.RECIPES = [
       { nome: "Pimento", qtd: "1 unidade" },
       { nome: "Cominhos", qtd: "1 c. chá" },
     ],
-    passos: ["Refoga a cebola, o alho e o pimento em lume médio.", "Junta o feijão, o tomate, o milho e as especiarias.", "Deixa cozinhar 15–20 minutos em lume brando.", "Serve com arroz ou tortilhas."],
+    passos: ["Aqueça o forno a 200 °C / 180 °C ventilador. Coza os legumes numa caçarola durante 15 minutos. Adicione o feijão e o tomate, tempere e deixe cozinhar por mais 10-15 minutos até ficar bem quente.", "Aqueça o saco no micro-ondas na potência máxima durante 1 min e sirva com a pimenta."],
   },
   {
     id: "falafel", nome: "Falafel", nomeOrig: "Falafel",
@@ -555,7 +555,7 @@ window.RECIPES = [
       { nome: "Pão pita", qtd: "4 unidades" },
       { nome: "Tahini", qtd: "2 c. sopa" },
     ],
-    passos: ["Tritura o grão-de-bico com a cebola, o alho, a salsa e as especiarias.", "Forma bolinhas ou discos.", "Coze na airfryer a 190 °C durante 12–15 minutos (ou frita a 180 °C) até dourar.", "Serve com pão pita, iogurte e salada."],
+    passos: ["Aqueça 1 colher de sopa de azeite numa panela grande e frite a cebola e o alho em lume brando durante 5 minutos até ficarem macios.", "Coloque numa tigela grande com o grão de bico e os temperos e amasse com um garfo ou um esmagador de batatas até que o grão de bico esteja completamente partido. Junte a salsa ou as ervas secas, temperando a gosto.", "Adicione o ovo e amasse a mistura com as mãos. Molde a mistura em 6 bolas e depois alise em hambúrgueres.", "Aqueça o restante azeite na frigideira e frite os falafels em lume médio durante 3 minutos de cada lado, até ficarem dourados e firmes. Sirva quente ou frio com cuscuz, pão pita ou salada."],
   },
   {
     id: "ratatouille", nome: "Ratatouille", nomeOrig: "Ratatouille",
@@ -571,7 +571,7 @@ window.RECIPES = [
       { nome: "Cebola", qtd: "1 unidade" },
       { nome: "Azeite", qtd: "3 c. sopa" },
     ],
-    passos: ["Corta a beringela, a curgete, o pimento e o tomate em rodelas ou cubos.", "Refoga a cebola e o alho em lume médio; junta os legumes em camadas.", "Rega com azeite e tomilho.", "Assa a 190 °C até os legumes ficarem macios (35–40 minutos)."],
+    passos: ["Corte as beringelas ao meio, no sentido do comprimento. Coloque-os no tabuleiro, corte com o lado virado para baixo, corte novamente ao meio no sentido do comprimento e depois em pedaços de 1,5 cm.", "Corte as pontas das curgetes e depois corte-as em fatias de 1,5 cm. Descasque os pimentos do talo até ao fundo. Segure na posição vertical, corte à volta do caule e depois corte em 3 pedaços.", "Corte qualquer membrana e depois corte em pedaços pequenos. Faça uma pequena cruz na base de cada tomate e coloque-os numa tigela refratária. Deite água a ferver sobre os tomates, deixe por 20 segundos e retire.", "Retire a água, substitua os tomates e cubra com água fria. Deixe arrefecer e retire a pele. Corte os tomates em quartos, retire as sementes com uma colher e pique a polpa grosseiramente.", "Coloque uma frigideira em lume médio e quando estiver bem quente, coloque 2 colheres de sopa de azeite. Aloure as beringelas durante 5 minutos de cada lado até que os pedaços fiquem macios.", "Reserve e frite as curgetes noutra colher de sopa de óleo durante 5 minutos, até ficarem douradas de ambos os lados. Repita com os pimentos.", "Não cozinhe demasiado os legumes nesta fase, pois ainda terão mais tempo para cozinhar na etapa seguinte. Rasgue as folhas de manjericão e reserve. Cozinhe a cebola na panela durante 5 minutos.", "Adicione o alho e frite por mais um min. Junte o vinagre e o açúcar e, de seguida, adicione o tomate e metade do manjericão.", "Volte a colocar os legumes na panela com um pouco de sal e pimenta e deixe cozinhar por 5 minutos. Sirva com manjericão."],
   },
   {
     id: "fajitas-grao", nome: "Fajitas de grão-de-bico", nomeOrig: "Chickpea fajitas",
@@ -586,7 +586,7 @@ window.RECIPES = [
       { nome: "Cebola", qtd: "1 unidade" },
       { nome: "Paprika", qtd: "1 c. chá" },
     ],
-    passos: ["Salteia a cebola e o pimento em lume médio-alto.", "Junta o grão-de-bico e as especiarias.", "Aquece as tortilhas numa frigideira seca em lume médio.", "Recheia e serve com iogurte ou abacate."],
+    passos: ["Aqueça o forno a 200 °C / 180 °C ventilador e forre um tabuleiro com papel de alumínio. Escorra o grão de bico, seque e coloque no tabuleiro preparado.", "Adicione o azeite e o pimentão doce, misture bem e leve ao forno durante 20-25 minutos até dourar e ficar crocante, agitando a meio da cozedura.", "Entretanto, coloque os tomates e a cebola numa tigela pequena com o vinagre e reserve para fazer pickles. Coloque o abacate noutra tigela e esmague com um garfo, deixando alguns pedaços maiores.", "Junte o sumo de limão e tempere bem. Misture as natas com a harissa e reserve até ao momento de servir. Aqueça uma frigideira até quase deitar fumo.", "Adicione as tortilhas, uma de cada vez, carbonizando cada lado até ficarem bem quentes com linhas de grelha.", "Coloque tudo na mesa e monte as fajitas: espalhe um pouco do creme de harissa sobre a tortilha, cubra com grão de bico assado, guacamole, salsa em conserva e coentros, se quiser.", "Sirva com as rodelas de limão para espremer."],
   },
   {
     id: "lentilhas-abobora", nome: "Chili de lentilhas e abóbora", nomeOrig: "Smoky lentil chili with squash",
@@ -601,7 +601,7 @@ window.RECIPES = [
       { nome: "Cebola", qtd: "1 unidade" },
       { nome: "Paprika fumada", qtd: "1 c. chá" },
     ],
-    passos: ["Refoga a cebola e o alho em lume médio.", "Junta a abóbora, as lentilhas e o caldo.", "Cozinha 20–25 minutos em lume brando até a abóbora desfazer.", "Tempera com cominhos e pimenta e serve."],
+    passos: ["Comece por assar a abóbora. Corte em meias luas finas e regue com um pouco de azeite e polvilhe com sal marinho. Juntei um pouco de salva fresca que tinha no frigorífico, mas é desnecessário.", "Asse a abóbora a 205 °C (400 F) durante 20-30 minutos, virando a meio, até ficar macia e dourada. Deixe arrefecer e pique em cubos. Entretanto, lave as lentilhas e cubra-as com água.", "Deixe ferver, depois baixe para ferver e deixe cozinhar (descoberto) durante 20-30 minutos ou até ficar macio. Escorra e reserve. Enquanto as lentilhas cozem, aqueça 1 c. de óleo em lume brando numa panela média.", "Adicione a cebola e o alho francês e salteie durante cerca de 5 minutos ou até começarem a amolecer. Adicione de seguida o alho juntamente com os cominhos e os coentros, cozinhando mais alguns minutos.", "Adicione os restantes temperos – pimentão doce, canela, pimenta, cacau, molho inglês, sal e orégãos. De seguida, adicione a lata de tomate, a água ou caldo e as cenouras.", "Deixe ferver, tapado, durante 20 minutos ou até os legumes estarem macios e a mistura engrossar. Terá de verificar a panela periodicamente para mexer e encher o líquido, se necessário.", "Adicione as lentilhas e a abóbora assada picada. Deixe cozinhar por mais 10 minutos para aquecer. Sirva com jalapeño fatiado, rodelas de lima, coentros, cebolinho e creme de leite de caju.", "CREME DE CAJU SIMPLES\n1 chávena de castanha de caju crua sem sal\nPitada de sal marinho\n1 colher de chá. Vinagre de maçã\nÁgua Deixe ferver um pouco de água e deixe as castanhas de molho durante, pelo menos, quatro horas.", "Em alternativa, pode usar água fria e deixar as castanhas de molho durante a noite, mas eu sou esquecido / preguiçoso, por isso uso frequentemente o método de fervura, que é muito mais rápido.", "Depois de os cajus estarem de molho, escorra-os e coloque-os no liquidificador em velocidade alta. Comece a fazer puré, adicionando lentamente cerca de 1 / 2 chávena de água doce, até atingir uma consistência cremosa.", "Pode ser necessário adicionar menos ou mais água para atingir a consistência desejada. Adicione uma pitada de sal marinho e vinagre (ou sumo de limão)."],
   },
   {
     id: "dal", nome: "Caril de lentilhas", nomeOrig: "Dal fry",
@@ -616,7 +616,7 @@ window.RECIPES = [
       { nome: "Curcuma", qtd: "1 c. chá" },
       { nome: "Gengibre", qtd: "1 colher" },
     ],
-    passos: ["Lava as lentilhas e coze-as em lume brando com água e curcuma.", "Noutra panela, faz o tempero com alho, gengibre e especiarias no azeite em lume médio.", "Junta o tempero às lentilhas e cozinha mais 5 minutos em lume brando.", "Serve com arroz."],
+    passos: ["Lave e deixe demolhar em aprox. 3 chávenas de água, durante pelo menos uma hora. O Dal terá o dobro do volume após a imersão. Escorra a água.", "Coza o dal com 2-1 / 2 chávenas de água e adicione sal e açafrão, em lume médio-alto, até obter uma textura macia (aproximadamente 30 minutos), deve ficar como uma sopa espessa. Numa frigideira, aqueça o ghee.", "Adicione sementes de cominhos e sementes de mostarda. Assim que as sementes se partirem, adicione folhas de louro, pimenta verde, gengibre e pimenta em pó. Mexa durante alguns segundos.", "Adicione o tomate, o sal e o açúcar, mexa e deixe cozinhar até os tomates estarem macios e moles. Adicione os coentros e o garam masala e deixe cozinhar durante cerca de um minuto.", "Deite o tempero sobre o dal, misture bem e deixe cozinhar por mais um minuto. Sirva com Naan."],
   },
   {
     id: "feijao-curry", nome: "Caril de feijão", nomeOrig: "Kidney bean curry",
@@ -631,7 +631,7 @@ window.RECIPES = [
       { nome: "Garam masala", qtd: "1 c. chá" },
       { nome: "Arroz", qtd: "250 g" },
     ],
-    passos: ["Refoga a cebola, o alho e o gengibre em lume médio.", "Junta o caril e o tomate; cozinha 5 minutos em lume médio.", "Adiciona o feijão e o leite de coco.", "Cozinha 10 minutos em lume brando e serve com arroz."],
+    passos: ["Aqueça o azeite numa frigideira grande em lume baixo-médio. Adicione a cebola e uma pitada de sal e deixe cozinhar lentamente, mexendo de vez em quando, até ficar macia e começar a ganhar cor.", "Adicione o alho, o gengibre e os talos de coentros e deixe cozinhar por mais 2 minutos, até ficar perfumado.", "Adicione os temperos à panela e deixe cozinhar por mais 1 minuto, altura em que tudo deverá ter um cheiro aromático. Adicione os tomates picados e o feijão à água e deixe ferver.", "Baixe o lume e cozinhe durante 15 minutos até que o caril fique bem espesso. Tempere a gosto e sirva com o arroz basmati e as folhas de coentros."],
   },
   {
     id: "rotolo", nome: "Rotolo de cogumelos e castanhas", nomeOrig: "Mushroom & chestnut rotolo",
@@ -647,7 +647,7 @@ window.RECIPES = [
       { nome: "Ricotta", qtd: "250 g" },
       { nome: "Queijo ralado", qtd: "50 g" },
     ],
-    passos: ["Salteia os cogumelos com o alho e os espinafres em lume médio.", "Estende a massa, cobre com o recheio e enrola.", "Envolve em película e coze 20 minutos em água a ferver (ou assa a 180 °C).", "Corta em fatias e serve com molho de tomate."],
+    passos: ["Mergulhe os cogumelos secos em 350ml de água a ferver e reserve até serem necessários. Bata ¾ das castanhas com 150ml de água até ficar cremoso. Pique grosseiramente as restantes castanhas.", "Aqueça 2 colheres de sopa de azeite numa frigideira grande antiaderente. Frite as chalotas com uma pitada de sal até ficarem macias, depois adicione o alho, as castanhas picadas e o alecrim e frite por mais 2 minutos.", "Adicione os cogumelos selvagens, 2 colheres de sopa de azeite e um pouco de tempero. Cozinhe durante 3 minutos até começarem a amolecer.", "Escorra e pique grosseiramente os cogumelos secos (reserve o líquido de molho), depois adicione-os também, juntamente com o molho de soja, e frite por mais 2 minutos.", "Bata o vinho, o líquido de cogumelos reservado e o creme de castanhas para criar um molho. Tempere, adicione metade à mistura de cogumelos na frigideira e deixe cozinhar durante 1 minuto até o molho ficar brilhante.", "Retire e rejeite os raminhos de alecrim e reserve a mistura. Aqueça o forno a 180 °C / 160 °C ventilador. Leve uma panela grande com água salgada a ferver e prepare uma tigela grande com água gelada.", "Coloque as folhas de lasanha em água a ferver durante 2 minutos ou até ficarem maleáveis e um pouco cozidas e, em seguida, mergulhe-as imediatamente em água fria.", "Usando os dedos, separe cuidadosamente as folhas e transfira para um pano de cozinha limpo.", "Espalhe uma boa colher de molho nos dois terços inferiores de cada assadeira e, depois, afastando-se de si, enrole as extremidades mais curtas.", "Corte cada rolo ao meio e coloque-os com o lado cortado para cima numa forma de tarte que terá todo o gosto em servir à mesa.", "Se sobrar algum molho de cogumelos depois de enrolar todas as folhas, basta colocá-lo em alguns dos rolos de massa expostos.", "Deite o restante molho por cima do macarrão e leve ao forno durante 10 minutos ou até que o macarrão já não tenha resistência quando testado com um palito.", "Entretanto, coloque o pão ralado, as últimas 2 colheres de sopa de azeite, as folhas de salva e um pouco de tempero numa tigela e misture tudo.", "Espalhe o rotolo com as migalhas e a salva e leve ao forno por mais 10 minutos, até que o topo fique dourado e as folhas de salva crocantes.", "Deixe arrefecer durante 10 minutos para que a massa absorva o molho, depois regue com um pouco de azeite de trufa, se quiser, antes de levar o prato à mesa."],
   },
   {
     id: "batatas-bravas", nome: "Patatas bravas", nomeOrig: "Patatas bravas",
@@ -662,7 +662,7 @@ window.RECIPES = [
       { nome: "Paprika", qtd: "1 c. chá" },
       { nome: "Azeite", qtd: "3 c. sopa" },
     ],
-    passos: ["Corta as batatas em cubos e tempera.", "Assa na airfryer a 200 °C ou no forno a 220 °C durante 20–25 minutos, até douradas e crocantes.", "Prepara o molho bravo com tomate, alho e malagueta em lume brando.", "Serve as batatas com o molho por cima."],
+    passos: ["Numa frigideira aqueça o azeite e frite a cebola durante cerca de 5 minutos até ficar macia.", "Adicione o alho, o tomate picado, o puré de tomate, o colorau doce, a malagueta em pó, o açúcar e uma pitada de sal e deixe ferver, mexendo de vez em quando.", "Baixe para ferver e deixe cozinhar durante 10 minutos até ficar polpudo. Pode ser conservado refrigerado até 24 horas. Aqueça o forno a 200 °C / 180 °C ventilador.", "Seque as batatas com papel de cozinha, coloque-as num tabuleiro e junte o azeite e um pouco de tempero. Leve ao forno durante 40-50 minutos até ficar crocante e dourado.", "Coloque as batatas em travessas e regue com o molho de tomate. Polvilhe com um pouco de salsa fresca para servir."],
   },
   {
     id: "salada-massa", nome: "Salada de massa mediterrânica", nomeOrig: "Mediterranean pasta salad",
@@ -677,7 +677,7 @@ window.RECIPES = [
       { nome: "Queijo feta", qtd: "100 g" },
       { nome: "Azeite", qtd: "3 c. sopa" },
     ],
-    passos: ["Coze a massa 8–10 minutos em água a ferver e arrefece em água fria.", "Junta o tomate, o pepino, o pimento, as azeitonas e o feta.", "Tempera com azeite, limão e orégãos.", "Serve fria."],
+    passos: ["Leve uma panela grande com água com sal a ferver\nAdicione o macarrão, mexa uma vez e deixe cozer durante cerca de 10 minutos ou conforme indicado na embalagem.", "Entretanto, lave os tomates e corte-os em quartos. Corte as azeitonas. Lave o manjericão. Coloque os tomates numa saladeira e rasgue as folhas de manjericão por cima. Adicione uma colher de sopa de azeite e misture.", "Quando o macarrão estiver pronto, escorra-o para um coador e deixe correr água fria para arrefecer rapidamente. Misture o macarrão na saladeira com os tomates e o manjericão.", "Adicione as azeitonas fatiadas, as bolas de mozarela escorridas e os pedaços de atum. Misture bem e deixe a salada repousar durante pelo menos meia hora para que os sabores se misturem.", "Polvilhe a massa com uma quantidade generosa de pimenta preta e regue com o restante azeite antes de servir."],
   },
 
   // ---------- Sobremesas & pequeno-almoço ----------
@@ -695,7 +695,7 @@ window.RECIPES = [
       { nome: "Farinha", qtd: "2 c. sopa" },
       { nome: "Canela", qtd: "q.b." },
     ],
-    passos: ["Aquece o leite com o açúcar e a canela em lume brando, sem ferver.", "Junta a farinha e as gemas, mexendo em lume brando até engrossar (creme).", "Forra as formas com massa folhada e enche com o creme.", "Assa a 250 °C até queimar ligeiramente por cima."],
+    passos: ["Enrole a massa\nMisture a farinha e o açúcar em pó e utilize-os para espanar a superfície de trabalho. Estenda a massa formando um retângulo de 45 x 30 cm. Enrole longitudinalmente para criar um formato longo de salsicha.", "Cortando a massa em rodelas\nCorte a massa em 24 rodelas, com cerca de 1-2cm de espessura.", "Estenda cada porção de massa\nRole cada roda ligeiramente com o rolo para caber em 2 formas antiaderentes de bolo de fadas com 12 furos.", "Pressione a massa na forma\nPressione os círculos de massa nas formas e molde-as para fazer formas finas. Refrigere até que seja necessário. Faça a calda infundida\nAqueça o forno a 220 °C / ventilador 200 °C.", "Faça uma calda de açúcar levando à ebulição o açúcar, 200ml de água, a raspa de limão e o pau de canela. Reduza até ficar xaroposo, deixe arrefecer e retire a canela e o limão.", "Bata os ovos, as gemas e a farinha de milho até ficar homogéneo noutra panela grande. Fazendo creme\nAqueça o leite e as sementes de baunilha numa panela separada até ferver.", "Deite aos poucos o leite quente sobre os ovos e a farinha de milho e deixe cozinhar em lume brando, mexendo sempre. Adicione xarope ao creme\nAdicione a calda de açúcar arrefecida ao creme e bata até engrossar um pouco.", "Verta o creme nas formas\nPasse o creme por um coador.", "Verta para as formas e leve ao forno durante 15 minutos até a massa dourar e o creme escurecer. deixe arrefecer e polvilhe com açúcar de confeiteiro Deixe arrefecer completamente nas formas e peneire o açúcar em pó e a canela em pó para servir."],
   },
   {
     id: "crumble", nome: "Crumble de maçã", nomeOrig: "Apple & blackberry crumble",
@@ -710,7 +710,7 @@ window.RECIPES = [
       { nome: "Açúcar", qtd: "100 g" },
       { nome: "Canela", qtd: "1 c. chá" },
     ],
-    passos: ["Descasca e corta as maçãs; coze em lume brando com açúcar e canela.", "Mistura a farinha, a manteiga e o açúcar até formar migalhas.", "Deita a fruta num tabuleiro e cobre com o crumble.", "Assa a 180 °C até dourar (30 minutos)."],
+    passos: ["Aqueça o forno a 190 °C / 170 °C ventilador. Coloque a farinha e o açúcar numa tigela grande. Adicione a manteiga e esfregue na farinha com a ponta dos dedos para obter uma textura leve de pão ralado.", "Não exagere ou o crumble ficará pesado. Polvilhe a mistura uniformemente sobre um tabuleiro de forno e leve ao forno durante 15 minutos ou até ficar ligeiramente corado.", "Entretanto, para a compota, descasque, retire o caroço e corte as maçãs em cubos de 2cm. Coloque a manteiga e o açúcar numa panela média e derreta em lume médio.", "Cozinhe durante 3 minutos até que a mistura se torne um caramelo claro. Junte as maçãs e deixe cozinhar durante 3 minutos. Adicione as amoras e a canela e deixe cozinhar por mais 3 minutos.", "Tape, retire do lume e deixe por 2-3 minutos para continuar a cozinhar no calor da panela.", "Para servir, coloque a fruta quente numa travessa refratária para gratinar, cubra com a mistura crumble e reaqueça no forno durante 5-10 minutos. Sirva com gelado de baunilha."],
   },
   {
     id: "bolo-cenoura", nome: "Bolo de cenoura", nomeOrig: "Carrot cake",
@@ -726,7 +726,7 @@ window.RECIPES = [
       { nome: "Nozes", qtd: "80 g" },
       { nome: "Óleo", qtd: "150 ml" },
     ],
-    passos: ["Rala a cenoura e mistura com os secos (farinha e açúcar).", "Junta os ovos, o óleo e as nozes.", "Deita numa forma e assa a 180 °C durante 40–45 minutos.", "Deixa arrefecer antes de desenformar."],
+    passos: ["Para o bolo de cenoura, pré-aqueça o forno a 160 °C / 325F / Gás 3. Unte e forre uma forma de bolo de 26cm / 10 pol.", "Misture todos os ingredientes do bolo de cenoura, exceto as cenouras e as nozes, numa tigela até ficar bem ligado. Junte as cenouras e as nozes.", "Coloque a mistura na forma de bolo e leve ao forno durante 1 hora e 15 minutos ou até que um palito inserido no meio saia limpo.", "Retire o bolo do forno e deixe arrefecer durante 10 minutos, depois retire cuidadosamente o bolo da forma e deixe arrefecer completamente sobre uma grelha.", "Entretanto, para a cobertura, bata o queijo creme, o açúcar refinado e a manteiga numa tigela até ficar cremoso. Espalhe a cobertura por cima do bolo com uma espátula."],
   },
   {
     id: "panquecas-banana", nome: "Panquecas de banana", nomeOrig: "Banana pancakes",
@@ -741,7 +741,7 @@ window.RECIPES = [
       { nome: "Ovos", qtd: "2 unidades" },
       { nome: "Fermento", qtd: "1 c. chá" },
     ],
-    passos: ["Esmaga as bananas e mistura com os ovos, o leite e a farinha.", "Junta o fermento e mexe até ficar homogéneo.", "Coze pequenas porções numa frigideira em lume médio até dourar dos dois lados.", "Serve com mel ou fruta."],
+    passos: ["Numa tigela, esmague a banana com um garfo até formar um puré grosso. Junte os ovos, o fermento e a baunilha. Aqueça uma frigideira grande antiaderente ou uma panqueca em lume médio e pincele com metade do azeite.", "Usando metade da massa, coloque duas panquecas na frigideira, cozinhe durante 1-2 minutos de cada lado e coloque num prato. Repita o processo com o restante óleo e massa. Cubra as panquecas com nozes e framboesas."],
   },
 
   // ---------- Marisco ----------
@@ -758,7 +758,7 @@ window.RECIPES = [
       { nome: "Alho", qtd: "2 dentes" },
       { nome: "Ovo (pincelar)", qtd: "1 unidade" },
     ],
-    passos: ["Salteia o camarão com o alho e o cebolinho em lume médio. Deixa arrefecer.", "Corta círculos na massa quebrada.", "Recheia, fecha e pincela com ovo.", "Assa a 200 °C (ou frita a 180 °C) até dourar."],
+    passos: ["Para fazer a massa, passe a manteiga por farinha e, de seguida, junte a clara de ovo e metade da gema (guarde a restante), o vinagre, uma pitada de sal e água fria suficiente para fazer uma massa macia.", "Amasse sobre uma superfície enfarinhada até ficar homogéneo e depois embrulhe e repouse durante 30 minutos. Aqueça o forno a 180c / ventilador 160c. Corte as pontas verdes das cebolinhas e corte o resto em rodelas finas.", "Numa frigideira aqueça um pouco de azeite e frite suavemente até ficarem macios, mas sem alourar. Adicione a pimenta e o alho, mexa e depois adicione os camarões e deixe cozinhar até ficarem opacos. Tempere bem.", "Retire os camarões e borbulhe os sucos até engrossar e, em seguida, adicione novamente os camarões. Divida a massa da panada em oito bolas e estenda círculos finos sobre uma superfície polvilhada com farinha.", "Coloque um pouco de recheio numa metade da massa, polvilhe o queijo feta por cima e dobre a outra metade.", "Apare a borda e, em seguida, dobre e amasse a massa para que a empanada fique bem fechada, coloque-a numa assadeira untada com óleo, de lado ou sobre a borda não dobrada, como um pastoso da Cornualha.", "Repita com a restante massa e mistura. Misture a gema que sobrou com um pouco de água e pincele o topo das empanadas. Leve ao forno durante 30 minutos ou até dourar e ligeiramente crocante nas bordas."],
   },
 
 
@@ -769,7 +769,7 @@ window.RECIPES = [
     foto: "https://www.themealdb.com/images/media/meals/0y6uvc1763258983.jpg",
     dica: "Fica ótimo com pão torrado ao pequeno-almoço.",
     ingredientes: [{ nome: "Batatas", qtd: "300 g" }, { nome: "Azeite", qtd: "1 c. sopa" }, { nome: "Chouriço", qtd: "100 g" }, { nome: "Ovos", qtd: "6 unidades" }, { nome: "Queijo cheddar", qtd: "50 g" }, { nome: "Salsa", qtd: "q.b." }],
-    passos: ["Coze as batatas em água a ferver 8–10 minutos, escorre e deixa secar.", "Aquece o azeite em lume médio, junta o chouriço e cozinha 2 minutos; adiciona as batatas e deixa dourar mais 5 minutos.", "Bate os ovos com sal e verte na frigideira com o chouriço e as batatas.", "Quando estiver quase pronta, espalha o queijo e a salsa por cima."],
+    passos: ["Coza a batata em água a ferver durante 8 a 10 minutos ou até ficar macia. Escorra e deixe secar ao vapor. Numa frigideira de omeletes aqueça o azeite, junte o chouriço e deixe cozinhar durante 2 minutos.", "Adicione a batata e deixe cozinhar por mais 5 minutos até a batata começar a ficar crocante. Retire o conteúdo da panela, limpe a panela e coza uma omelete de 2 ou 3 ovos na mesma panela.", "Quando estiver quase cozido, polvilhe com o chouriço e a batata, a salsa e o queijo. Dobre a omelete para dentro da panela e deixe cozinhar por mais 1 minuto para derreter o queijo."],
   },
 
   {
@@ -779,7 +779,7 @@ window.RECIPES = [
     foto: "https://www.themealdb.com/images/media/meals/rwuyqx1511383174.jpg",
     dica: "Dobra a receita e congela as panquecas para a semana.",
     ingredientes: [{ nome: "Farinha", qtd: "200 g" }, { nome: "Ovos", qtd: "2 unidades" }, { nome: "Leite", qtd: "300 ml" }, { nome: "Óleo", qtd: "1 c. sopa" }, { nome: "Açúcar", qtd: "2 c. sopa" }, { nome: "Framboesas", qtd: "q.b." }],
-    passos: ["Mistura a farinha, os ovos, o leite, o óleo e uma pitada de sal até obter uma massa lisa.", "Deixa repousar 30 minutos (ou cozinha já).", "Aquece uma frigideira untada em lume médio e cozinha as panquecas 1 minuto de cada lado, até dourar.", "Serve com açúcar e framboesas por cima."],
+    passos: ["Coloque a farinha, os ovos, o leite, 1 colher de sopa de óleo e uma pitada de sal numa tigela ou jarro grande e bata até obter uma massa homogénea.", "Reserve durante 30 minutos para descansar se tiver tempo ou comece a cozinhar imediatamente. Coloque uma frigideira ou frigideira média em lume médio e limpe-a cuidadosamente com papel de cozinha untado com óleo.", "Quando estiver bem quente, cozinhe as panquecas durante 1 minuto de cada lado até ficarem douradas, mantendo-as quentes em forno brando durante a cozedura. Sirva com rodelas de limão e açúcar ou o seu recheio preferido.", "Depois de frias, pode colocar as panquecas em camadas entre papel vegetal, embrulhar em película aderente e congelar até 2 meses."],
   },
 
   {
@@ -789,7 +789,7 @@ window.RECIPES = [
     foto: "https://www.themealdb.com/images/media/meals/c400ok1764439058.jpg",
     dica: "Usa aveia normal triturada no liquidificador.",
     ingredientes: [{ nome: "Ovos", qtd: "1 unidade" }, { nome: "Leite", qtd: "80 ml" }, { nome: "Açúcar", qtd: "1 c. sopa" }, { nome: "Fermento", qtd: "1 c. chá" }, { nome: "Aveia", qtd: "150 g" }, { nome: "Manteiga", qtd: "1 c. sopa" }, { nome: "Morangos", qtd: "q.b." }],
-    passos: ["Bate todos os ingredientes (menos os morangos) até ficar homogéneo.", "Deixa a massa repousar 10 minutos.", "Unta uma frigideira com manteiga em lume médio e coze pequenas porções, virando quando borbulhar.", "Serve com os morangos e um fio de mel."],
+    passos: ["Coloque todos os ingredientes no copo e bata. Deixe a mistura repousar durante 10 minutos. Unte uma frigideira quente com um pouco de manteiga e verta um pouco da mistura.", "Quando começar a borbulhar à superfície vire com uma espátula. Cozinhe em lume médio-baixo para que não queimem. Por fim, adicione o caramelo e os morangos."],
   },
 
   {
@@ -799,7 +799,7 @@ window.RECIPES = [
     foto: "https://www.themealdb.com/images/media/meals/1brbso1763585098.jpg",
     dica: "Um fio de leite de coco extra na hora de servir.",
     ingredientes: [{ nome: "Abóbora", qtd: "1,2 kg" }, { nome: "Óleo", qtd: "2 c. sopa" }, { nome: "Cebola", qtd: "1 unidade" }, { nome: "Gengibre", qtd: "1 c. sopa" }, { nome: "Erva-príncipe", qtd: "1 haste" }, { nome: "Pasta de caril vermelho", qtd: "2 c. sopa" }, { nome: "Leite de coco", qtd: "400 ml" }, { nome: "Caldo de legumes", qtd: "800 ml" }, { nome: "Malagueta", qtd: "1 unidade" }],
-    passos: ["Assa a abóbora aos cubos com metade do óleo a 200 °C durante 30 minutos, até dourar.", "Refoga a cebola, o gengibre e a erva-príncipe no óleo restante em lume médio.", "Junta a pasta de caril, a abóbora, o leite de coco e o caldo; cozinha 5 minutos.", "Tritura tudo e serve com malagueta fresca."],
+    passos: ["Aqueça o forno a 200 °C / 180 °C ventilador. Coloque a abóbora ou a abóbora num tabuleiro com metade do azeite e os temperos e leve ao forno durante 30 minutos até ficar dourada e macia.", "Entretanto, coloque o restante azeite numa panela com a cebola, o gengibre e a erva-príncipe. Cozinhe suavemente durante 8 a 10 minutos até ficar macio.", "Junte a pasta de caril durante 1 min, seguida da abóbora assada, tudo menos 3 colheres de sopa de leite de coco e o caldo. Deixe ferver, coza durante 5 minutos e depois pesque o capim-limão.", "Deixe arrefecer por alguns minutos e bata até ficar homogéneo com uma varinha mágica ou num liquidificador grande em lotes.", "Volte a colocar na panela para aquecer, temperando com sal, pimenta, sumo de limão e açúcar, se necessário. Sirva regado com o restante leite de coco e polvilhado com pimenta, se gostar."],
   },
 
   {
@@ -809,7 +809,7 @@ window.RECIPES = [
     foto: "https://www.themealdb.com/images/media/meals/stpuws1511191310.jpg",
     dica: "Acompanha com croutons e manjericão.",
     ingredientes: [{ nome: "Azeite", qtd: "2 c. sopa" }, { nome: "Cebola", qtd: "1 unidade" }, { nome: "Aipo", qtd: "2 talos" }, { nome: "Cenoura", qtd: "1 unidade" }, { nome: "Batatas", qtd: "300 g" }, { nome: "Polpa de tomate", qtd: "3 c. sopa" }, { nome: "Tomate picado", qtd: "1 lata" }, { nome: "Caldo de legumes", qtd: "2 cubos" }, { nome: "Leite", qtd: "200 ml" }],
-    passos: ["Refoga o azeite com a cebola, o aipo, a cenoura, as batatas e o louro em lume médio durante 10–15 minutos.", "Junta a polpa, o tomate, os cubos de caldo e 1 L de água a ferver; coze 15 minutos em lume brando.", "Tritura até ficar cremosa.", "Junta o leite, aquece em lume brando sem ferver e serve."],
+    passos: ["Coloque o azeite, a cebola, o aipo, a cenoura, a batata e o louro numa caçarola grande ou em duas panelas. Frite suavemente até as cebolas estarem macias – cerca de 10-15 minutos. Encha a chaleira e ferva.", "Junte o puré de tomate, o açúcar, o vinagre, o tomate picado e a passata e esmigalhe nos cubos de caldo. Adicione 1 litro de água a ferver e deixe ferver.", "Tape e deixe cozer durante 15 minutos até a batata ficar macia e depois retire as folhas de louro. Bata no liquidificador (ou coloque no liquidificador aos poucos) até ficar bem homogéneo.", "Tempere a gosto e adicione mais uma pitada de açúcar se precisar. A sopa pode agora ser arrefecida e refrigerada até 2 dias ou congelada até 3 meses.", "Para servir, aqueça a sopa, juntando o leite – tente não deixar ferver. Sirva em taças pequenas com rolinhos de salsicha com queijo."],
   },
 
   {
@@ -819,7 +819,7 @@ window.RECIPES = [
     foto: "https://www.themealdb.com/images/media/meals/x2fw9e1560460636.jpg",
     dica: "Serve com pão pita tostado.",
     ingredientes: [{ nome: "Azeite", qtd: "2 c. sopa" }, { nome: "Cebola", qtd: "1 unidade" }, { nome: "Grão-de-bico", qtd: "400 g" }, { nome: "Caldo de legumes", qtd: "1 L" }, { nome: "Cominhos", qtd: "1 c. chá" }, { nome: "Alho", qtd: "3 dentes" }, { nome: "Harissa", qtd: "1 c. chá" }, { nome: "Limão", qtd: "1 unidade" }],
-    passos: ["Refoga a cebola no azeite em lume médio até ficar macia.", "Junta o grão-de-bico e o caldo; deixa ferver e cozinha 20 minutos em lume brando.", "Torra os cominhos, pisa com o alho e a harissa e junta à sopa.", "Serve com sumo de limão e um fio de azeite."],
+    passos: ["Aqueça o azeite numa panela grande. Adicione a cebola e deixe cozinhar até ficar translúcida. Escorra o grão de bico demolhado e coloque-o na panela juntamente com o caldo de legumes.", "Deixe ferver, reduza o lume e tape. Cozinhe durante 30 minutos. Entretanto, torre os cominhos numa frigideira pequena sem untar e depois triture-os no almofariz.", "Adicione o alho e o sal e triture até formar uma pasta fina. Adicione a pasta e a harissa à sopa e deixe cozinhar até o grão-de-bico ficar macio, cerca de 30 minutos.", "Tempere a gosto com sal, pimenta e sumo de limão e sirva quente."],
   },
 
   {
@@ -829,7 +829,7 @@ window.RECIPES = [
     foto: "https://www.themealdb.com/images/media/meals/lgmnff1763789847.jpg",
     dica: "Molda com as mãos húmidas para não colar.",
     ingredientes: [{ nome: "Borrego picado", qtd: "600 g" }, { nome: "Cebola", qtd: "1 unidade" }, { nome: "Alho", qtd: "3 dentes" }, { nome: "Garam masala", qtd: "1 c. sopa" }, { nome: "Coentros", qtd: "1 maço" }, { nome: "Molho de malagueta", qtd: "1 c. sopa" }, { nome: "Pão pita", qtd: "4 unidades" }, { nome: "Tomate", qtd: "2 unidades" }, { nome: "Couve roxa", qtd: "100 g" }, { nome: "Iogurte", qtd: "1 embalagem" }],
-    passos: ["Mistura a carne com a cebola, o alho, o garam masala, os coentros e o molho de malagueta.", "Forma 8 hambúrgueres pequenos e achata.", "Grelha a lume médio-alto, 3–4 minutos de cada lado, até dourados.", "Serve no pão pita com tomate, couve roxa e iogurte."],
+    passos: ["Coloque a carne picada numa tigela grande (use uma tigela limpa para lavar a loiça se não tiver nada suficientemente grande) com todos os outros ingredientes do hambúrguer e uma boa pitada de sal.", "Arregace as mangas, coloque as mãos na mistura e amasse tudo com os dedos até ficar completamente misturado. Distribua a mistura por 16 hambúrgueres pequenos.", "Agora, podem ser congelados até 1 mês ou arrefecidos com um dia de antecedência.", "Para cozinhar, aqueça o grelhador na posição mais alta e coloque os hambúrgueres numa única camada num tabuleiro de forno (pode ser necessário fazer isto em lotes, dependendo do tamanho do tabuleiro).", "Grelhe na prateleira mais alta durante 5-6 minutos de cada lado até ficar dourado e cozinhado.", "Empilhe os hambúrgueres numa travessa e sirva com todos os acompanhamentos, para que cada um possa montar a sua própria sanduíche."],
   },
 
   {
@@ -839,7 +839,7 @@ window.RECIPES = [
     foto: "https://www.themealdb.com/images/media/meals/72fgzj1764109947.jpg",
     dica: "Os alperces dão um toque agridoce surpreendente.",
     ingredientes: [{ nome: "Azeite", qtd: "2 c. sopa" }, { nome: "Cebola roxa", qtd: "1 unidade" }, { nome: "Alho", qtd: "4 dentes" }, { nome: "Cominhos", qtd: "1 c. chá" }, { nome: "Tomate picado", qtd: "1 lata" }, { nome: "Borrego picado", qtd: "500 g" }, { nome: "Alperces secos", qtd: "8 unidades" }, { nome: "Pão ralado", qtd: "50 g" }, { nome: "Hortelã", qtd: "q.b." }, { nome: "Pão pita", qtd: "4 unidades" }],
-    passos: ["Refoga a cebola no azeite em lume médio; junta o alho e as especiarias e cozinha mais 2 minutos.", "Reserva metade; à restante junta o tomate e deixa apurar 10 minutos em lume brando.", "Mistura a carne com a cebola reservada, os alperces picados, o pão ralado e a hortelã; forma almôndegas.", "Cozinha as almôndegas no molho 15 minutos em lume brando e serve com pão pita."],
+    passos: ["Aqueça 2 colheres de chá de óleo numa panela e amoleça a cebola durante 5 minutos. Adicione o alho e os temperos e deixe cozinhar por mais alguns minutos.", "Coloque metade da mistura de cebola numa tigela e deixe arrefecer. Adicione os tomates, o açúcar e os temperos às restantes cebolas na panela e deixe cozinhar durante cerca de 10 minutos até reduzir.", "Entretanto, junte a hortelã, o borrego, os alperces e o pão ralado às cebolas arrefecidas, tempere e misture bem com as mãos. Forme pequenas almôndegas.", "Numa frigideira antiaderente aqueça o restante azeite e frite as almôndegas até ficarem douradas (em porções se precisar).", "Junte o molho com um pouco de água e deixe cozinhar tudo suavemente durante alguns minutos até as almôndegas estarem cozinhadas. Sirva com pão pita e salada."],
   },
 
   {
@@ -849,7 +849,7 @@ window.RECIPES = [
     foto: "https://www.themealdb.com/images/media/meals/vwrpps1503068729.jpg",
     dica: "Corta o frango panado ainda quente para não soltar o pão ralado.",
     ingredientes: [{ nome: "Peito de frango", qtd: "600 g" }, { nome: "Farinha", qtd: "3 c. sopa" }, { nome: "Ovos", qtd: "1 unidade" }, { nome: "Pão ralado", qtd: "100 g" }, { nome: "Óleo", qtd: "q.b." }, { nome: "Cebola", qtd: "1 unidade" }, { nome: "Cenoura", qtd: "1 unidade" }, { nome: "Alho", qtd: "3 dentes" }, { nome: "Caril em pó", qtd: "2 c. sopa" }, { nome: "Caldo de galinha", qtd: "500 ml" }, { nome: "Mel", qtd: "1 c. sopa" }, { nome: "Molho de soja", qtd: "2 c. sopa" }],
-    passos: ["Panha o peito de frango em farinha, ovo e pão ralado e frita a 170 °C até dourar.", "Para o molho, refoga a cebola, o alho e a cenoura em lume médio; junta a farinha e o caril.", "Adiciona o caldo, o mel e o molho de soja e deixa engrossar 15 minutos em lume brando.", "Corta o frango panado em tiras e serve com o molho e arroz."],
+    passos: ["Preparação:15min › Cozedura:30min › Pronto em:45min Para o molho de caril: Aqueça o azeite numa panela média antiaderente, adicione a cebola e o alho e deixe cozinhar até ficarem macios.", "Junte as cenouras e deixe cozinhar em lume brando durante 10 a 12 minutos. Adicione a farinha e o caril em pó; cozinhe durante 1 minuto.", "Aos poucos, misture o caldo até incorporar; adicione o mel, o molho de soja e a folha de louro. Deixe ferver lentamente.", "Baixe o lume e deixe cozinhar durante 20 minutos ou até que o molho engrosse, mas ainda tenha consistência. Junte o garam masala.", "Passe o molho de caril por um coador; volte a colocar na panela e leve ao lume brando até à hora de servir. Para o frango: Tempere ambos os lados dos peitos de frango com sal e pimenta.", "Coloque a farinha, o ovo e o pão ralado em taças separadas e disponha-os em fila. Cubra os peitos de frango com farinha, depois mergulhe-os no ovo e depois no pão ralado, cobrindo ambos os lados.", "Aqueça o azeite numa frigideira grande em lume médio-alto. Coloque o frango em óleo quente e deixe cozinhar até ficar dourado, cerca de 3 ou 4 minutos de cada lado.", "Depois de cozido, coloque sobre papel de cozinha para absorver o excesso de óleo. Deite o molho de caril sobre o frango, sirva com arroz branco e delicie-se!"],
   },
 
   {
@@ -859,7 +859,7 @@ window.RECIPES = [
     foto: "https://www.themealdb.com/images/media/meals/sstssx1487349585.jpg",
     dica: "Ajusta a malagueta ao teu gosto.",
     ingredientes: [{ nome: "Batatas", qtd: "300 g" }, { nome: "Feijão-verde", qtd: "150 g" }, { nome: "Óleo", qtd: "1 c. sopa" }, { nome: "Alho", qtd: "2 dentes" }, { nome: "Pasta de caril verde", qtd: "2 c. sopa" }, { nome: "Leite de coco", qtd: "400 ml" }, { nome: "Molho de peixe", qtd: "1 c. chá" }, { nome: "Frango", qtd: "450 g" }, { nome: "Manjericão", qtd: "1 maço" }, { nome: "Arroz", qtd: "300 g" }],
-    passos: ["Coze as batatas 5 minutos em água a ferver; junta o feijão-verde e coze mais 3 minutos. Escorre.", "Aquece o óleo em lume médio, salteia o alho e junta a pasta de caril.", "Adiciona o leite de coco, o molho de peixe e o frango; cozinha 10 minutos em lume brando.", "Junta as batatas, o feijão e o manjericão; serve com arroz."],
+    passos: ["Coloque as batatas numa panela com água a ferver e deixe cozer durante 5 minutos. Adicione o feijão e deixe cozinhar por mais 3 minutos, altura em que ambos deverão estar macios, mas não demasiado. Escorra e reserve.", "Num wok ou frigideira grande, aqueça o azeite até ficar bem quente, depois coloque o alho e deixe cozinhar até ficar dourado, o que deve demorar apenas alguns segundos. Não deixe escurecer demasiado ou estragará o sabor.", "Coloque a pasta de caril e mexa durante alguns segundos para começar a cozinhar os temperos e libertar todos os sabores. De seguida, verta o leite de coco e deixe formar uma bolha.", "Junte o molho de peixe e o açúcar e, de seguida, os pedaços de frango. Baixe o lume para ferver e deixe cozinhar, tapado, durante cerca de 8 minutos, até que o frango esteja cozido.", "Adicione as batatas e o feijão e deixe-os aquecer no leite de coco quente, depois adicione um adorável sabor cítrico misturando as folhas de limão raladas (ou a raspa de limão).", "As folhas de manjericão entram de seguida, mas deixe-as apenas brevemente ao lume ou perderão rapidamente o brilho. Polvilhe com a guarnição de limão e sirva de imediato com arroz cozido."],
   },
 
   {
@@ -869,7 +869,7 @@ window.RECIPES = [
     foto: "https://www.themealdb.com/images/media/meals/nlxald1764112200.jpg",
     dica: "Deixa marinar de um dia para o outro para mais sabor.",
     ingredientes: [{ nome: "Frango inteiro", qtd: "1 unidade" }, { nome: "Cebola", qtd: "1 unidade" }, { nome: "Azeite", qtd: "5 c. sopa" }, { nome: "Vinagre balsâmico", qtd: "2 c. sopa" }, { nome: "Mostarda Dijon", qtd: "1 c. sopa" }, { nome: "Alho", qtd: "3 dentes" }, { nome: "Pimenta preta", qtd: "1 c. chá" }, { nome: "Cayenne", qtd: "1 c. chá" }],
-    passos: ["Mistura a cebola, o azeite, o vinagre, a mostarda, o alho e as pimentas num recipiente.", "Envolve o frango na marinada e deixa repousar (ideal 1 hora ou de um dia para o outro).", "Leva ao forno a 175 °C durante 60–75 minutos, regando de vez em quando.", "Deixa repousar 10 minutos antes de trinchar."],
+    passos: ["Pré-aqueça o forno a 175 °C. Misture água, cebola, azeite, vinagre balsâmico, mostarda Dijon, alho, pimenta preta, pimenta de caiena e sal numa assadeira. Adicione o frango; vire até ficar bem revestido com a mistura.", "Asse no forno pré-aquecido até que um termómetro de leitura instantânea inserido na parte mais grossa da coxa, perto do osso, marque 74 °C, cerca de 1 hora e 30 minutos."],
   },
 
   {
@@ -879,7 +879,7 @@ window.RECIPES = [
     foto: "https://www.themealdb.com/images/media/meals/087fu71783802698.jpg",
     dica: "Serve com arroz branco e feijão preto.",
     ingredientes: [{ nome: "Costeletas de porco", qtd: "4 unidades" }, { nome: "Óleo", qtd: "2 c. sopa" }, { nome: "Alho", qtd: "3 dentes" }, { nome: "Mostarda", qtd: "1 c. sopa" }, { nome: "Cominhos", qtd: "1 c. sopa" }, { nome: "Tomate", qtd: "3 unidades" }, { nome: "Cebola", qtd: "1 unidade" }, { nome: "Coentros", qtd: "q.b." }],
-    passos: ["Marina as costeletas com mostarda, cominhos, alho, sal e pimenta (ideal 1 hora).", "Aloura as costeletas no óleo em lume médio-alto, 3 minutos de cada lado; retira.", "Refoga a cebola e o tomate na mesma frigideira em lume médio até apurar.", "Volta a colocar as costeletas no molho, cozinha 5 minutos em lume brando e serve com coentros."],
+    passos: ["Coloque as costeletas de porco num saco plástico zip lock. Adicione a mostarda, os cominhos, o alho, o sal e a pimenta. Leve ao frigorífico durante 1 hora ou durante a noite.", "Certifique-se de que as costeletas de porco estão uniformemente cobertas. Numa frigideira grande, aqueça o azeite em lume médio.", "Coloque as costeletas de porco na frigideira e deixe cozinhar durante 3 minutos de cada lado. Retire a carne de porco da frigideira e reserve num prato quente.", "Adicione a cebola e o tomate na mesma frigideira onde a carne de porco foi dourada, adicionando mais uma colher de sopa de azeite, se necessário.", "Cozinhe em lume forte durante cerca de 5-7 minutos ou até dourar e amolecer, mexendo sempre para evitar queimar.", "Adicione as costeletas de porco cozidas reservadas e tape, reduza o lume para médio-baixo e deixe cozinhar até que a carne de porco esteja macia e ligeiramente rosada no centro, cerca de 15 minutos.", "Divida as costeletas pelos pratos, coloque o molho por cima, adicione os coentros e sirva de imediato."],
   },
 
   {
@@ -889,7 +889,7 @@ window.RECIPES = [
     foto: "https://www.themealdb.com/images/media/meals/qxutws1486978099.jpg",
     dica: "Decora com framboesas para um contraste bonito.",
     ingredientes: [{ nome: "Farinha com fermento", qtd: "180 g" }, { nome: "Açúcar de coco", qtd: "100 g" }, { nome: "Cacau", qtd: "40 g" }, { nome: "Fermento", qtd: "1 c. chá" }, { nome: "Sementes de linhaça", qtd: "2 c. sopa" }, { nome: "Leite de amêndoa", qtd: "120 ml" }, { nome: "Baunilha", qtd: "1 c. chá" }, { nome: "Água a ferver", qtd: "120 ml" }],
-    passos: ["Prepara o ovo de linhaça: mistura as sementes com 5 c. sopa de água e deixa 10 minutos.", "Mistura os secos e depois junta os molhados e a linhaça.", "Junta a água a ferver e mexe até ficar liso.", "Assa a 180 °C durante 45 minutos e decora com chocolate derretido."],
+    passos: ["Basta misturar todos os ingredientes secos com ingredientes húmidos e misturar bem. Leve ao forno durante 45 minutos a 180 °C. Decore com um pouco de chocolate vegan derretido"],
   },
 
   {
@@ -899,7 +899,7 @@ window.RECIPES = [
     foto: "https://www.themealdb.com/images/media/meals/yypvst1511386427.jpg",
     dica: "Corta em quadrados só depois de arrefecer.",
     ingredientes: [{ nome: "Chocolate negro", qtd: "200 g" }, { nome: "Chocolate de leite", qtd: "100 g" }, { nome: "Manteiga", qtd: "250 g" }, { nome: "Açúcar amarelo", qtd: "400 g" }, { nome: "Ovos", qtd: "4 unidades" }, { nome: "Farinha", qtd: "140 g" }, { nome: "Cacau", qtd: "50 g" }, { nome: "Framboesas", qtd: "200 g" }],
-    passos: ["Derrete o chocolate, a manteiga e o açúcar em lume brando.", "Junta os ovos um a um, depois a farinha e o cacau peneirados.", "Envolve metade das framboesas e verte no tabuleiro; espalha o resto por cima.", "Assa a 180 °C durante 30–35 minutos."],
+    passos: ["Aqueça o forno a 180 °C / 160 °C ventilador. Forre uma forma de tabuleiro de 20 x 30cm com papel vegetal.", "Num tacho coloque o chocolate, a manteiga e o açúcar e derreta suavemente, mexendo de vez em quando com uma colher de pau. Retire do lume. Misture os ovos, um a um, à mistura de chocolate derretido.", "Peneire a farinha e o cacau e misture. Junte metade das framboesas, raspe para o tabuleiro e espalhe sobre as restantes framboesas.", "Leve ao forno na prateleira do meio durante 30 minutos ou, se preferir uma textura mais firme, durante mais 5 minutos. Deixe arrefecer antes de cortar em quadrados. Armazene num recipiente hermético até 3 dias."],
   },
 
   {
@@ -909,7 +909,7 @@ window.RECIPES = [
     foto: "https://www.themealdb.com/images/media/meals/swttys1511385853.jpg",
     dica: "Deixa no frio de um dia para o outro para firmar.",
     ingredientes: [{ nome: "Manteiga", qtd: "85 g" }, { nome: "Bolachas", qtd: "200 g" }, { nome: "Açúcar", qtd: "2 c. sopa" }, { nome: "Queijo creme", qtd: "900 g" }, { nome: "Açúcar em pó", qtd: "250 g" }, { nome: "Farinha", qtd: "3 c. sopa" }, { nome: "Sumo de limão", qtd: "2 c. sopa" }, { nome: "Ovos", qtd: "3 unidades" }, { nome: "Natas azedas", qtd: "300 ml" }],
-    passos: ["Derrete a manteiga, mistura com as bolachas trituradas e o açúcar; pressiona na base da forma.", "Assa a base 10 minutos a 180 °C e deixa arrefecer.", "Bate o queijo creme com o açúcar, a farinha, o limão e os ovos; junta as natas.", "Deita sobre a base e assa 45 minutos a 180 °C; deixa arrefecer antes de servir."],
+    passos: ["Coloque uma prateleira no meio do forno. Pré-aqueça o forno em 160 °C (ventilado) / 180 °C. Forre o fundo de uma forma de bolo de 23cm com papel vegetal. Para a crosta, derreta a manteiga numa panela média.", "Junte as migalhas de bolacha e o açúcar para que a mistura fique uniformemente humedecida. Pressione a mistura no fundo do tabuleiro e leve ao forno durante 10 minutos.", "Deixe arrefecer sobre uma gradinha enquanto prepara o recheio. Para o recheio, aumente a temperatura do forno para 200 °C (ventilado) / 240 °C.", "Na batedeira de mesa com batedeira em forma de pá, bata o queijo de pasta mole em velocidade média-baixa até ficar cremoso, cerca de 2 minutos.", "Com a batedeira em temperatura baixa, adicione aos poucos o açúcar, depois a farinha e uma pitada de sal, raspando as paredes da taça e a pá duas vezes. Troque o acessório da pá pelo batedor.", "Continue a adicionar a baunilha, a raspa de limão e o sumo. Junte os ovos e a gema, um a um, raspando a tigela e bata pelo menos duas vezes.", "Mexa a caixa de 284ml de natas até ficar homogéneo e, em seguida, meça 200ml (pouco mais de 3⁄4 da caixa). Continue a baixa velocidade enquanto adiciona o creme de leite medido (reserve o restante).", "Bata para misturar, mas não bata demasiado. A massa deve ser lisa, leve e algo arejada. Pincele as laterais da forma com manteiga derretida e coloque num tabuleiro de forno.", "Deite o recheio - se houver grumos, afunde-os com uma faca - a parte superior deve ficar o mais lisa possível. Leve ao forno por 10 minutos.", "Reduza a temperatura do forno para 90 °C (ventilado) / 110 °C e leve ao forno por mais 25 minutos. Se agitar suavemente a forma, o recheio deverá oscilar ligeiramente.", "Desligue o forno e abra a porta do forno para obter um cheesecake cremoso no centro, ou deixe-o fechado se preferir uma textura mais seca. Deixe arrefecer no forno durante 2 horas.", "O cheesecake pode ficar com uma ligeira fissura na parte superior à medida que arrefece. Junte as natas reservadas com a embalagem de 142ml, o açúcar e o sumo de limão para a cobertura.", "Espalhe sobre o cheesecake até às bordas. Cubra frouxamente com papel de alumínio e leve ao frigorífico durante pelo menos 8 horas ou durante a noite.", "Passe uma faca de lâmina redonda nas laterais da lata para soltar as bordas presas. Desbloqueie a lateral, deslize o cheesecake do fundo da forma para um prato e, em seguida, deslize o papel vegetal por baixo."],
   },
 
   {
@@ -919,7 +919,7 @@ window.RECIPES = [
     foto: "https://www.themealdb.com/images/media/meals/xxrxux1503070723.jpg",
     dica: "Usa arroz arbóreo para um risotto mais cremoso.",
     ingredientes: [{ nome: "Manteiga", qtd: "50 g" }, { nome: "Cebola", qtd: "1 unidade" }, { nome: "Arroz para risotto", qtd: "300 g" }, { nome: "Vinho branco", qtd: "125 ml" }, { nome: "Caldo de legumes", qtd: "1 L" }, { nome: "Limão", qtd: "1 unidade" }, { nome: "Camarão", qtd: "240 g" }, { nome: "Salmão", qtd: "300 g" }, { nome: "Espargos", qtd: "100 g" }, { nome: "Parmesão", qtd: "50 g" }],
-    passos: ["Derrete a manteiga em lume brando e refoga a cebola sem deixar ganhar cor.", "Junta o arroz e mexe; adiciona o vinho e deixa absorver.", "Adiciona o caldo aos poucos, mexendo em lume brando, até o arroz ficar cremoso.", "Junta o salmão, o camarão, os espargos e o limão; cozinha 3 minutos e serve com parmesão."],
+    passos: ["Numa panela de fundo grosso derreta a manteiga e coza suavemente a cebola sem cor até ficar macia.", "Adicione o arroz e mexa para cobrir todos os grãos da manteiga\nAdicione o vinho e cozinhe mexendo suavemente até que seja absorvido\nAos poucos, adicione o caldo quente, mexendo até que cada adição seja absorvida.", "Vá mexendo até o arroz ficar macio\nTempere com o sumo e a raspa de limão e pimenta a gosto.", "(provavelmente haverá salinidade suficiente no salmão para não ser necessário adicionar sal) Mexa suavemente para aquecer\nSirva polvilhado com parmesão e legumes da época.", "Grelhe o salmão e coloque-o delicadamente sobre o risotto com os camarões e os espargos"],
   },
 
   {
@@ -929,7 +929,7 @@ window.RECIPES = [
     foto: "https://www.themealdb.com/images/media/meals/vtqxtu1511784197.jpg",
     dica: "Melhor no dia seguinte — os sabores intensificam.",
     ingredientes: [{ nome: "Carne de vaca para estufar", qtd: "800 g" }, { nome: "Bacon", qtd: "100 g" }, { nome: "Cebolinhas", qtd: "200 g" }, { nome: "Cogumelos", qtd: "250 g" }, { nome: "Alho", qtd: "2 dentes" }, { nome: "Polpa de tomate", qtd: "1 c. sopa" }, { nome: "Vinho tinto", qtd: "750 ml" }, { nome: "Cenoura", qtd: "1 unidade" }, { nome: "Tomilho", qtd: "q.b." }, { nome: "Louro", qtd: "2 folhas" }],
-    passos: ["Aloura a carne em pedaços numa panela bem quente, em várias vezes.", "Na mesma panela, frita o bacon, as cebolinhas, os cogumelos e o alho em lume médio.", "Junta a carne, a polpa de tomate, o vinho e as ervas; tapa e cozinha 2 horas em lume brando.", "Serve com puré ou batatas assadas."],
+    passos: ["Aqueça uma caçarola grande e adicione 1 colher de sopa de gordura de ganso.", "Tempere a carne e frite até ficar dourada, cerca de 3-5 minutos, depois vire e frite o outro lado até que a carne esteja totalmente dourada, acrescentando mais gordura se necessário.", "Faça-o em 2 a 3 porções, transferindo a carne para um coador colocado sobre uma tigela quando estiver dourada.", "Na mesma frigideira, frite o bacon, a cebolinha ou a cebola pérola, os cogumelos, o alho e o bouquet garni até ficarem ligeiramente dourados.", "Misture o puré de tomate e deixe cozinhar por alguns minutos, mexendo na mistura. Isto enriquece o bourguignon e é uma excelente base para o guisado.", "De seguida, coloque a carne e o suco escorrido de volta na panela e mexa. Verta sobre o vinho e cerca de 100ml de água para que a carne saia do líquido, mas não fique completamente coberta.", "Deixe ferver e use uma colher para raspar o sumo caramelizado da cozedura do fundo da panela – isto dará mais sabor ao guisado. Aqueça o forno a 150 °C / ventilador 130 °C.", "Faça uma cartela: rasgue um quadrado de papel de alumínio um pouco maior que a caçarola, disponha-o no tabuleiro de forma a cobrir o topo do guisado e retire o excesso de papel de alumínio.", "Depois cozinhe durante 3 horas. Se o molho parecer aguado, retire a carne e os legumes com uma escumadeira e reserve.", "Cozinhe o molho em lume forte durante alguns minutos até engrossar um pouco e depois volte a colocar a carne e os legumes na panela. Para fazer o puré de aipo, descasque o aipo e corte em cubos.", "Aqueça o azeite numa frigideira grande. Adicione o aipo-rábano e frite durante 5 minutos até ficar dourado. Tempere bem com sal e pimenta.", "Junte as vagens de alecrim, tomilho, louro e cardamomo e verta 200ml de água, o suficiente para quase cobrir o aipo-rábano. Baixe o lume, tape parcialmente a panela e deixe ferver durante 25-30 minutos.", "Após 25-30 minutos, o aipo-rábano deve estar macio e a maior parte da água terá evaporado. Escorra a água restante e retire os raminhos de ervas, o louro e as vagens de cardamomo.", "Amasse ligeiramente com um esmagador de batatas, finalize com um fio de azeite e tempere a gosto. Coloque o bife bourguignon em taças e coloque uma colher grande de puré de aipo-rábano por cima.", "Decore com uma das folhas de louro, se gostar."],
   },
 
   {
@@ -939,7 +939,7 @@ window.RECIPES = [
     foto: "https://www.themealdb.com/images/media/meals/ntafxw1763586291.jpg",
     dica: "Serve com noodles e coentros frescos.",
     ingredientes: [{ nome: "Gengibre", qtd: "1 c. sopa" }, { nome: "Alho", qtd: "2 dentes" }, { nome: "Erva-príncipe", qtd: "3 hastes" }, { nome: "Coentros", qtd: "1 maço" }, { nome: "Malagueta", qtd: "2 unidades" }, { nome: "Óleo", qtd: "2 c. sopa" }, { nome: "Carne de vaca", qtd: "500 g" }, { nome: "Molho de soja", qtd: "2 c. sopa" }, { nome: "Cinco especiarias", qtd: "1 c. chá" }, { nome: "Caldo de carne", qtd: "400 ml" }, { nome: "Noodles de arroz", qtd: "200 g" }],
-    passos: ["Tritura o gengibre, o alho, a erva-príncipe, os coentros e 1 malagueta.", "Refoga esta pasta no óleo em lume médio 5 minutos; junta a carne, o molho de soja, as especiarias e o caldo.", "Tapa e cozinha 1 h 15 em lume brando, depois destapa mais 15 minutos até a carne ficar tenra.", "Coze os noodles e serve com o estufado e limão."],
+    passos: ["Coloque o gengibre, o alho, a erva-príncipe, os coentros e 1 malagueta no processador de alimentos e triture até obter um puré. Aqueça o azeite numa panela em lume brando. Adicione o puré e deixe cozinhar por 5 minutos.", "Junte a carne, a soja, as cinco especiarias, o açúcar e o caldo. Tape e deixe ferver, depois baixe o lume e deixe cozinhar durante 1 hora e 15 minutos.", "Retire a tampa e deixe cozinhar por mais 15 minutos até a carne ficar macia. Pouco antes de servir, prepare o macarrão seguindo as instruções da embalagem. Escorra bem, divida por 2 taças e regue com o estufado de carne.", "Sirva polvilhado com o restante pimento e folhas de coentros, com rodelas de limão para espremer."],
   },
 
   {
@@ -949,7 +949,7 @@ window.RECIPES = [
     foto: "https://www.themealdb.com/images/media/meals/ikizdm1763760862.jpg",
     dica: "Um caldo rápido que se faz em 20 minutos.",
     ingredientes: [{ nome: "Caldo de galinha", qtd: "1 L" }, { nome: "Pasta de caril vermelho", qtd: "1 c. chá" }, { nome: "Noodles de arroz", qtd: "100 g" }, { nome: "Cogumelos shiitake", qtd: "150 g" }, { nome: "Milho", qtd: "125 g" }, { nome: "Salmão", qtd: "2 postas" }, { nome: "Limão", qtd: "1 unidade" }, { nome: "Molho de soja", qtd: "1 c. sopa" }, { nome: "Coentros", qtd: "q.b." }],
-    passos: ["Ferve o caldo com a pasta de caril em lume médio-alto.", "Junta os noodles e coze 8 minutos; adiciona os cogumelos e o milho e coze mais 2 minutos.", "Junta o salmão e cozinha 3 minutos até estar no ponto.", "Tira do lume, junta o limão e o molho de soja e serve com coentros."],
+    passos: ["Deite o caldo numa panela grande, deixe ferver e junte a pasta de caril. Adicione o macarrão e deixe cozer durante 8 minutos. Adicione os cogumelos e o milho e deixe cozinhar por mais 2 minutos.", "Adicione o salmão à frigideira e deixe cozinhar durante 3 minutos ou até ficar cozido. Retire do lume e junte o sumo de limão, o molho de soja e uma pitada de açúcar.", "Distribua por 4 taças e polvilhe com os coentros antes de servir."],
   },
 
   {
@@ -959,7 +959,7 @@ window.RECIPES = [
     foto: "https://www.themealdb.com/images/media/meals/1525873040.jpg",
     dica: "Serve com arroz de jasmim.",
     ingredientes: [{ nome: "Camarão", qtd: "400 g" }, { nome: "Molho de soja", qtd: "2 c. sopa" }, { nome: "Polpa de tomate", qtd: "1 c. chá" }, { nome: "Farinha de milho", qtd: "1 c. chá" }, { nome: "Açúcar", qtd: "1 c. chá" }, { nome: "Óleo", qtd: "1 c. sopa" }, { nome: "Amendoim", qtd: "85 g" }, { nome: "Malagueta", qtd: "3 unidades" }, { nome: "Alho", qtd: "6 dentes" }, { nome: "Gengibre", qtd: "q.b." }],
-    passos: ["Marina os camarões com a farinha de milho e 1 c. sopa de molho de soja durante 10 minutos.", "Mistura o vinagre, o resto do molho de soja, a polpa, o açúcar e 2 c. sopa de água.", "Salteia os camarões num wok bem quente; retira.", "Salteia o alho, o gengibre e a malagueta, junta o molho e os camarões; serve com amendoim."],
+    passos: ["Misture a farinha de milho e 1 colher de sopa de molho de soja, junte os camarões e reserve durante 10 minutos.", "Misture o vinagre, o restante molho de soja, o puré de tomate, o açúcar e 2 colheres de sopa de água para fazer um molho.", "Quando estiver pronto para cozinhar, aqueça uma frigideira grande ou wok até ficar bem quente e adicione 1 colher de sopa de óleo.", "Frite os camarões até que estejam dourados em alguns pontos e abertos – depois retire-os da frigideira. Aqueça o restante azeite e adicione o amendoim, a malagueta e as castanhas de água.", "Frite durante 2 minutos ou até o amendoim começar a colorir, depois adicione o gengibre e o alho e frite durante mais 1 minuto.", "Adicione os camarões e o molho e deixe cozinhar durante 2 minutos até engrossar um pouco. Sirva com arroz."],
   },
 
   {
@@ -969,7 +969,7 @@ window.RECIPES = [
     foto: "https://www.themealdb.com/images/media/meals/yuwtuu1511295751.jpg",
     dica: "Acompanha com cuscuz solto e salsa.",
     ingredientes: [{ nome: "Azeite", qtd: "2 c. sopa" }, { nome: "Cebola", qtd: "1 unidade" }, { nome: "Cenoura", qtd: "1 unidade" }, { nome: "Borrego", qtd: "500 g" }, { nome: "Alho", qtd: "2 dentes" }, { nome: "Cominhos", qtd: "1 c. chá" }, { nome: "Gengibre", qtd: "1 c. chá" }, { nome: "Canela", qtd: "1 c. chá" }, { nome: "Mel", qtd: "1 c. sopa" }, { nome: "Alperces", qtd: "100 g" }, { nome: "Abóbora", qtd: "300 g" }, { nome: "Cuscuz", qtd: "300 g" }],
-    passos: ["Refoga a cebola e a cenoura no azeite em lume médio.", "Junta o borrego aos cubos e aloura; adiciona o alho e as especiarias.", "Junta o mel, os alperces, a abóbora e água até cobrir; cozinha 45–60 minutos em lume brando.", "Serve com cuscuz e salsa picada."],
+    passos: ["Numa frigideira de fundo grosso aqueça o azeite e junte a cebola e a cenoura. Cozinhe durante 3-4 minutos até ficar macio. Adicione o borrego em cubos e aloure todo.", "Junte o alho e todos os temperos e deixe cozinhar por mais alguns minutos ou até que os aromas se soltem.", "Adicione o mel e os alperces, esmigalhe no cubo de caldo e verta cerca de 500ml de água a ferver ou o suficiente para cobrir a carne. Mexa bem e deixe ferver. Baixe para ferver, tape e deixe cozer durante 1 hora.", "Retire a tampa e deixe cozinhar por mais 30 minutos, juntando depois a abóbora. Cozinhe por mais 20 a 30 minutos até que a abóbora esteja macia e o borrego tenro.", "Sirva acompanhado de arroz ou cuscuz e polvilhe com salsa e pinhões, se usar."],
   },
 
   {
@@ -979,7 +979,7 @@ window.RECIPES = [
     foto: "https://www.themealdb.com/images/media/meals/lwsnkl1604181187.jpg",
     dica: "Não sobreponhas as costeletas ao fritar.",
     ingredientes: [{ nome: "Costeletas de porco", qtd: "4 unidades" }, { nome: "Farinha", qtd: "100 g" }, { nome: "Ovos", qtd: "2 unidades" }, { nome: "Pão ralado", qtd: "100 g" }, { nome: "Óleo", qtd: "q.b." }, { nome: "Ketchup", qtd: "2 c. sopa" }, { nome: "Molho inglês", qtd: "2 c. sopa" }, { nome: "Molho de ostra", qtd: "1 c. sopa" }, { nome: "Açúcar", qtd: "1 c. sopa" }],
-    passos: ["Espalma as costeletas entre duas folhas de papel vegetal até ~1 cm.", "Panha em farinha, ovo e pão ralado.", "Frita em óleo quente (170 °C) até dourar dos dois lados.", "Mistura os molhos com o açúcar e serve por cima, com arroz."],
+    passos: ["Retire o pedaço grande de gordura da borda de cada lombo de porco e amasse cada um dos lombos entre dois pedaços de papel vegetal até obter cerca de 1 cm de espessura – pode fazê-lo utilizando um amaciador de carne ou um rolo.", "Depois de amassada, utilize as mãos para remodelar a carne até ao seu formato e espessura originais – este passo irá garantir que a carne fica o mais suculenta possível.", "Coloque a farinha, os ovos e o pão ralado panko em três taças separadas de bordo largo. Tempere a carne e passe-a primeiro por farinha, depois pelos ovos e depois pelo pão ralado.", "Numa frigideira grande ou numa frigideira grande, adicione óleo suficiente para subir 2 cm na lateral da frigideira.", "Aqueça o óleo a 180 °C – se não tiver termómetro, coloque um pouco de panko no óleo e se afundar um pouco e começar a fritar, o óleo está pronto.", "Adicione duas costeletas de porco e deixe cozinhar durante 1 minuto e 30 segundos de cada lado, depois retire e deixe repousar sobre uma rede durante 5 minutos. Repita com as restantes costeletas de porco.", "Enquanto a carne de porco repousa, faça o molho misturando os ingredientes e adicionando um pouco de água se estiver muito espesso. Corte o tonkatsu e sirva regado com o molho."],
   },
 
   {
@@ -989,7 +989,7 @@ window.RECIPES = [
     foto: "https://www.themealdb.com/images/media/meals/pbzcrx1763765096.jpg",
     dica: "Faz o caldo com antecedência para mais sabor.",
     ingredientes: [{ nome: "Caldo de carne", qtd: "1 L" }, { nome: "Cebola", qtd: "1 unidade" }, { nome: "Gengibre", qtd: "1 pedaço" }, { nome: "Canela em pau", qtd: "1 unidade" }, { nome: "Anis estrelado", qtd: "2 unidades" }, { nome: "Bife de lombo", qtd: "300 g" }, { nome: "Molho de peixe", qtd: "1 c. sopa" }, { nome: "Noodles de arroz", qtd: "200 g" }, { nome: "Cebolinho", qtd: "2 talos" }, { nome: "Manjericão", qtd: "q.b." }, { nome: "Limão", qtd: "1 unidade" }],
-    passos: ["Chama a cebola e o gengibre numa frigideira bem quente até queimarem; junta ao caldo com as especiarias.", "Deixa o caldo ferver 20 minutos em lume brando e tempera com molho de peixe.", "Coze os noodles e distribui pelas taças; cobre com o bife fatiado fino.", "Verte o caldo a ferver por cima e serve com ervas e limão."],
+    passos: ["Coloque o caldo de carne juntamente com 500ml de água numa panela grande.", "Coloque a cebola e o gengibre numa frigideira em lume alto e queime por todos os lados, cerca de 3-5 minutos (também pode fazer isto debaixo da grelha). Depois de carbonizado, adicione ao caldo de carne.", "Na mesma frigideira, torre os temperos durante 2 a 3 minutos e, quando começarem a cheirar bem, junte-os também ao caldo de carne. Deixe o caldo ferver, depois deixe ferver e coza durante 30 minutos antes de coar.", "Entretanto, corte a gordura do bife e embrulhe-o em película aderente, depois coloque-o no congelador durante 15 minutos – isto tornará o seu bife muito fácil de fatiar!", "Corte em fatias finas, volte a cobrir com película aderente e coloque no frigorífico. Prove o caldo de carne e utilize o açúcar de palma, o molho de peixe e a soja para temperar.", "Coza o macarrão de acordo com as instruções da embalagem e divida-o por duas taças, cobrindo cada uma com a carne fatiada. Leve o caldo a ferver e verta para as taças (o fogo vai cozinhar a carne).", "Cubra cada um com cebolinho, rodelas de pimento e ervas. Sirva com as rodelas de limão para espremer."],
   },
 
   {
@@ -999,7 +999,7 @@ window.RECIPES = [
     foto: "https://www.themealdb.com/images/media/meals/kpiu4t1782242131.jpg",
     dica: "Usa macarrão curto para segurar o molho.",
     ingredientes: [{ nome: "Macarrão", qtd: "250 g" }, { nome: "Manteiga", qtd: "2 c. sopa" }, { nome: "Queijo cheddar", qtd: "250 g" }, { nome: "Ovos", qtd: "1 unidade" }, { nome: "Leite", qtd: "250 ml" }, { nome: "Mostarda", qtd: "1 c. chá" }, { nome: "Pão ralado", qtd: "2 c. sopa" }],
-    passos: ["Coze o macarrão 8–10 minutos em água com sal; escorre e mistura com a manteiga.", "Mistura o queijo ralado com o macarrão ainda quente.", "Bate o ovo com o leite e a mostarda e envolve no macarrão.", "Verte numa forma, cobre com pão ralado e assa a 180 °C durante 25–30 minutos."],
+    passos: ["Leve a água a ferver e adicione o macarrão partido, os cotovelos e o sal. Cozinhe destapado até ficar macio, mas não demasiado cozido (cerca de 8 minutos).", "Pré-aqueça um forno moderadamente quente a 350F, 180 °C ou Gas Mark 4. Escorra bem o macarrão, volte a colocá-lo na mesma panela quente onde foi cozido e misture a manteiga.", "Rale o queijo e misture com o macarrão ainda quente. Bata o ovo até ficar cremoso e adicione o leite, a cebola em pó, a pimenta branca, o sal, o molho de pimenta e a mostarda. Deite com o macarrão e misture.", "Coloque numa caçarola refratária untada. Cubra com manteiga, um pouco de queijo ralado e pão ralado fino. Leve ao centro do forno durante cerca de 30-45 minutos, dependendo da profundidade do prato."],
   },
 
   {
@@ -1009,7 +1009,7 @@ window.RECIPES = [
     foto: "https://www.themealdb.com/images/media/meals/7ytdtz1784833420.jpg",
     dica: "Rala a papaia bem fria para ficar crocante.",
     ingredientes: [{ nome: "Papaia verde", qtd: "1/2 unidade" }, { nome: "Sumo de limão", qtd: "1 c. sopa" }, { nome: "Cenoura", qtd: "1 unidade" }, { nome: "Tomate cereja", qtd: "1 chávena" }, { nome: "Cebolinho", qtd: "2 talos" }, { nome: "Amendoim torrado", qtd: "50 g" }, { nome: "Alho", qtd: "1 dente" }],
-    passos: ["Descasca e rala a papaia e a cenoura.", "Corta o cebolinho e os tomates ao meio.", "Mistura tudo numa taça com o alho picado e o sumo de limão.", "Salpica com o amendoim por cima."],
+    passos: ["Corte, descasque e rale o mamão. Usei uma trituradora juliana manual. Se não tiver triturador, utilize um ralador. Descasque e rale as cenouras.", "Corte a cebolinha bem pequena\nCorte os tomates ao meio\nDe seguida, juntei todos os ingredientes\nCubrai com amendoim"],
   },
 
   {
@@ -1019,7 +1019,7 @@ window.RECIPES = [
     foto: "https://www.themealdb.com/images/media/meals/1550441882.jpg",
     dica: "Perfeitas para acompanhar ovos e bacon.",
     ingredientes: [{ nome: "Batatas", qtd: "3 unidades" }, { nome: "Azeite", qtd: "1 c. sopa" }, { nome: "Bacon", qtd: "2 fatias" }, { nome: "Alho", qtd: "1 dente" }, { nome: "Xarope de ácer", qtd: "1 c. sopa" }, { nome: "Salsa", qtd: "q.b." }],
-    passos: ["Corta as batatas em cubos e lava em água fria.", "Aquece o azeite numa frigideira em lume médio-alto e cozinha as batatas até dourar (cerca de 15 minutos).", "Junta o bacon picado e o alho; cozinha até o bacon ficar crocante.", "Rega com o xarope de ácer e serve com salsa."],
+    passos: ["Antes de fazer qualquer coisa, congele as fatias de bacon assim que estiver pronto para as preparar, será muito mais fácil de picar! Lave as batatas e corte os dados médios em pedaços quadrados.", "Para evitar que escureçam, coloque as batatas já cortadas numa tigela com água. Entretanto, aqueça 1-2 colheres de sopa de óleo numa frigideira grande em lume médio-alto.", "Incline a frigideira para que o azeite se espalhe uniformemente. Assim que o azeite estiver quente, escorra as batatas e coloque na frigideira. Tempere com sal, pimenta e Old Bay, conforme necessário.", "Cozinhe durante 10 minutos, mexendo sempre as batatas, até ficarem douradas. Se necessário, adicione mais uma colher de sopa de azeite. Pique o bacon e junte às batatas.", "O bacon começará a desfazer-se e a gordura começará a cozinhar ainda mais as batatas. Misture um pouco! O bacon levará 5 a 6 minutos para ficar crocante.", "Assim que o bacon estiver cozinhado, reduza o lume para médio-baixo, adicione o alho picado e misture. Temporada mais uma vez. Adicione salsa seca ou fresca. Controle o calor conforme necessário.", "Deixe o alho cozinhar até ficar perfumado, cerca de um minuto. Pouco antes de servir, regue com o xarope de ácer e misture. Deixe cozer mais um minuto, dando às batatas um efeito caramelizado.", "Sirva numa tigela quente com um ovo estrelado!"],
   },
 
   {
@@ -1029,6 +1029,6 @@ window.RECIPES = [
     foto: "https://www.themealdb.com/images/media/meals/sxxpst1468569714.jpg",
     dica: "O segredo é cozinhar devagar até a carne desfazer.",
     ingredientes: [{ nome: "Borrego", qtd: "1 kg" }, { nome: "Azeite", qtd: "2 c. sopa" }, { nome: "Cebolinhas", qtd: "200 g" }, { nome: "Cenoura", qtd: "2 unidades" }, { nome: "Nabo", qtd: "1 unidade" }, { nome: "Batatas", qtd: "400 g" }, { nome: "Vinho branco", qtd: "150 ml" }, { nome: "Caldo de galinha", qtd: "450 ml" }, { nome: "Tomilho", qtd: "4 hastes" }],
-    passos: ["Tempera o borrego e aloura em lume alto, em várias vezes.", "Junta as cebolinhas, a cenoura, o nabo e as batatas.", "Adiciona o vinho, o caldo e o tomilho; tapa.", "Leva ao forno a 180 °C (ou lume brando) durante 1 h 30, até a carne desfazer."],
+    passos: ["Aqueça o forno a 180 °C / 350F / marca de. Escorra e passe o trigo demolhado por água, coloque numa panela média com bastante água, leve ao lume e deixe cozer durante uma hora, até ficar cozido. Escorra e reserve.", "Tempere o borrego com uma colher de chá de sal e um pouco de pimenta preta. Coloque uma colher de sopa de azeite numa frigideira grande e funda com tampa; coloque em lume médio-alto.", "Adicione um pouco de borrego – não sobrecarregue a frigideira – e sele durante quatro minutos de todos os lados. Transfira para uma tigela e repita com o restante borrego, adicionando o azeite conforme necessário.", "Baixe o lume para médio e adicione uma colher de sopa de azeite na panela. Adicione as chalotas e frite durante quatro minutos, até caramelizar.", "Coloque-os na taça do borrego e repita com os restantes legumes até que estejam bem dourados, adicionando mais óleo conforme necessário.", "Depois de todos os legumes estarem tostados e retirados da frigideira, adicione o vinho juntamente com o açúcar, as ervas, uma colher de chá de sal e uma boa quantidade de pimenta preta moída.", "Ferva em lume forte durante cerca de três minutos. Coloque o borrego, os legumes e o trigo integral de volta na panela e adicione o caldo.", "Tape e deixe ferver durante cinco minutos, depois leve ao forno durante uma hora e meia. Retire o guisado do forno e verifique o líquido; se houver muito, retire a tampa e deixe ferver durante alguns minutos."],
   },
 ];
